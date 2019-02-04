@@ -1,0 +1,55 @@
+.button_blue_round {
+  background-color:#5772a1;
+  -moz-border-radius:25px;
+  -webkit-border-radius:25px;
+  border-radius:25px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  padding:8px 148px;
+  text-decoration:none;
+  width
+  text-shadow:0px 1px 0px #283966;
+}
+.button_blue_round:hover {
+  background-color:#476e9e;
+  color:#ffffff;
+  text-decoration: none;
+}
+.button_blue_round:active {
+  position:relative;
+  top:1px;
+}
+
+#login_button {
+  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+   background-color:#ffffff;
+  -moz-border-radius:25px;
+  -webkit-border-radius:25px;
+  border-radius:25px;
+  border:1px solid #d5d8e0;
+  display:inline-block;
+  cursor:pointer;
+  color:#666666;
+  font-family:Arial;
+  font-size:17px;
+  font-weight:bold;
+  padding:8px 148px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+}
+#login_button:hover {
+  
+  background-color:#f5f7fa;
+ 
+}
+#login_button:active {
+  position:relative;
+  top:1px;
+}
+
+

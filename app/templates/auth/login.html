@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1>{{ _('Sign In') }}</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+    </div>
+    <br>
+    <p><a href="{{ url_for('auth.register') }}" class="button_blue_round">{{ _('Register') }}</a></p>
+    <p>
+        {{ _('Forgot Your Password?') }}
+        <a href="{{ url_for('auth.reset_password_request') }}">{{ _('Click to Reset It') }}</a>
+    </p>
+    <p>
+        {{ _('Change Password?') }}
+        <a href="{{ url_for('auth.change_password') }}">{{ _('Click to Change It') }}</a>
+
+
+
+    </p>
+{% endblock %}
+
+Text
+Font Size:
+bold italic
+Size
+Vertical Size:
+Horizontal Size:
+Border
+Border Radius:
+Border Size:
+Box Shadow
+Text Shadow
+Vertical Position:
+Horizontal Position:
+Blur Radius:
+
+<a href="#" class="button">Register</a>
