@@ -29,8 +29,15 @@ class User(UserMixin,db.Model):
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
     posts = db.relationship('Post', backref='author', lazy='dynamic')
+    tasks = db.relationship('Task', backref='author', lazy='dynamic')
+    mappoints = db.relationship('Mappoint', backref='location', lazy='dynamic')
     about_me = db.Column(db.String(140))
     last_seen = db.Column(db.DateTime, default=datetime.utcnow)
+    role=db.Column(db.String(24))
+    create_date=db.Column(db.String(140))
+    rating=db.Column(db.Integer)
+
+
     @login.user_loader
     #db relationship between left sider User(Parent Class) and right side user defined under ('User,...
     #secondary configures the association table I defined above the class
@@ -115,5 +122,43 @@ class Post(db.Model): # ,SearchableMixin needs to be added
     language = db.Column(db.String(5))
     def __repr__(self):
         return '<Post {}>'.format(self.body)
+
+
+class Task(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    summary=db.Column(db.String(140))
+    body = db.Column(db.String(1200))
+    internet=db.Column(db.Boolean())
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    tags = db.relationship('Tags', backref='task', lazy='dynamic')
+
+
+
+
+    def __repr__(self):
+        return '<Post {}>'.format(self.body)
+
+class Tags(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name=db.Column(db.String(64))
+    task_id = db.Column(db.Integer, db.ForeignKey('task.id'))
+
+
+class Mappoint(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    streetname=db.Column(db.String(140))
+    cityname=db.Column(db.String(64))
+    land=db.Column(db.String(64))
+    number=db.Column(db.String(32))
+    plz=db.Column(db.String(16))
+    additional_infos=db.Column(db.String(140))
+
+
+
+    
+
+
 
 

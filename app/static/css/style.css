@@ -1,17 +1,23 @@
+
+
 .button_blue_round {
   background-color:#5772a1;
   -moz-border-radius:25px;
   -webkit-border-radius:25px;
-  border-radius:25px;
+  border-radius:28px;
   display:inline-block;
   cursor:pointer;
   color:#ffffff;
   font-family:Arial;
   font-size:17px;
-  padding:8px 148px;
+  padding:8px 7vw;
   text-decoration:none;
   width
   text-shadow:0px 1px 0px #283966;
+  border:1px solid #4e6096;
+  width: 100%;
+  text-align:center;
+  margin: 1%;
 }
 .button_blue_round:hover {
   background-color:#476e9e;
@@ -24,13 +30,15 @@
 }
 
 #login_button {
+  text-align:center;
+  width: 100%;
   -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
   -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
   box-shadow:inset 0px 1px 0px 0px #ffffff;
    background-color:#ffffff;
   -moz-border-radius:25px;
   -webkit-border-radius:25px;
-  border-radius:25px;
+  border-radius:28px;
   border:1px solid #d5d8e0;
   display:inline-block;
   cursor:pointer;
@@ -38,9 +46,10 @@
   font-family:Arial;
   font-size:17px;
   font-weight:bold;
-  padding:8px 148px;
+  padding:8px 7vw;
   text-decoration:none;
   text-shadow:0px 1px 0px #ffffff;
+  margin: 1%;
 }
 #login_button:hover {
   
@@ -53,3 +62,14 @@
 }
 
 
+
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+
+.nav_top_border a:active{
+
+border-top: 1px solid;
+}

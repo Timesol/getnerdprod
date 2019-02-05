@@ -1,0 +1,1000 @@
+  302  sudo ufw status
+  303  sudo nano /etc/elasticsearch/elasticsearch.yml
+  304  sudo systemctl restart elasticsearch
+  305  curl -X GET 'http://localhost:9200'
+  306  flask run -h 10.146.177.18 -p 8000
+  307  sudo nano config.py 
+  308  export 
+  309  ELASTICSEARCH_URL=http://localhost:9200
+  310  export ELASTICSEARCH_URL=http://localhost:9200
+  311  flask run -h 10.146.177.18 -p 8000
+  312  flask db migrate
+  313  flask db upgarde
+  314  flask db upgrade
+  315  flask run -h 10.146.177.18 -p 8000
+  316  sudo nano app/models.py
+  317  flask shell
+  318  flask run -h 10.146.177.18 -p 8000
+  319  sudo service elasticsearch status
+  320  sudo nano /etc/elasticsearch/elasticsearch.yml
+  321  sudo chown -R elasticsearch:elasticsearch /home/ahoehne/ela
+  322  sudo systemctl restart elasticsearch
+  323  flask run -h 10.146.177.18 -p 8000
+  324  sudo ufw disable
+  325  flask run -h 10.146.177.18 -p 8000
+  326  /home/ahoehne/flask01/app/main/routes.py
+  327  sudo nano /home/ahoehne/flask01/app/main/routes.py
+  328  sudo nano /home/ahoehne/flask01/app/main/routes.py +308
+  329  sudo nano +308 /home/ahoehne/flask01/app/main/routes.py 
+  330  flask run -h 10.146.177.18 -p 8000
+  331  sudo nano  /home/ahoehne/flask01/app/main/routes.py 
+  332  sudo nano +308 /home/ahoehne/flask01/app/main/routes.py 
+  333  curl -XGET 'http://localhost:9200/_cluster/health?pretty=true'
+  334  curl -XGET 'localhost:9200'
+  335  cd flask01/
+  336  source venv/bin/activate
+  337  clear
+  338  flask run -h 10.146.177.18 -p 8000
+  339  export FLASK_DEBUG=1
+  340  flask run -h 10.146.177.18 -p 8000
+  341  sudo nano app/models.py
+  342  flask shell
+  343  flask db migrate
+  344  flask db upgrade
+  345  curl -XGET 'oldhost9200/_cat/indices'
+  346  curl -XGET 'localhost9200/_cat/indices'
+  347  curl -XGET 'localhost/_cat/indices'
+  348  sudo apt-get reinstall elasticsearch
+  349  sudo apt-get purge --autoremove elasticsearch
+  350  sudo apt-get install  elasticsearch
+  351  flask run -h 10.146.177.18 -p 8000
+  352  sudo systemctl enable elasticsearch.service
+  353  curl -X GET 'http://localhost:9200'
+  354  sudo nano /etc/elasticsearch/elasticsearch.yml
+  355  sudo systemctl restart elasticsearch
+  356  curl -X GET 'http://localhost:9200'
+  357  sudo ufw status
+  358  sudo service elasticsearch status
+  359  curl -X GET 'http://localhost:9200'
+  360  sudo service elasticsearch status
+  361  sudo nano /etc/default/elasticsearch
+  362  sudo systemctl restart elasticsearch
+  363  sudo service elasticsearch status
+  364  curl -X GET 'http://localhost:9200'
+  365  flask run -h 10.146.177.18 -p 8000
+  366  sudo nano /etc/default/elasticsearch
+  367  sudo systemctl restart elasticsearch
+  368  sudo service elasticsearch status
+  369  flask run -h 10.146.177.18 -p 8000
+  370  flask db migrate
+  371  sudo service elasticsearch status
+  372  sudo systemctl restart elasticsearch
+  373  sudo service elasticsearch status
+  374  sudo nano /etc/elasticsearch/elasticsearch.yml
+  375  sudo systemctl restart elasticsearch
+  376  curl -X GET 'http://localhost:9200'
+  377  flask run -h 10.146.177.18 -p 8000
+  378  sudo service elasticsearch status
+  379  flask run -h 10.146.177.18 -p 8000
+  380  sudo nano app/search.py 
+  381  flask run -h 10.146.177.18 -p 8000
+  382  sudo nano app/main/routes.py
+  383  flask run -h 10.146.177.18 -p 8000
+  384  sudo nano app/main/routes.py
+  385  sudo apt-get install gunicorn
+  386  gunicorn -b 10.146.177.18:8000 -w 4 flask01:app
+  387  sudo nano /etc/supervisor/conf.d/microblog.conf
+  388  sudo supervisorctl reload
+  389  ls
+  390  mkdir certs
+  391  ls
+  392  ls certs/
+  393  sudo rm -R certs/
+  394  mkdir certs
+  395  openssl req -new -newkey rsa:4096 -days 365 -nodes -x509   -keyout certs/key.pem -out certs/cert.pem
+  396  sudo rm /etc/nginx/sites-enabled/default
+  397  /etc/nginx/sites-enabled/flask01
+  398  sudo nano /etc/nginx/sites-enabled/flask01
+  399  sudo service nginx reload
+  400  sudo apt-get install smbclient
+  401  smbclient //10.146.177.50/flask01 -U ahoehne
+  402  source kenv/bin/activate
+  403  clear
+  404  pip install sqlachemy
+  405  pip install sqlalchemy
+  406  sudo nano ~/.config/pip/pip.conf
+  407  pip install pip --upgrade
+  408  pip install setuptools --upgrade 
+  409  pip install sqlalchemy
+  410  sudo apt-get install samba
+  411  mkdir sql
+  412  sudo cp /etc/samba/smb.conf ~
+  413  sudo nano /etc/samba/smb.conf
+  414  sudo service smbd restart
+  415  testparm
+  416  ifconfig
+  417  sudo nano /etc/samba/smb.conf
+  418  sudo smbpasswd -a ahoehne
+  419  sudo service smbd restart
+  420  pip install psycopg2
+  421  pip install pymysql
+  422  sudoa apt-get install mysql
+  423  sudo apt-get install mysql
+  424  sudo apt-get -y install mysql-server
+  425  sudo apt-get install postgresql postgresql-contrib
+  426  mysql -u root -p
+  427  cd sql/
+  428  ls
+  429  python sqlal.py
+  430  mysql -u root -p
+  431  git init
+  432  git commit -m "first commit"
+  433  git add .
+  434  git commit -m "first commit"
+  435  git config --global user.email "vatotechnics@gmail.com"
+  436  git config --global user.name "timesol"
+  437  git commit -m "first commit"
+  438  git remote add origin https://github.com/Timesol/sqlalchemytests.git
+  439  git push -u origin master
+  440  python sqlal.py
+  441  mysql -u root -p
+  442  python sqlal.py
+  443  mysql -u root -p
+  444  python sqlal.py
+  445  mysql -u root -p
+  446  git add .
+  447  git commit -m "second commit"
+  448  git push origin master
+  449  cd sql/
+  450  cd ..
+  451  source kenv/bin/activate
+  452  cd sql/
+  453  clear
+  454  python sqlal.py
+  455  cd sql
+  456  python sqlal.py
+  457  cd ..
+  458  source kenv/bin/activate
+  459  cd sql/
+  460  python sqlal.py
+  461  clear
+  462  cd sql/
+  463  cd ..
+  464  source kenv/bin/activate
+  465  cd sql/
+  466  python sqlal.py
+  467  python ownsqlal.py 
+  468  sudo ssh ahoehne@viepccsat01
+  469  sudo ssh ahoehne@viepwbcat31
+  470  ssh ahoehne@viepwbcat31
+  471  ssh ahoehne@10.146.31.136
+  472  ssh ahoehne@10.146.140.166
+  473  sudo nano test.py
+  474  pip install pexcept
+  475  pip install pexpect
+  476  python  test.py
+  477  sudo nano test.py
+  478  python  test.py
+  479  cd sql/
+  480  ls
+  481  cd ..
+  482  source kenv/bin/activate
+  483  git add .
+  484  cd sql/
+  485  git add
+  486  git add .
+  487  git commit -m "New Start"
+  488  git push origin master
+  489  ssh ahoehne@10.146.140.166
+  490  ifconfig
+  491  sudo apt-get install telnetd
+  492  netcat -u 10.146.177.20 22
+  493  netcat  10.146.177.20 22
+  494  netcat -v  10.146.177.20 22
+  495  netcat -v  10.146.177.20 23
+  496  netcat -v  10.146.177.20 3080
+  497  cd flask01/
+  498  sudo nano /etc/samba/smb.conf
+  499  sudo service smbd restart
+  500  git fetch --all
+  501  source venv/bin/activate
+  502  git fetch --all
+  503  ls
+  504  git init
+  505  git fetch --all
+  506  sudo rm .git
+  507  sudo rm -R .git
+  508  git remote add origin https://github.com/Timesol/flask02
+  509  git init
+  510  git remote add origin https://github.com/Timesol/flask02
+  511  git fetch --all
+  512  git reset --hard origin/master
+  513  git pull origin master
+  514  pip install matplotlib
+  515  sudo apt-get install python3-tk
+  516  flask run -h 10.146.177.18 -p 8000
+  517  pip install openpyxl
+  518  flask run -h 10.146.177.18 -p 8000
+  519  pip install paramiko
+  520  flask run -h 10.146.177.18 -p 8000
+  521  flask run -h 10.146.177.18 -p 5000
+  522  ls
+  523  sudo nano config.py 
+  524  sudo nano .env
+  525  flask run -h 10.146.177.18 -p 5000
+  526  flask db migrate
+  527  flask db upgrade
+  528  flask run -h 10.146.177.18 -p 5000
+  529  pip install Flask-BasicAuth
+  530  flask run -h 10.146.177.18 -p 5000
+  531  pip install Flask-Session
+  532  flask run -h 10.146.177.18 -p 5000
+  533  pip install Flask-Session
+  534  flask run -h 10.146.177.18 -p 5000
+  535  flask shell
+  536  flask run -h 10.146.177.18 -p 5000
+  537  git add .
+  538  git commit -m "session and login changes"
+  539  git add .
+  540  git commit -m "session and login changes"
+  541  git add .
+  542  git commit -m "session and login changes"
+  543  git push origin master
+  544  cd flask01/
+  545  clear
+  546  source venv/bin/activate
+  547  clear
+  548  flask run -h 10.146.177.18 -p 5000
+  549  flask db migrate
+  550  flask db upgrade
+  551  flask run -h 10.146.177.18 -p 5000
+  552  git add .
+  553  git commit "Changes on Scripts"
+  554  git commit -m "Changes on Scripts"
+  555  git push origin master 
+  556  cd flask01/
+  557  source venv/bin/activate
+  558  clear
+  559  flask run -h 10.146.177.18 -p 5000
+  560  cd flask01/
+  561  source venv/bin/activate
+  562  clear
+  563  python app/functions/requests.py 
+  564  sudo rm app/functions/requests.py
+  565  python app/functions/requests.py 
+  566  python app/functions/requests_send.py 
+  567  flask run -h 10.146.177.18 -p 5000
+  568  pip install httplib
+  569  flask run -h 10.146.177.18 -p 5000
+  570  pip install flask-proxy
+  571  cd flask01/
+  572  source venv/bin/activate
+  573  flask run -h 10.146.177.18 -p 8000
+  574  flask run -h 10.146.177.18 -p 5000
+  575  cd flask01/
+  576  source venv/bin/activate
+  577  clear
+  578  flask run -h 10.146.177.18 -p 5000
+  579  sudo supervisorctl reload
+  580  cd logs/
+  581  ls
+  582  sudo nano  microblog.log.10
+  583  ls
+  584  sudo nano  microblog.log
+  585  sudo supervisorctl reload
+  586  sudo nano  microblog.log
+  587  sudo supervisorctl reload
+  588  flask run -h 10.146.177.18 -p 5000
+  589  cd flask01/
+  590  source venv/bin/activate
+  591  clear
+  592  flask run -h 10.146.177.18 -p 5000
+  593  cd flask01/
+  594  source venv/bin/activate
+  595  clear
+  596  flask run -h 10.146.177.18 -p 5000
+  597  cd flask01/
+  598  source venv/bin/activate
+  599  clear
+  600  flask run -h 10.146.177.18 -p 5000
+  601  flask run -h 10.146.177.18 -p 7000
+  602  sudo supervisorctl reload
+  603  flask run -h 10.146.177.18 -p 7000
+  604  cd flask01/
+  605  source venv/bin/activate
+  606  clear
+  607  flask run -h 10.146.177.18 -p 7000
+  608  clear
+  609  flask run -h 10.146.177.18 -p 7000
+  610  sudo supervisor reload
+  611  sudo supervisord reload
+  612  sudo supervisorctl reload
+  613  cd flask01/
+  614  source venv/bin/activate
+  615  clear
+  616  pip install proxy.py
+  617  proxy.py -h 10.146.177.18 --port 9000
+  618  proxy.py --hostname 10.146.177.18 --port 9000
+  619  proxy.py --hostname 10.146.177.18 --port 9500
+  620  proxy.py --hostname 10.146.177.18 --port 5000
+  621  proxy.py --hostname 10.146.177.18 --port 9000
+  622  sudo supervisorctl reload
+  623  proxy.py --hostname 10.146.177.18 --port 9000
+  624  flask run -h 10.146.177.18 -p 7000
+  625  cd flask01/
+  626  source venv/bin/activate
+  627  clear
+  628  python app/functions/requests_send.py 
+  629  cd flask01/
+  630  source venv/bin/activate
+  631  clear
+  632  flask shell
+  633  flask run -h 10.146.177.18 -p 7000
+  634  flask shell 
+  635  flask run -h 10.146.177.18 -p 7000
+  636  mkdir uploads/ahoehne
+  637  flask run -h 10.146.177.18 -p 7000
+  638  cd ..
+  639  ls
+  640  cd ..
+  641  ls
+  642  cd ahoehne/
+  643  cd flask01/
+  644  ls
+  645  ls upload
+  646  ls uploads
+  647  flask run -h 10.146.177.18 -p 7000
+  648  git add .
+  649  git commit -m "automated bo"
+  650  git push origin master
+  651  flask run -h 10.146.177.18 -p 7000
+  652  flask db migrate
+  653  flask db upgrade
+  654  flask run -h 10.146.177.18 -p 7000
+  655  cd flask01/
+  656  source venv/bin/activate
+  657  clear
+  658  flask run -h 10.146.177.18 -p 7000
+  659  git add .
+  660  git commit -m 'Scriptchanges'
+  661  git push origin master 
+  662  cd flask01/
+  663  source venv/bin/activate
+  664  clear
+  665  git fetch --all
+  666  git reset --hard origin/master
+  667  git pull origin master
+  668  flask db migrate
+  669  flask db upgrade
+  670  flask run -h 10.146.177.18 -p 7000
+  671  cdf flask01/
+  672  cd flask01/
+  673  source venv/bin/activate
+  674  clear
+  675  flask run -h 10.146.177.18 -p 7000
+  676  flask db migrate
+  677  flask db upgrade
+  678  flask run -h 10.146.177.18 -p 7000
+  679  flask shell
+  680  flask run -h 10.146.177.18 -p 7000
+  681  git add .
+  682  git commit -m "template generator"
+  683  git push origin master
+  684  cd flask01/
+  685  source venv/bin/activate
+  686  git fetch --all
+  687  git reset --hard origin/master
+  688  git pull origin master
+  689  flask db migrate
+  690  flask db upgrade
+  691  clear
+  692  flask run -h 10.146.177.18 -p 7000
+  693  cd flask01/
+  694  source venv/bin/activate
+  695  git add .
+  696  git commit -m "modal changes2"
+  697  git push origin master
+  698  cd flask01/
+  699  source venv/bin/activate
+  700  clear
+  701  git clone https://github.com/froala/wysiwyg-editor.git
+  702  ls
+  703  cd wysiwyg-editor/
+  704  ls
+  705  cd ..
+  706  cp -R wysiwyg-editor/ app/static/
+  707  cd app/static/
+  708  ls
+  709  cd ..
+  710  flask run -h 10.146.177.18 -p 7000
+  711  cd app/static/
+  712  ls
+  713  cd wysiwyg-editor/
+  714  ls
+  715  cd js/
+  716  ls
+  717  cp froala_editor.min.js /home/ahoehne/flask01/app/static/
+  718  cp froala_editor.pkgd.min.js /home/ahoehne/flask01/app/static/
+  719  cd ..
+  720  ls
+  721  cd css/
+  722  ls
+  723  cp froala_editor.pkgd.min.css /home/ahoehne/flask01/app/static/css
+  724  cp froala_style.css /home/ahoehne/flask01/app/static/css
+  725  cp froala_style.min.css /home/ahoehne/flask01/app/static/css
+  726  cp froala_editor.min.css /home/ahoehne/flask01/app/static/css
+  727  cd ..
+  728  flask run -h 10.146.177.18 -p 7000
+  729  sudo rm -R app/static/wysiwyg-editor/
+  730  cd app/static/
+  731  git clone https://github.com/summernote/summernote.git
+  732  ls
+  733  cd summernote/
+  734  ls
+  735  cd ..
+  736  flask run -h 10.146.177.18 -p 7000
+  737  cd flask01/
+  738  source venv/bin/activate
+  739  clear
+  740  git fetch --all
+  741  git reset --hard origin/master
+  742  git pull origin /master
+  743  git pull origin/master
+  744  ping 8.8.8.8
+  745  flask run -h 10.146.177.18 -p 7000
+  746  cd flask01/
+  747  source venv/bin/activate
+  748  clear
+  749  python app/functions/requests_send.py
+  750  flask run -h 10.146.177.18 -p 7000
+  751  python app/functions/requests_send.py
+  752  flask run -h 10.146.177.18 -p 7000
+  753  git add .
+  754  git commit -m "Network changes"
+  755  git push origin master
+  756  git fetch --all
+  757  git reset --hard origin/master
+  758  git pull origin master
+  759  flask run -h 10.146.177.18 -p 7000
+  760  git fetch --all
+  761  git reset --hard origin/master
+  762  git pull origin master
+  763  flask run -h 10.146.177.18 -p 7000
+  764  cd flask01/
+  765  source venv/bin/activate
+  766  clear
+  767  git fetch --all
+  768  git reset --hard origin/master
+  769  git pull origin master
+  770  clear
+  771  flask run -h 10.146.177.18 -p 7000
+  772  cd flask01/
+  773  source venv/bin/activate
+  774  clear
+  775  flask run -h 10.146.177.18 -p 7000
+  776  cd flask01/
+  777  source venv/bin/activate
+  778  clear
+  779  git add
+  780  git add .
+  781  git commit -m "changes on get_bo"
+  782  git push origin master
+  783  git fetch --all
+  784  git reset --hard origin/master
+  785  git pull origin master
+  786  flask run -h 10.146.177.18 -p 7000
+  787  flask run -h 10.146.177.18 -p 6000
+  788  flask run -h 10.146.177.18 -p 7000
+  789  flask run -h 10.146.177.18 -p 5000
+  790  cd flask01/
+  791  source venv/bin/activate
+  792  flask run -h 10.146.177.18 -p 5000
+  793  cd flask01/
+  794  source venv/bin/activate
+  795  clear
+  796  flask run -h 10.146.177.18 -p 5000
+  797  cd flask01/
+  798  source venv/bin/activate
+  799  clear
+  800  git add .
+  801  git commit -m "get bo changes 2"
+  802  git push origin master
+  803  flask run -h 10.146.177.18 -p 5000
+  804  flask run -h 10.146.177.18 -p 6000
+  805  flask run -h 10.146.177.18 -p 7000
+  806  git add .
+  807  git commit -m "post changes"
+  808  git push origin master
+  809  cd flask01/
+  810  source venv/bin/activate
+  811  clear
+  812  flask run -h 10.146.177.18 -p 7000
+  813  cd flask01/
+  814  source venv/bin/activate
+  815  flask run -h 10.146.177.18 -p 7000
+  816  git add .
+  817  git commit -m "form changes "
+  818  git push origin master
+  819  cd flask01/
+  820  source venv/bin/activate
+  821  clear
+  822  flask run -h 10.146.177.18 -p 7000
+  823  sudo supervisorctl reload
+  824  flask db migrate
+  825  sudo supervisorctl reload
+  826  flask run -h 10.146.177.18 -p 7000
+  827  cd flask01/
+  828  source venv/bin/activate
+  829  flask run -h 10.146.177.18 -p 7000
+  830  flask run -h 10.146.177.18 -p 7000+
+  831  flask run -h 10.146.177.18 -p 7000
+  832  cd flask01/
+  833  source venv/bin/activate
+  834  clear
+  835  flask run -h 10.146.177.18 -p 7000
+  836  flask run -h 10.146.177.18 -p 6000
+  837  flask run -h 10.146.177.18 -p 5000
+  838  git add .
+  839  git commit -m "changes speed"
+  840  git push origin master
+  841  git fetch --all
+  842  git reset --hard
+  843  git reset --hard origin/master
+  844  git pull origin master
+  845  flask run -h 10.146.177.18 -p 5000
+  846  cd flask01/
+  847  source venv/bin/activate
+  848  clear
+  849  flask run -h 10.146.177.18 -p 5000
+  850  git add .
+  851  git commit -m "Changes Journals"
+  852  git push origin master
+  853  flask run -h 10.146.177.18 -p 5000
+  854  git push origin master
+  855  flask run -h 10.146.177.18 -p 5000
+  856  cd flask01/
+  857  source venv/bin/activate
+  858  clear
+  859  flask run -h 10.146.177.18 -p 5000
+  860  cd flask01/
+  861  source venv/bin/activate
+  862  clear
+  863  flask run -h 10.146.177.18 -p 5000
+  864  flask run -h 10.146.177.18 -p 7000
+  865  flask run -h 10.146.177.18 -p 8000
+  866  flask run -h 10.146.177.18 -p 9000
+  867  cd flask01/
+  868  source venv/bin/activate
+  869  clear
+  870  flask run -h 10.146.177.18 -p 9000
+  871  flask run -h 10.146.177.18 -p 5000
+  872  cd flask01/
+  873  source venv/bin/activate
+  874  git add .
+  875  git commit -m "javascript changes"
+  876  git push origin master
+  877  cd flask01/
+  878  source venv/bin/activate
+  879  clear
+  880  git fetch --all
+  881  git reset --hard origin/master
+  882  git pull origin master
+  883  flask run -h 10.146.177.18 -p 5000
+  884  git add .
+  885  git commit "new script changes "
+  886  git commit -m  "new script changes "
+  887  git push origin master
+  888  cd flask01/
+  889  source venv/bin/activate
+  890  clear
+  891  flask run -h 10.146.177.18 -p 5000
+  892  git fetch  --all
+  893  git reset --hard
+  894  git fetch  --all
+  895  git reset --hard
+  896  git reset --hard origin/master
+  897  git pull origin master
+  898  flask run -h 10.146.177.18 -p 5000
+  899  cd flask01/
+  900  source venv/bin/activate
+  901  flask run -h 10.146.177.18 -p 5000
+  902  flask run -h 10.146.177.18 -p 7000
+  903  cd flask01/
+  904  source venv/bin/activate
+  905  git fetch --all
+  906  git reset --hard
+  907  git reset --hard origin/master
+  908  git pull origin master
+  909  flask run -h 10.146.177.18 -p 7000
+  910  cd flask01/
+  911  source venv/bin/activate
+  912  git fetch --all
+  913  git reset --hard origin/master
+  914  git pull origin master
+  915  flask run -h 10.146.177.18 -p 7000
+  916  flask db migrate
+  917  flask db upgrade
+  918  flask run -h 10.146.177.18 -p 7000
+  919  mysql -u root -p
+  920  flask run -h 10.146.177.18 -p 7000
+  921  cd flask01/
+  922  source venv/bin/activate
+  923  clear
+  924  mysql -u root -p
+  925  flask run -h 10.146.177.18 -p 7000
+  926  flask run -h 10.146.177.18 -p 700
+  927  flask run -h 10.146.177.18 -p 7000
+  928  git add .
+  929  git commit -m "router changes"
+  930  git push origin master
+  931  cd flask01/
+  932  source venv/bin/activate
+  933  clear
+  934  git fetch --all
+  935  git reset --hard origin/master
+  936  python app/functions/dyndb.py 
+  937  mysql -u root -p
+  938  flask run -h 10.146.177.18 -p 7000
+  939  flask shell
+  940  flask run -h 10.146.177.18 -p 7000
+  941  sudo rm uploads/ahoehne/statistic_16-01-2019_ahoehne.xlsx 
+  942  flask run -h 10.146.177.18 -p 7000
+  943  sudo rm uploads/ahoehne/statistic_20-01-2019_ahoehne.xlsx 
+  944  flask run -h 10.146.177.18 -p 7000
+  945  flask shell
+  946  flask run -h 10.146.177.18 -p 7000
+  947  cd flask01/
+  948  source venv/bin/activate
+  949  clear
+  950  flask run -h 10.146.177.18 -p 7000
+  951  cd flask01/
+  952  source venv/bin/activate
+  953  clear
+  954  flask run -h 10.146.177.18 -p 7000
+  955  pip install flask-admin
+  956  flask run -h 10.146.177.18 -p 7000
+  957  flask shell
+  958  flask run -h 10.146.177.18 -p 7000
+  959  clear
+  960  cd flask01/
+  961  source venv/bin/activate
+  962  clear
+  963  flask run -h 10.146.177.18 -p 7000
+  964  clear
+  965  cd flask01/
+  966  source venv/bin/activate
+  967  clear
+  968  flask run -h 10.146.177.18 -p 7000
+  969  cd flask01/
+  970  source venv/bin/activate
+  971  git add .
+  972  git commit -m "simplifying"
+  973  git push origin master
+  974  flask run -h 10.146.177.18 -p 7000
+  975  cd flask01/
+  976  source venv/bin/activate
+  977  clear
+  978  git fetch --all
+  979  git reset --hard origin/master
+  980  git pull origin master
+  981  cd ..
+  982  mkdir wiki
+  983  cd wiki
+  984  pip install MarkWiki
+  985  p/wheels/1d/b7/c4/2ea439a10f77153d7ad07de686b120a552b5db3dcdcda9aace
+  986  markwiki
+  987  markwiki -h 10.146.177.18 -p 9000
+  988  markwiki -h
+  989  export MARKWIKI_SETTINGS="/home/ahoehne/wiki/production.config"
+  990  sudo nano /home/ahoehne/wiki/production.config
+  991  markwiki 
+  992  sudo nano /home/ahoehne/wiki/production.config
+  993  markwiki 
+  994  sudo markwiki 
+  995  sudo chown ahoehne:ahoehne /var/www/markwiki
+  996  mkdir /var/www/markwiki
+  997  sudo mkdir /var/www/markwiki
+  998  markwiki 
+  999  sudo chown ahoehne:ahoehne /var/www/markwiki
+ 1000  markwiki 
+ 1001  sudo nano /home/ahoehne/wiki/production.config
+ 1002  markwiki 
+ 1003  sudo nano /home/ahoehne/wiki/production.config
+ 1004  markwiki 
+ 1005  cd ..
+ 1006  cdf flask01/
+ 1007  cd flask01/
+ 1008  flask run -h 10.146.177.18 -p 7000
+ 1009  cd ..
+ 1010  cd flask01/
+ 1011  flask run -h 10.146.177.18 -p 7000
+ 1012  pip unistall markwiki
+ 1013  pip uninstall markwiki
+ 1014  flask run -h 10.146.177.18 -p 7000
+ 1015  EXPORT FLASK_APP=flask01.py
+ 1016  export FLASK_APP=flask01.py
+ 1017  flask run -h 10.146.177.18 -p 7000
+ 1018  cd ..
+ 1019  sudo rm -r wiki
+ 1020  sudo rm -r /var/www/markwiki/
+ 1021  flask run -h 10.146.177.18 -p 7000
+ 1022  git fetch --all
+ 1023  cd flask01/
+ 1024  source venv/bin/activate
+ 1025  flask run -h 10.146.177.18 -p 7000
+ 1026  git fetch --all
+ 1027  git reset --hard origin/master
+ 1028  flask run -h 10.146.177.18 -p 7000
+ 1029  pip install flask 
+ 1030  flask run -h 10.146.177.18 -p 7000
+ 1031  ls
+ 1032  markwiki run -h 10.146.177.18 -p 7000
+ 1033  flask run -h 10.146.177.18 -p 7000
+ 1034  flusk run -h 10.146.177.18 -p 7000
+ 1035  flask
+ 1036  export FLASK_APP=flask01.py
+ 1037  flask run -h 10.146.177.18 -p 7000
+ 1038  ls
+ 1039  python
+ 1040  flask run -h 10.146.177.18 -p 7000
+ 1041  sudo reboot
+ 1042  cd flask01/
+ 1043  source venv/bin/activate
+ 1044  flask run -h 10.146.177.18 -p 7000
+ 1045  flask run -h 10.146.177.18 -p 5000
+ 1046  cd flask01/
+ 1047  source venv/bin/activate
+ 1048  flask run -h 10.146.177.18 -p 7000
+ 1049  pyton --version 
+ 1050  python --version 
+ 1051  python -m install flask
+ 1052  pip install flask
+ 1053  pip upgrade  flask
+ 1054  pip --upgrade  flask
+ 1055  pip install --upgrade flask
+ 1056  flask run -h 10.146.177.18 -p 7000
+ 1057  pip install --upgrade flask_wtf 
+ 1058  flask run -h 10.146.177.18 -p 7000
+ 1059  cd flask01/
+ 1060  source venv/bin/activate
+ 1061  flask run -h 10.146.177.18 -p 7000
+ 1062  flask run -h 10.146.177.18 -p 3000
+ 1063  pip install --upgrade flask_login
+ 1064  flask run -h 10.146.177.18 -p 7000
+ 1065  clear
+ 1066  git fetch --all
+ 1067  cd flask01/
+ 1068  source venv/bin/activate
+ 1069  git fetch --all
+ 1070  git reser --hard origin/master
+ 1071  git reset --hard origin/master
+ 1072  git pull origin master 
+ 1073  clear
+ 1074  flask run -h 10.146.177.18 -p 7000
+ 1075  clear
+ 1076  cd flask01/
+ 1077  source venv/bin/activate
+ 1078  clear
+ 1079  flask run -h 10.146.177.18 -p 7000
+ 1080  clear
+ 1081  clear
+ 1082  cd flask01/
+ 1083  source venv/bin/activate
+ 1084  flask run -h 10.146.177.18 -p 7000
+ 1085  flask shell
+ 1086  flask run -h 10.146.177.18 -p 7000
+ 1087  cd flask01/
+ 1088  source venv/bin/activate
+ 1089  flask run -h 10.146.177.18 -p 7000
+ 1090  flask run -h 10.146.177.18 -p 5000
+ 1091  flask shell
+ 1092  flask run -h 10.146.177.18 -p 5000
+ 1093  flask shell
+ 1094  flask run -h 10.146.177.18 -p 5000
+ 1095  flask db migrate
+ 1096  flask db upgrade
+ 1097  flask run -h 10.146.177.18 -p 5000
+ 1098  git fetch --all
+ 1099  git reset --hard origin/master
+ 1100  cd flask01/
+ 1101  source venv/bin/activate
+ 1102  clear
+ 1103  cd flask01/
+ 1104  flask run -h 10.146.177.18 -p 5000
+ 1105  source venv/bin/activate
+ 1106  clear
+ 1107  flask run -h 10.146.177.18 -p 5000
+ 1108  cd migrations/
+ 1109  ls
+ 1110  sudo nano script.py.mako 
+ 1111  ls
+ 1112  cd versions/
+ 1113  ls
+ 1114  sudo nano fe537248b19e_.py
+ 1115  cd ..
+ 1116  ls
+ 1117  python script.py.mako
+ 1118  cd ..
+ 1119  flask run -h 10.146.177.18 -p 5000
+ 1120  ls migrations/versions/
+ 1121  flask run -h 10.146.177.18 -p 5000
+ 1122  flask db upgrade
+ 1123  flask run -h 10.146.177.18 -p 5000
+ 1124  sudo nano logs/
+ 1125  cd logs/
+ 1126  ls
+ 1127  sudo nano microblog.log
+ 1128  cd ..
+ 1129  flask run -h 10.146.177.18 -p 5000
+ 1130  flask db migrate
+ 1131  flask db upgrade
+ 1132  flask run -h 10.146.177.18 -p 5000
+ 1133  source venv/bin/ac
+ 1134  source venv/bin/activate
+ 1135  source /venv/bin/activate
+ 1136  ls
+ 1137  ls venv/bin/
+ 1138  cd flask01/
+ 1139  source venv/bin/activate
+ 1140  python
+ 1141  source jenv/bin/activate
+ 1142  python3 -m  jenv jenv
+ 1143  python3 -m  jenv /jenv
+ 1144  python3 -m  venv jenv
+ 1145  source jenv/bin/activate
+ 1146  python 
+ 1147  mkdir getnerd
+ 1148  cd getnerd/
+ 1149  pip install flask 
+ 1150  sudo nano /etc/samba/smb.conf
+ 1151  sudo service smbd restart
+ 1152  history
+ 1153  mkdir app uploads
+ 1154  ls
+ 1155  mkdir app/main app/auth app/errors app/static app/templates
+ 1156  sudo cp /home/ahoehne/flask01/app/auth/ app
+ 1157  sudo cp -R /home/ahoehne/flask01/app/auth/ app
+ 1158  ls app/
+ 1159  sudo rm -R app/errors/
+ 1160  sudo cp -R /home/ahoehne/flask01/app/errors/ app
+ 1161  sudo cp -R /home/ahoehne/flask01/app/__init__.py app
+ 1162  sudo cp -R /home/ahoehne/flask01/config.py 
+ 1163  sudo cp -R /home/ahoehne/flask01/config.py .
+ 1164  ls
+ 1165  sudo cp -R /home/ahoehne/flask01/flask01.py .
+ 1166  sudo cp -R /home/ahoehne/flask01/server.py .
+ 1167  sudo cp -R /home/ahoehne/flask01/.gitignore .
+ 1168  sudo cp -R /home/ahoehne/flask01/boot.sh .
+ 1169  cd getnerd
+ 1170  cd ..
+ 1171  source jenv/bin/activate
+ 1172  cd getnerd/
+ 1173  mysql -u root -p
+ 1174  cd ..
+ 1175  chown -r ahoehne:ahoehne getnerd/
+ 1176  chown -R ahoehne:ahoehne getnerd/
+ 1177  sudo chown -R ahoehne:ahoehne getnerd/
+ 1178  cp /home/ahoehne/flask01/requirements.txt .
+ 1179  cp requirements.txt getnerd/
+ 1180  pip intstall -r requirements.txt
+ 1181  pip install -r requirements.txt
+ 1182  flask run -h 10.146.177.18 -p 5000
+ 1183  export FLASK_APP=getnerd.py
+ 1184  flask run -h 10.146.177.18 -p 5000
+ 1185  cd getnerd/
+ 1186  flask run -h 10.146.177.18 -p 5000
+ 1187  pip install cli
+ 1188  cp /home/ahoehne/flask01/app/cli.py app
+ 1189  flask run -h 10.146.177.18 -p 5000
+ 1190  cp models.py app
+ 1191  sudo rm models.py 
+ 1192  flask run -h 10.146.177.18 -p 5000
+ 1193  cp /home/ahoehne/flask01/app/email.py app
+ 1194  flask run -h 10.146.177.18 -p 5000
+ 1195  cp - -R /home/ahoehne/flask01/app/templates/auth/  app/templates/
+ 1196  cp  -R /home/ahoehne/flask01/app/templates/auth/  app/templates/
+ 1197  flask run -h 10.146.177.18 -p 5000
+ 1198  cp /home/ahoehne/flask01/app/templates/errors/ app/templates/
+ 1199  cp -R /home/ahoehne/flask01/app/templates/errors/ app/templates/
+ 1200  flask run -h 10.146.177.18 -p 5000
+ 1201  flask db init
+ 1202  flask db migrate -m "User and Post Models"
+ 1203  flask db upgrade
+ 1204  flask run -h 10.146.177.18 -p 5000
+ 1205  git init .
+ 1206  git add .
+ 1207  git commit -m "Create Flask Template"
+ 1208  git remote add origin https://github.com/Timesol/getnerd.git
+ 1209  git push -u origin master
+ 1210  python -m smtpd -n -c DebuggingServer localhost:8025
+ 1211  cd flask01/
+ 1212  cd ..
+ 1213  cd getnerd/
+ 1214  cd ..
+ 1215  source jenv/bin/activate
+ 1216  cd getnerd/
+ 1217  clear
+ 1218  flask run -h 10.146.177.18 -p 5000
+ 1219  sudo cp -R /home/ahoehne/flask01/app/templates/email/ app/templates/
+ 1220  flask run -h 10.146.177.18 -p 5000
+ 1221  mkdir app/static/css
+ 1222  flask run -h 10.146.177.18 -p 5000
+ 1223  cd getnerd/
+ 1224  cd ..
+ 1225  source jenv/bin/activate
+ 1226  cd getnerd/
+ 1227  flask run -h 10.146.177.18 -p 5000
+ 1228  python -m smtpd -n -c DebuggingServer localhost:8025
+ 1229  cd myfoxit/
+ 1230  source jenv/bin/activate
+ 1231  python -m smtpd -n -c DebuggingServer localhost:8025
+ 1232  sudo cp -R /home/ahoehne/flask01/app/static/ app
+ 1233  sudo rm -r app/static/
+ 1234  sudo mkdir app/static
+ 1235  sudo mkdir app/static/css
+ 1236  sudo mkdir app/static/js
+ 1237  sudo cp -R /home/ahoehne/flask01/app/static/css/style.css app/static/css/
+ 1238  sudo chow -R ahoehne:ahoehne app
+ 1239  sudo chown -R ahoehne:ahoehne app
+ 1240  cd getnerd/
+ 1241  cd ..
+ 1242  sudo rm -R getnerd/
+ 1243  mkdir myfoxit
+ 1244  cd myfoxit/
+ 1245  python3 venv -m jenv
+ 1246  python3 -m venv jenv
+ 1247  source jenv/bin/activate
+ 1248  git init 
+ 1249  git remote add origin https://github.com/Timesol/getnerdprod
+ 1250  git fetch --all
+ 1251  git reset --hard origin/master
+ 1252  ls
+ 1253  sudo nano /etc/samba/smb.conf
+ 1254  sudo service smbd restart
+ 1255  mysql -u root -p
+ 1256  pip install -r requirements.txt 
+ 1257  pip install bdist_wheel
+ 1258  pip install cryptography
+ 1259  pip install-f --upgrade  cryptography
+ 1260  pip install -f --upgrade  cryptography
+ 1261  pip install -I  cryptography
+ 1262  pip install wheel
+ 1263  pip install -I  cryptography
+ 1264  flask run -h 10.146.177.18 -p 5000
+ 1265  flask db init
+ 1266  flask db migrate
+ 1267  flask db upgrade
+ 1268  flask run -h 10.146.177.18 -p 5000
+ 1269  sudo cp -R /home/ahoehne/flask01/app/templates/email/ app
+ 1270  flask run -h 10.146.177.18 -p 5000
+ 1271  sudo cp -R /home/ahoehne/flask01/app/templates/email/ app/templates/
+ 1272  flask run -h 10.146.177.18 -p 5000
+ 1273  export MAIL_SERVER=localhost
+ 1274  export MAIL_PORT=8025
+ 1275  flask run -h 10.146.177.18 -p 5000
+ 1276  git add .
+ 1277  git commit- m 'Design Changes on Loginpage'
+ 1278  git commit -m 'Design Changes on Loginpage'
+ 1279  git add .
+ 1280  git commit -m 'Design Changes on Loginpage'
+ 1281  git push origin master
+ 1282  git fetch --all
+ 1283  git fetch --all origin/master
+ 1284  git fetch --all 
+ 1285  git reset --hard origin/master
+ 1286  ls
+ 1287  git add .
+ 1288  git commit -m 'Design Changes on Loginpage'
+ 1289  sudo rm -R .git 
+ 1290  git init
+ 1291  git commit -m "first commit"
+ 1292  git add .
+ 1293  git commit -m "first commit"
+ 1294  git remote add origin https://github.com/Timesol/getnerdprod.git
+ 1295  git push -u origin master
+ 1296  flask run -h 10.146.177.18 -p 5000
+ 1297  cd myfoxit/
+ 1298  source jenv/bin/activate
+ 1299  flask run -h 10.146.177.18 -p 5000
+ 1300  history
+ 1301  history > command_history/05_02_2019.txt

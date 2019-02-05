@@ -75,14 +75,14 @@ def create_app(config_class=Config):
             mail_handler = SMTPHandler(
                 mailhost=(app.config['MAIL_SERVER'], app.config['MAIL_PORT']),
                 fromaddr='no-reply@' + app.config['MAIL_SERVER'],
-                toaddrs=app.config['ADMINS'], subject='Microblog Failure',
+                toaddrs=app.config['ADMINS'], subject='myFoxit Failure',
                 credentials=auth, secure=secure)
             mail_handler.setLevel(logging.ERROR)
             app.logger.addHandler(mail_handler)
 
         if not os.path.exists('logs'):
             os.mkdir('logs')
-        file_handler = RotatingFileHandler('logs/microblog.log',
+        file_handler = RotatingFileHandler('logs/myFoxit.log',
                                            maxBytes=10240, backupCount=10)
         file_handler.setFormatter(logging.Formatter(
             '%(asctime)s %(levelname)s: %(message)s '
@@ -91,7 +91,7 @@ def create_app(config_class=Config):
         app.logger.addHandler(file_handler)
 
         app.logger.setLevel(logging.INFO)
-        app.logger.info('Timesol startup')
+        app.logger.info('myFoxit startup')
 
         if app.config['LOG_TO_STDOUT']:
             stream_handler = logging.StreamHandler()
@@ -100,7 +100,7 @@ def create_app(config_class=Config):
         else:
             if not os.path.exists('logs'):
                 os.mkdir('logs')
-            file_handler = RotatingFileHandler('logs/microblog.log',
+            file_handler = RotatingFileHandler('logs/myFoxit.log',
                                                maxBytes=10240, backupCount=10)
             file_handler.setFormatter(logging.Formatter(
                 '%(asctime)s %(levelname)s: %(message)s '
@@ -109,7 +109,7 @@ def create_app(config_class=Config):
             app.logger.addHandler(file_handler)
 
         app.logger.setLevel(logging.INFO)
-        app.logger.info('Timesol startup')
+        app.logger.info('myFoxit startup')
 
     return app
 
