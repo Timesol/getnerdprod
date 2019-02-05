@@ -1,7 +1,7 @@
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
-from flask import Flask, request, current_app
+from flask import Flask, request, current_app,g
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
@@ -13,8 +13,7 @@ from config import Config
 from werkzeug.utils import secure_filename
 from flask import request
 from elasticsearch import Elasticsearch
-
-
+from flask import session
 
 
 #  Variable for setting path  
@@ -122,7 +121,15 @@ def create_app(config_class=Config):
 
 @babel.localeselector
 def get_locale():
-    return request.accept_languages.best_match(current_app.config['LANGUAGES'])
+
+    if session['lang']:
+        lan=session['lang']
+        print(lan)
+        return lan
+    else:
+        lan=request.accept_languages.best_match(current_app.config['LANGUAGES'])
+        print(lan)
+        return lan
 
 
 from app import models

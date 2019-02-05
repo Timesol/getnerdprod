@@ -53,7 +53,10 @@
                     {% else %}
                     <li><a href="{{ url_for('auth.logout') }}">{{ _('Logout') }}</a></li>
                     {% endif %}
+
+                 <li><a href="{{ url_for('main.langchange', lang='en') }}">{{ _('English') }}</a></li>
                 </ul>
+
             </div>
         </div>
     </nav>

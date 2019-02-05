@@ -1,0 +1,156 @@
+# Translations template for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-02-05 10:31+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: app/__init__.py:30
+msgid "Please log in to access this page."
+msgstr ""
+
+#: app/auth/email.py:8
+msgid "[Microblog] Reset Your Password"
+msgstr ""
+
+#: app/auth/forms.py:11 app/auth/forms.py:18 app/auth/forms.py:51
+msgid "Username"
+msgstr ""
+
+#: app/auth/forms.py:12 app/auth/forms.py:20 app/auth/forms.py:43
+msgid "Password"
+msgstr ""
+
+#: app/auth/forms.py:13
+msgid "Remember Me"
+msgstr ""
+
+#: app/auth/forms.py:14 app/auth/routes.py:36 app/templates/auth/login.html:5
+msgid "Sign In"
+msgstr ""
+
+#: app/auth/forms.py:19 app/auth/forms.py:38
+msgid "Email"
+msgstr ""
+
+#: app/auth/forms.py:22 app/auth/forms.py:45 app/auth/forms.py:55
+msgid "Repeat Password"
+msgstr ""
+
+#: app/auth/forms.py:24 app/auth/routes.py:59 app/templates/auth/login.html:14
+#: app/templates/auth/register.html:5
+msgid "Register"
+msgstr ""
+
+#: app/auth/forms.py:29
+msgid "Please use a different username."
+msgstr ""
+
+#: app/auth/forms.py:34
+msgid "Please use a different email address."
+msgstr ""
+
+#: app/auth/forms.py:39 app/auth/forms.py:47
+msgid "Request Password Reset"
+msgstr ""
+
+#: app/auth/forms.py:52
+msgid "Old Password"
+msgstr ""
+
+#: app/auth/forms.py:53
+msgid "New Password"
+msgstr ""
+
+#: app/auth/forms.py:57
+msgid "Change Password"
+msgstr ""
+
+#: app/auth/routes.py:29 app/auth/routes.py:100
+msgid "Invalid username or password"
+msgstr ""
+
+#: app/auth/routes.py:57
+msgid "Congratulations, you are now a registered user!"
+msgstr ""
+
+#: app/auth/routes.py:72
+msgid "Check your email for the instructions to reset your password"
+msgstr ""
+
+#: app/auth/routes.py:75 app/templates/auth/reset_password_request.html:5
+msgid "Reset Password"
+msgstr ""
+
+#: app/auth/routes.py:89
+msgid "Your password has been reset."
+msgstr ""
+
+#: app/templates/base.html:4
+msgid "Welcome to myFoxit"
+msgstr ""
+
+#: app/templates/base.html:34
+msgid "Home"
+msgstr ""
+
+#: app/templates/base.html:52
+msgid "Login"
+msgstr ""
+
+#: app/templates/base.html:54
+msgid "Logout"
+msgstr ""
+
+#: app/templates/auth/change_password.html:7
+msgid "Change Your Password"
+msgstr ""
+
+#: app/templates/auth/login.html:18
+msgid "Forgot Your Password?"
+msgstr ""
+
+#: app/templates/auth/login.html:19
+msgid "Click to Reset It"
+msgstr ""
+
+#: app/templates/auth/login.html:22
+msgid "Change Password?"
+msgstr ""
+
+#: app/templates/auth/login.html:23
+msgid "Click to Change It"
+msgstr ""
+
+#: app/templates/auth/reset_password.html:5
+msgid "Reset Your Password"
+msgstr ""
+
+#: app/templates/errors/404.html:4
+msgid "Not Found"
+msgstr ""
+
+#: app/templates/errors/404.html:5 app/templates/errors/500.html:6
+msgid "Back"
+msgstr ""
+
+#: app/templates/errors/500.html:4
+msgid "An unexpected error has occurred"
+msgstr ""
+
+#: app/templates/errors/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr ""
+
