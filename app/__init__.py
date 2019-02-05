@@ -121,17 +121,15 @@ def create_app(config_class=Config):
 
 @babel.localeselector
 def get_locale():
-    if request.args.get("lang"):
-        session["lang"] = request.args.get("lang")
-        return session.get("lang", "en")
-    elif session["lang"] is not None:
-        return str(session["lang"])
-        print('session var set')
-        
-    else:
-        lan=request.accept_languages.best_match(current_app.config['LANGUAGES'])
-        print(lan)
-        return lan
+    # if the user has set up the language manually it will be stored in the session,
+    # so we use the locale from the user settings
+    try:
+        language = session['language']
+    except KeyError:
+        language = None
+    if language is not None:
+        return language
+    return request.accept_languages.best_match(current_app.config['LANGUAGES'].keys())
 
 
 from app import models
