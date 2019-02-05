@@ -14,7 +14,7 @@ from werkzeug.utils import secure_filename
 from flask import request
 from elasticsearch import Elasticsearch
 from flask import session
-
+from dotenv import find_dotenv, load_dotenv
 
 #  Variable for setting path  
 
@@ -34,7 +34,9 @@ babel = Babel()
 
 
 def create_app(config_class=Config):
+
     app = Flask(__name__)
+
     app.config.from_object(config_class)
     app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
     db.init_app(app)
@@ -58,6 +60,12 @@ def create_app(config_class=Config):
 
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
+
+    @app.context_processor
+    def inject_conf_var():
+        return dict(
+               AVAILABLE_LANGUAGES=current_app.config['LANGUAGES'],
+               CURRENT_LANGUAGE=session.get('language',request.accept_languages.best_match(current_app.config['LANGUAGES'].keys())))
 
 
 
@@ -133,4 +141,5 @@ def get_locale():
 
 
 from app import models
+
 

@@ -4,18 +4,15 @@ from app.main import bp
 from flask_babel import _, get_locale
 from flask import session
 from app import babel
+from flask import app
 
-@bp.context_processor
-def inject_conf_var():
-    return dict(
-               AVAILABLE_LANGUAGES=current_app.config['LANGUAGES'],
-               CURRENT_LANGUAGE=session.get('language',request.accept_languages.best_match(current_app.config['LANGUAGES'].keys())))
+
 
 
 @bp.route('/language/<language>')
-def set_language(language=None):
+def language(language=None):
     session['language'] = language
-    return redirect(url_for('index'))
+    return redirect(url_for('main.index'))
 
 
 
@@ -29,4 +26,4 @@ def index():
 
 
 
-	return render_template('index.html', AVAILABLE_LANGUAGES=AVAILABLE_LANGUAGES)
+	return render_template('index.html')

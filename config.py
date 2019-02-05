@@ -9,7 +9,7 @@ class Config(object):
         'sqlite:///' + os.path.join(basedir, 'app.db')
    # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    POSTS_PER_PAGE = 3
+    POSTS_PER_PAGE = 4
     MAIL_SERVER = os.environ.get('MAIL_SERVER')
     MAIL_PORT = int(os.environ.get('MAIL_PORT') or 25)
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') is not None
@@ -18,7 +18,8 @@ class Config(object):
     ADMINS = ['itsecnew@gmail.com']
     LANGUAGES = {
   'en': 'English',
-  'de': 'Deutsch'
+  'de': 'Deutsch',
+  'es': 'Español'
 }
    # ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
     ELASTICSEARCH_URL='http://localhost:9200'

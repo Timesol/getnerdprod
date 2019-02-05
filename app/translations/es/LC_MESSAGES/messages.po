@@ -1,4 +1,4 @@
-# German translations for PROJECT.
+# Spanish translations for PROJECT.
 # Copyright (C) 2019 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-02-05 19:09+0100\n"
-"PO-Revision-Date: 2019-02-05 10:31+0100\n"
+"PO-Revision-Date: 2019-02-05 18:48+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: de\n"
-"Language-Team: de <LL@li.org>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -20,85 +20,85 @@ msgstr ""
 
 #: app/__init__.py:29
 msgid "Please log in to access this page."
-msgstr "Bitte einloggen um diese Seite zu sehen."
+msgstr ""
 
 #: app/auth/email.py:8
 msgid "[Microblog] Reset Your Password"
-msgstr "Passwort zurücksetzen"
+msgstr ""
 
 #: app/auth/forms.py:11 app/auth/forms.py:18 app/auth/forms.py:51
 #: app/main/forms.py:15
 msgid "Username"
-msgstr "Benutzername"
+msgstr ""
 
 #: app/auth/forms.py:12 app/auth/forms.py:20 app/auth/forms.py:43
 msgid "Password"
-msgstr "Passwort"
+msgstr ""
 
 #: app/auth/forms.py:13
 msgid "Remember Me"
-msgstr "Angemeldet bleiben"
+msgstr ""
 
 #: app/auth/forms.py:14 app/auth/routes.py:37 app/templates/auth/login.html:5
 msgid "Sign In"
-msgstr "Anmelden"
+msgstr ""
 
 #: app/auth/forms.py:19 app/auth/forms.py:38
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 #: app/auth/forms.py:22 app/auth/forms.py:45 app/auth/forms.py:55
 msgid "Repeat Password"
-msgstr "Passwort wiederholen"
+msgstr ""
 
 #: app/auth/forms.py:24 app/auth/routes.py:60 app/templates/auth/login.html:14
 #: app/templates/auth/register.html:5
 msgid "Register"
-msgstr "Registrieren"
+msgstr ""
 
 #: app/auth/forms.py:29
 msgid "Please use a different username."
-msgstr "Benutzername bereits vergeben."
+msgstr ""
 
 #: app/auth/forms.py:34
 msgid "Please use a different email address."
-msgstr "Enail Adresse bereits vergeben."
+msgstr ""
 
 #: app/auth/forms.py:39 app/auth/forms.py:47
 msgid "Request Password Reset"
-msgstr "Passwort zurücksetzen anfordern."
+msgstr ""
 
 #: app/auth/forms.py:52
 msgid "Old Password"
-msgstr "Altes Passwort"
+msgstr ""
 
 #: app/auth/forms.py:53
 msgid "New Password"
-msgstr "Neues Passwort"
+msgstr ""
 
 #: app/auth/forms.py:57
 msgid "Change Password"
-msgstr "Passwort ändern."
+msgstr ""
 
 #: app/auth/routes.py:30 app/auth/routes.py:101
 msgid "Invalid username or password"
-msgstr "Falscher Benutzername oder Passwort."
+msgstr ""
 
 #: app/auth/routes.py:58
 msgid "Congratulations, you are now a registered user!"
-msgstr "Super, Du bist nun registriert."
+msgstr ""
 
 #: app/auth/routes.py:73
 msgid "Check your email for the instructions to reset your password"
-msgstr "Prüfe dein Postfach und folge den Anweisungen zum Passwortzurücksetzen."
+msgstr ""
 
 #: app/auth/routes.py:76 app/templates/auth/reset_password_request.html:5
 msgid "Reset Password"
-msgstr "Passwort zurücksetzen."
+msgstr ""
 
 #: app/auth/routes.py:90
 msgid "Your password has been reset."
-msgstr "Dein Passwort wurde zurückgesetzt"
+msgstr ""
 
 #: app/main/forms.py:12
 msgid "Summarize your Problem"
@@ -118,7 +118,7 @@ msgstr ""
 
 #: app/templates/base.html:4
 msgid "Welcome to myFoxit"
-msgstr "Willkommen be myFoxit"
+msgstr ""
 
 #: app/templates/base.html:34
 msgid "Home"
@@ -134,27 +134,27 @@ msgstr ""
 
 #: app/templates/auth/change_password.html:7
 msgid "Change Your Password"
-msgstr "Ändere dein Passwort."
+msgstr ""
 
 #: app/templates/auth/login.html:18
 msgid "Forgot Your Password?"
-msgstr "Passwort vergessen?"
+msgstr ""
 
 #: app/templates/auth/login.html:19
 msgid "Click to Reset It"
-msgstr "Hier klicken zum zurücksetzen"
+msgstr ""
 
 #: app/templates/auth/login.html:22
 msgid "Change Password?"
-msgstr "Passwort ändern?"
+msgstr ""
 
 #: app/templates/auth/login.html:23
 msgid "Click to Change It"
-msgstr "Hier klicken zum ändern"
+msgstr ""
 
 #: app/templates/auth/reset_password.html:5
 msgid "Reset Your Password"
-msgstr "Passwort zurücksetzen"
+msgstr ""
 
 #: app/templates/errors/404.html:4
 msgid "Not Found"

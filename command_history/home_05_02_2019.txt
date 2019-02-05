@@ -1,0 +1,1000 @@
+ 1035  sudo apt-get install sublime-text 
+ 1036  subl
+ 1037  sudo rm  ~/.config/sublime-text-3
+ 1038  sudo rm -R  ~/.config/sublime-text-3
+ 1039  subl
+ 1040  sudo rm -R  ~/.config/sublime-text-3
+ 1041  subl#
+ 1042  subl
+ 1043  sudo nano  ~/.config/sublime-text-3
+ 1044  cd  ~/.config/sublime-text-3
+ 1045  ls
+ 1046  cd cache
+ 1047  cd Cache
+ 1048  ls
+ 1049  cd ..
+ 1050  sudo rm -R  ~/.config/sublime-text-3
+ 1051  cd  ~/.config/sublime-text-3
+ 1052  sduo apt-get purge --autoremove sublime-text
+ 1053  sudo apt-get purge --autoremove sublime-text
+ 1054  cd /opt
+ 1055  lsd
+ 1056  ls
+ 1057  cd containerd
+ 1058  ls
+ 1059  cd ..
+ 1060  sudo rm -R /opt
+ 1061  sudo reboot
+ 1062  subl
+ 1063  cleare
+ 1064  clear
+ 1065  sudo ssh ahoehne@192.168.0.192
+ 1066  exit
+ 1067  sudo apt-get install sublime-text 
+ 1068  subl
+ 1069  cd flask02/
+ 1070  source venv/bin/activate
+ 1071  cleare
+ 1072  clear
+ 1073  sudo chown ahoehne:ahoehne app
+ 1074  sudo subl
+ 1075  flask run -h 192.168.0.213 -p 5000
+ 1076  flask db migrate
+ 1077  flask db upgrade
+ 1078  flask run -h 192.168.0.213 -p 5000
+ 1079  python app/functions/sshcon.py 
+ 1080  pip install pxssh
+ 1081  pip install pexpect
+ 1082  python app/functions/sshcon.py 
+ 1083  pip install chilkat
+ 1084  flask shell
+ 1085  flask run -h 192.168.0.213 -p 5000
+ 1086  flask shell
+ 1087  flask run -h 192.168.0.213 -p 5000
+ 1088  pip install plotly 
+ 1089  python app/functions/charts.py
+ 1090  pip install matplotlib
+ 1091  python app/functions/charts.py
+ 1092  mkdir app/static/images
+ 1093  python app/functions/charts.py
+ 1094  ls
+ 1095  app 
+ 1096  cd app/static/
+ 1097  ls
+ 1098  cd ..
+ 1099  python app/functions/charts.py
+ 1100  ls app/static/
+ 1101  ls app/static/images/
+ 1102  flask run -h 192.168.0.213 -p 5000
+ 1103  ls
+ 1104  ls app
+ 1105  flask run -h 192.168.0.213 -p 5000
+ 1106  ls app/static/images/
+ 1107  flask run -h 192.168.0.213 -p 5000
+ 1108  python app/functions/sshcon.py 
+ 1109  pip install paramiko
+ 1110  python app/functions/sshcon.py 
+ 1111  ping 192.168.0.192
+ 1112  python app/functions/sshcon.py 
+ 1113  show arp
+ 1114  arp
+ 1115  sudo ssh ahoehne@192.168.0.220
+ 1116  sudo ssh ahoehne@192.168.0.248
+ 1117  sudo ssh ahoehne@192.168.0.220
+ 1118  python app/functions/sshcon.py 
+ 1119  ifconfig
+ 1120  sudo apt-get install openssh.server
+ 1121  python app/functions/sshcon.py 
+ 1122  ls
+ 1123  sudo apt-get install cmake g++ pkg-config git vim-common libwebsockets-dev libjson-c-dev libssl-dev
+ 1124  git clone https://github.com/tsl0922/ttyd.git
+ 1125  cd ttyd && mkdir build && cd build
+ 1126  cmake 
+ 1127  cmake
+ 1128  cmake ..
+ 1129  make && make install
+ 1130  cd ..
+ 1131  ls
+ 1132  ttyd -p 8080 bash -x
+ 1133  cd ttyd/
+ 1134  ttyd -p 8080 bash -x
+ 1135  ls
+ 1136  sudo cp /home/ahoehne/flask02/ttyd/build/ttyd /usr/local/bin/ttyd
+ 1137  ttyd -p 8080 bash -x
+ 1138  ttyd 192.168.0.213 -p 8080 bash -x
+ 1139  ttyd -h 192.168.0.213 -p 8080 bash -x
+ 1140  ttyd  -p 8080 bash -x
+ 1141  adduser pwacker
+ 1142  sudo adduser pwacker
+ 1143  ttyd -u pwacker -p 8080 bash -x
+ 1144  cd ..
+ 1145  ttyd  -p 8080 bash -x
+ 1146  id -u pwacker
+ 1147  ttyd -u 1001 -p 8080 bash -x
+ 1148  sudo ttyd -u 1001 -p 8080 bash -x
+ 1149  flask run -h 192.168.0.213 -p 5000
+ 1150  cd flask02/
+ 1151  flask run -h 192.168.0.213 -p 5000
+ 1152  ls
+ 1153  cd ..
+ 1154  cd Downloads/
+ 1155  ls
+ 1156  cd ..
+ 1157  cd flask02/
+ 1158  flask run -h 192.168.0.213 -p 5000
+ 1159  python app/functions/sshcon.py 
+ 1160  qbittorrent 
+ 1161  nautilus
+ 1162  cd ..
+ 1163  cd Downloads/
+ 1164  unzip Mastering Python Networking by Mike Schiller.zip -d 
+ 1165  unzip Mastering Python Networking by Mike Schiller.zip 
+ 1166  unzip mpy.zip 
+ 1167  unzip mpy
+ 1168  unzip mpy.zip
+ 1169  cd mpy/
+ 1170  unzip mpy.zip
+ 1171  ls
+ 1172  cd ..
+ 1173  cd flask02/
+ 1174  python app/functions/sshcon.py 
+ 1175  sudo chown ahoehne:ahoehne /home/ahoehne/.local/share/Trash/files
+ 1176  sudo rm -rf /home/ahoehne/.local/share/Trash/*
+ 1177  subl
+ 1178  sudo chmod 666 ~/.Trash
+ 1179  sudo chmod 666 /home/ahoehne/.local/share/Trash/files
+ 1180  ls -lpa ~ | grep Trash
+ 1181  sudo chmod 755 ~/.Trash
+ 1182  ls -lpa ~ | grep /home/ahoehne/.local/share/Trash/files
+ 1183  sudo apt-get update
+ 1184  sudo apt-get dist-upgrade
+ 1185  subl
+ 1186  cd /home/ahoehne/.local/share/Trash/files
+ 1187  sudo chown ahoehne:ahoehne /home/ahoehne/.local/share/Trash/files
+ 1188  cd /home/ahoehne/.local/share/Trash/files
+ 1189  sudo chmod -R 700 ~/.local/share/Trash/
+ 1190  cd /home/ahoehne/.local/share/Trash/files
+ 1191  sudo chmod -R 700 /home/ahoehne/.local/share/Trash/files
+ 1192  cd /home/ahoehne/.local/share/Trash/files
+ 1193  sudo subl
+ 1194  sudo ttyd -u 1001 -p 8080 bash -x
+ 1195  sudo ttyd  -p 8080 bash -x
+ 1196  ls
+ 1197  exit
+ 1198  cd flask02/
+ 1199  history
+ 1200  python app/functions/sshcon.py 
+ 1201  source venv/bin/activate
+ 1202  python app/functions/sshcon.py 
+ 1203  sudo ssh -L ahoehne@192.168.0.213 192.168.0.192
+ 1204  sudo ssh -A -t ahoehne@192.168.0.213 192.168.0.192
+ 1205  sudo ssh -A -t ahoehne@192.168.0.213 -A -t 192.168.0.192
+ 1206  sudo ssh -A -t ahoehne@192.168.0.213 ssh -A -t ahoehne@192.168.0.192
+ 1207  telnet 192.168.0.136
+ 1208  sudo ssh -A -t ahoehne@192.168.0.213 ssh -A -t ahoehne@192.168.0.192 -A telnet 192.168.0.136
+ 1209  python app/functions/sshcon.py 
+ 1210  flask run -h 192.168.0.213 -p 5000
+ 1211  flask shell
+ 1212  python app/functions/sshcon.py 
+ 1213  ahoehne
+ 1214  net7toor
+ 1215  python app/functions/sshcon.py 
+ 1216  eval "{ sleep 1; echo ahoehne; sleep 1; echo net7toor; sleep 1;  }" | telnet 192.168.0.136
+ 1217  eval "{ sleep 1; echo ahoehne; sleep 1; echo net7toor; sleep 1; echo 'ls'; sleep 15; }" | telnet 192.168.0.136
+ 1218  ls
+ 1219  python app/functions/sshcon.py 
+ 1220  ssh ahoehne@192.168.0.192
+ 1221  python app/functions/sshcon.py 
+ 1222  git add .
+ 1223  git commit -m "ssh configurations"
+ 1224  git push origin master 
+ 1225  qbittorrent 
+ 1226  python app/functions/sshcon.py 
+ 1227  sudo ssh ahoehne@192.168.0.192
+ 1228  python app/functions/sshcon.py 
+ 1229  ssh -L 2223:localhost:23 192.168.0.136
+ 1230  sudo ssh ahoehne@192.168.0.136
+ 1231  ssh -L 2223:localhost:23 192.168.0.136
+ 1232  telnet 192.168.0.136
+ 1233  ssh -L 2223:localhost:23 work03
+ 1234  ssh -L 2223:localhost:23 192.168.0.136
+ 1235  ssh -L 2223:192.168.0.192:23 192.168.0.136
+ 1236  telnet 192.168.0.136
+ 1237  python app/functions/sshcon.py 
+ 1238  telnet 192.168.0.136 192.168.0.192
+ 1239  eval "{{ sleep 1; echo {0}; sleep 1; echo {1}; sleep 10; echo df; sleep 5; }}" | telnet 192.168.0.136 
+ 1240  eval "{ sleep 1; echo {0}; sleep 1; echo {1}; sleep 10; echo df; sleep 5; }" | telnet 192.168.0.136 
+ 1241  eval "{ sleep 1; echo ahoehne; sleep 1; echo net7toor; sleep 10; echo df; sleep 5; }" | telnet 192.168.0.136 
+ 1242  eval "{ sleep 1; echo ahoehne; sleep 1; echo net7toor; sleep 10; echo telnet 192.168.0.192; sleep 5; }" | telnet 192.168.0.136 
+ 1243  eval "{ sleep 1; echo ahoehne; sleep 1; echo net7toor; sleep 10; echo telnet 192.168.0.192; echo ahoehne; sleep 1; echo net7toor; sleep 5; }" | telnet 192.168.0.136 
+ 1244  eval "{ sleep 1; echo ahoehne; sleep 1; echo net7toor; sleep 10; echo telnet 192.168.0.192; sleep 1; echo ahoehne; sleep 1; echo net7toor; sleep 5; }" | telnet 192.168.0.136 
+ 1245  eval "{ sleep 1; echo ahoehne; sleep 1; echo net7toor; sleep 10; echo telnet 192.168.0.192; sleep 1; echo ahoehne; sleep 1; echo net7toor; sleep 1; echo ls; sleep 5; }" | telnet 192.168.0.136 
+ 1246  telnet 192.168.0.136
+ 1247  eval "{ sleep 1; echo ahoehne; sleep 1; echo net7toor; sleep 10; echo telnet 192.168.0.192; sleep 1; echo ahoehne; sleep 1; echo net7toor; sleep 1; echo ls; sleep 5; }" | telnet 192.168.0.136 
+ 1248  python app/functions/sshcon.py 
+ 1249  ping 62.99.227.25
+ 1250  telnet  62.99.227.25
+ 1251  python app/functions/sshcon.py 
+ 1252  telnet  62.99.227.25
+ 1253  python app/functions/sshcon.py 
+ 1254  python app/functions/sshcon.py
+ 1255  git add .
+ 1256  git commit -m "cisco configs"
+ 1257  git push origin master 
+ 1258  qbittorrent 
+ 1259  python app/functions/sshcon.py
+ 1260  flask run -h 192.168.0.213 -p 5000
+ 1261  flask shell
+ 1262  flask run -h 192.168.0.213 -p 5000
+ 1263  flask shell
+ 1264  flask run -h 192.168.0.213 -p 5000
+ 1265  flask shell
+ 1266  flask run -h 192.168.0.213 -p 5000
+ 1267  flask shell
+ 1268  source venv/bin/activate
+ 1269  flask run -h 192.168.0.213 -p 5000
+ 1270  sudo nano test.sh
+ 1271  sudp apt-get install expect
+ 1272  sudo apt-get install expect
+ 1273  sh test.sh
+ 1274  sudo nano test.sh
+ 1275  sh test.sh
+ 1276  sudo nano test.sh
+ 1277  sh test.sh
+ 1278  sh test.sh 192.168.0.136 ahoehne
+ 1279  (echo password; echo "show ip route"; sleep 1; echo "quit" ) | telnet myrouter
+ 1280  (echo ahoehne; echo net7toor; sleep 1;  ) | telnet 192.168.0.136
+ 1281  (echo ahoehne; echo net7toor; sleep 2;  ) | telnet 192.168.0.136
+ 1282  (echo ahoehne; echo net7toor; sleep 5;  ) | telnet 192.168.0.136
+ 1283  (echo ahoehne; echo net7toor;   ) | telnet 192.168.0.136
+ 1284  (echo ahoehne; echo net7toor; sleep 30;  ) | telnet 192.168.0.136
+ 1285   telnet 192.168.0.136
+ 1286  telnet 192.168.0.136 | (echo ahoehne; echo net7toor; sleep 1;  ) | telnet 192.168.0.136
+ 1287  telnet 192.168.0.136 | (echo ahoehne; echo net7toor; sleep 1;  ) 
+ 1288  telnet 192.168.0.136 | (sleep 1; echo ahoehne; echo net7toor;   ) 
+ 1289  eval "{ echo ahoehne; sleep 1; echo net7toor; sleep 1; echo 'ls'; sleep 5; }" | telnet 192.168.0.136
+ 1290  eval "{ sleep 1; echo ahoehne; sleep 1; echo net7toor; sleep 1; echo 'ls'; sleep 5; }" | telnet 192.168.0.136
+ 1291  nautilus
+ 1292  telnet 0 2223
+ 1293  sudo fdisk -l
+ 1294  sudo mount -t auto /dev/sdb1 media
+ 1295  sudo mount -t auto /dev/sdb1 /media
+ 1296  cd /media/
+ 1297  ls
+ 1298  df -h
+ 1299  nautilus
+ 1300  rsync -R --info=progress2 /home/ahoehne/Downloads/bleach/ /media
+ 1301  rsync
+ 1302  rsync -r --info=progress2 /home/ahoehne/Downloads/bleach/ /media
+ 1303  sudo rsync -r --info=progress2 /home/ahoehne/Downloads/bleach/ /media
+ 1304  cd ..
+ 1305  flask run -h 192.168.0.213 -p 5000
+ 1306  ls
+ 1307  cd /home/ahoehne/flask02/
+ 1308  flask run -h 192.168.0.213 -p 5000
+ 1309  flask db migrate+
+ 1310  flask db migrate
+ 1311  flask db upgrade
+ 1312  flask run -h 192.168.0.213 -p 5000
+ 1313  git add .
+ 1314  git commit -m "Changes on Statistics"
+ 1315  git push origin master 
+ 1316  sudo rbeoot
+ 1317  sudo rebeoot
+ 1318  sudo reboot
+ 1319  startx
+ 1320  sudo apt-get install remmina#
+ 1321  sudo apt-get install remmina
+ 1322  java -version
+ 1323  sudo apt-get install default-jre
+ 1324  java -version
+ 1325  remmina
+ 1326  ping 192.168.0.81
+ 1327  remmina
+ 1328  cd flask02/
+ 1329  source venv/bin/activate
+ 1330  flask run -h 192.168.0.213 -p 5000
+ 1331  subl
+ 1332  flask run -h 192.168.0.213 -p 5000
+ 1333  flask db migrate
+ 1334  flask db upgrade
+ 1335  flask run -h 192.168.0.213 -p 5000
+ 1336  flask db migrate
+ 1337  flask db upgrade
+ 1338  flask run -h 192.168.0.213 -p 5000
+ 1339  flask db migrate
+ 1340  flask db upgrade
+ 1341  flask run -h 192.168.0.213 -p 5000
+ 1342  git commit -m "structure changes"
+ 1343  git add .
+ 1344  git commit -m "structure changes"
+ 1345  git push origin master
+ 1346  sh /home/ahoehne/Downloads/snx_install.sh
+ 1347  sudo sh /home/ahoehne/Downloads/snx_install.sh
+ 1348  sudo subl
+ 1349  sudo poweroff
+ 1350  subl
+ 1351  sudo suble
+ 1352  sudo subl
+ 1353  flask db migrate
+ 1354  cd /etc/mysql/
+ 1355  ls
+ 1356  sudo nano conf.
+ 1357  sudo nano my.cnf
+ 1358  sudo nano mysql.cnf 
+ 1359  cd conf.d/
+ 1360  ls
+ 1361  sudo nano mysql. 
+ 1362  cd ..
+ 1363  cd mysql.conf.d/
+ 1364  ls
+ 1365  sudo nano mysqld.cnf 
+ 1366  cd ..
+ 1367  cd /etc
+ 1368  sudo nano ~/.my.cnf
+ 1369  /etc/init.d/mysqld restart
+ 1370  init.d/mysqld restart
+ 1371  /init.d/mysqld restart
+ 1372  cd ..
+ 1373  /etc/init.d/mysql restart 
+ 1374  sudo reboot
+ 1375  cd Downloads/
+ 1376  ls
+ 1377  sh snx_install.sh 
+ 1378  sudo nano snx_install
+ 1379  sudo nano snx_install.sh 
+ 1380  sudo passwd root
+ 1381  sh snx_install.sh 
+ 1382  ls
+ 1383  sudo apt-get install java10-installer
+ 1384  sudo add-apt-repository ppa:linuxuprising/java
+ 1385  sudo apt update
+ 1386  sudo apt install oracle-java10-installer
+ 1387  apt-get install default-jdk
+ 1388  sudo apt-get install default-jdk
+ 1389  apt-get install software-properties-common
+ 1390  sudo apt-get install software-properties-common
+ 1391  add-apt-repository ppa:linuxuprising/java
+ 1392  sudo add-apt-repository ppa:linuxuprising/java
+ 1393  apt-get install oracle-java11-installer
+ 1394  sudo apt-get install oracle-java11-installer
+ 1395  ping 192.168.0.81
+ 1396  remmina
+ 1397  ls
+ 1398  sudo dpkg teamviewer_14.1.3399_amd64.deb
+ 1399  sudo dpkg -i teamviewer_14.1.3399_amd64.deb
+ 1400  teamviewer 
+ 1401  sudo teamviewer --daemon start 
+ 1402  teamviewer 
+ 1403  cd ..
+ 1404  cd flask02/
+ 1405  source venv/bin/activate
+ 1406  git fetch --all
+ 1407  git reset --hard origin/master
+ 1408  sudo git reset --hard origin/master
+ 1409  git pull origin master
+ 1410  flask db migrate
+ 1411  flask db upgrade
+ 1412  flask run -h 192.168.0.213 -p 5000
+ 1413  sudo subl
+ 1414  flask run -h 192.168.0.213 -p 5000
+ 1415  cd flask02/
+ 1416  source venv/bin/activate
+ 1417  clear
+ 1418  flask run -h 192.168.0.213 -p 5000
+ 1419  service mysql start
+ 1420  sudo nano /etc/mysql/my.cnf
+ 1421  service mysql start
+ 1422  service mysql stop
+ 1423  service mysql start
+ 1424  flask run -h 192.168.0.213 -p 5000
+ 1425  service mysql stop
+ 1426  sudo nano /etc/mysql/my.cnf
+ 1427  service mysql start
+ 1428  service mysql stop
+ 1429  sudo nano /etc/mysql/my.cnf
+ 1430  service mysql start
+ 1431  flask run -h 192.168.0.213 -p 5000
+ 1432  sudo nano /etc/mysql/conf.d/disable_strict_mode.cnf
+ 1433  sudo service mysql restart
+ 1434  flask run -h 192.168.0.213 -p 5000
+ 1435  sudo n rm /etc/mysql/conf.d/disable_strict_mode.cnf
+ 1436  sudo  rm /etc/mysql/conf.d/disable_strict_mode.cnf
+ 1437  sudo service mysql restart
+ 1438  flask run -h 192.168.0.213 -p 5000
+ 1439  flask db migrate
+ 1440  flask db upgrade
+ 1441  flask run -h 192.168.0.213 -p 5000
+ 1442  flask db migrate
+ 1443  flask db upgrade
+ 1444  flask shell
+ 1445  flask run -h 192.168.0.213 -p 5000
+ 1446  mysql -u root -p
+ 1447  flask db migrate
+ 1448  flask db upgrade
+ 1449  flask run -h 192.168.0.213 -p 5000
+ 1450  flask shell
+ 1451  flask run -h 192.168.0.213 -p 5000
+ 1452  chmod -R 077 /home/ahoehne/flask02/app/static/images/
+ 1453  sudo chmod -R 077 /home/ahoehne/flask02/app/static/images/
+ 1454  flask run -h 192.168.0.213 -p 5000
+ 1455  flask run -h 192.168.0.213 -p 5000
+ 1456  sudo chmod -R 077 /home/ahoehne/
+ 1457  flask run -h 192.168.0.213 -p 5000
+ 1458  sudo chmod -R 777 /home/ahoehne
+ 1459  flask run -h 192.168.0.213 -p 5000
+ 1460  flask shell
+ 1461  flask run -h 192.168.0.213 -p 5000
+ 1462  flask shell
+ 1463  flask run -h 192.168.0.213 -p 5000
+ 1464  unzip /home/ahoehne/Downloads/daterangepicker-master.zip 
+ 1465  cd /home/ahoehne/Downloads/
+ 1466  ls
+ 1467  cd ..
+ 1468  cd flask02/
+ 1469  ls
+ 1470  cd daterangepicker-master/
+ 1471  ls
+ 1472  cp moment.min.js /home/ahoehne/flask02/app/static
+ 1473  cp daterangepicker.js /home/ahoehne/flask02/app/static
+ 1474  cp daterangepicker.css /home/ahoehne/flask02/app/static/css/
+ 1475  cd ..
+ 1476  flask run -h 192.168.0.213 -p 5000
+ 1477  flask db migrate
+ 1478  flask db upgrade
+ 1479  flask run -h 192.168.0.213 -p 5000
+ 1480  flask shell
+ 1481  flask run -h 192.168.0.213 -p 5000
+ 1482  git add .
+ 1483  git commit -m "dates"
+ 1484  git diff upload.py
+ 1485  git diff app/templates/_statistics_tabs.html
+ 1486  gitk app/templates/_statistics_tabs.html
+ 1487  git log --follow -p -- app/templates/_statistics_tabs.html
+ 1488  cd flask 
+ 1489  cd flask02/
+ 1490  git add .
+ 1491  gitr commit - m "dates"
+ 1492  git commit - m "dates"
+ 1493  source venv/bin/activate
+ 1494  git commit - m "dates"
+ 1495  git commit -m "dates"
+ 1496  git add .
+ 1497  git commit -m "dates"
+ 1498  git commit -m "dates2"
+ 1499  git add .
+ 1500  git push origin master
+ 1501  flask run -h 192.168.0.213 -p 5000
+ 1502  nautilus
+ 1503  startx
+ 1504  cd flask02/
+ 1505  source venv/bin/activate
+ 1506  clear
+ 1507  flask run -h 192.168.0.213 -p 5000
+ 1508  git add .
+ 1509  git commit -m "Excel"
+ 1510  git push origin master 
+ 1511  git fetch --all
+ 1512  git reset --orgin/master
+ 1513  git reset --hard origin/master
+ 1514  git pull origin master
+ 1515  flask db migrate
+ 1516  flask db upgrade
+ 1517  flask run -h 192.168.0.213 -p 5000
+ 1518  flask shell
+ 1519  flask run -h 192.168.0.213 -p 5000
+ 1520  flask shell
+ 1521  flask run -h 192.168.0.213 -p 5000
+ 1522  flask shell
+ 1523  flask run -h 192.168.0.213 -p 5000
+ 1524  flask shell
+ 1525  flask run -h 192.168.0.213 -p 5000
+ 1526  [A
+ 1527  flask run -h 192.168.0.213 -p 5000
+ 1528  flask shell
+ 1529  flask run -h 192.168.0.213 -p 5000
+ 1530  flask shell
+ 1531  flask run -h 192.168.0.213 -p 5000
+ 1532  flask db migrate
+ 1533  flask db upgrade
+ 1534  flask run -h 192.168.0.213 -p 5000
+ 1535  git add .
+ 1536  git commit -m "changes journals"
+ 1537  git push origin master
+ 1538  git fetch --all
+ 1539  git reset --hard origin/master
+ 1540  sudo git reset --hard origin/master
+ 1541  git pull origin master
+ 1542  flask run -h 192.168.0.213 -p 5000
+ 1543  sudo chmod 777 /home/ahoehne/flask02/app/templates/journals/
+ 1544  flask run -h 192.168.0.213 -p 5000
+ 1545  cd ..
+ 1546  cd Downloads/
+ 1547  ls
+ 1548  unzip /home/ahoehne/Downloads/daterangepicker-master.zip 
+ 1549  unzip /home/ahoehne/Downloads/tinymce_4.9.2.zip /home/ahoehne/flask02/app/static/
+ 1550  unzip /home/ahoehne/Downloads/tinymce_4.9.2.zip -R /home/ahoehne/flask02/app/static/
+ 1551  unzip /home/ahoehne/Downloads/tinymce_4.9.2.zip  -d /home/ahoehne/flask02/app/static/
+ 1552  cd ..
+ 1553  cd flask02/
+ 1554  cd app/static/
+ 1555  ls
+ 1556  cd ..
+ 1557  flask run -h 192.168.0.213 -p 5000
+ 1558  cd app/static/
+ 1559  cd tinymce/
+ 1560  ls
+ 1561  cd js
+ 1562  ls
+ 1563  cd tinymce/
+ 1564  ls
+ 1565  cd .. 
+ 1566  cd ..
+ 1567  cd..
+ 1568  cd ..
+ 1569  flask run -h 192.168.0.213 -p 5000
+ 1570  git add .
+ 1571  git commit -m "Adding Rich Text Editor "
+ 1572  git push origin master
+ 1573  git fetch --all
+ 1574  git reset --hard origin/master
+ 1575  git pull origin
+ 1576  git pull origin master
+ 1577  flask run -h 192.168.0.213 -p 5000
+ 1578  git add .
+ 1579  git commit "network changes2"
+ 1580  git commit -m "network changes2"
+ 1581  git push origin master
+ 1582  git add .
+ 1583  git commit -m "network changes3"
+ 1584  git push origin master
+ 1585  flask run -h 192.168.0.213 -p 5000
+ 1586  git add .
+ 1587  git commit -m "Network Changes4"
+ 1588  git push origin master
+ 1589  git fetch --all
+ 1590  git reset --hard origin master
+ 1591  git reset --hard origin/master
+ 1592  git pull origin master
+ 1593  flask run -h 192.168.0.213 -p 5000
+ 1594  git add .
+ 1595  git commit -m "changes7"
+ 1596  git push origin master
+ 1597  git fetch --all
+ 1598  git reset --hard origin/master
+ 1599  git pull origin master
+ 1600  flask run -h 192.168.0.213 -p 5000
+ 1601  git fetch --all
+ 1602  git reset --hard origin/master
+ 1603  git pull origin master
+ 1604  flask run -h 192.168.0.213 -p 5000
+ 1605  [A
+ 1606  flask run -h 192.168.0.213 -p 5000
+ 1607  git add .
+ 1608  git commit -m "journals"
+ 1609  git push origin master
+ 1610  flask run -h 192.168.0.213 -p 5000
+ 1611  git fetch --all
+ 1612  git reset --hard origin/master
+ 1613  git pull origin master
+ 1614  flask run -h 192.168.0.213 -p 5000
+ 1615  cat<< EOF
+ 1616  feuer
+ 1617  feuer
+ 1618  feuer
+ 1619  EOF
+ 1620  flask run -h 192.168.0.213 -p 5000
+ 1621  git add . 
+ 1622  git commit -m "script changes"
+ 1623  git push origin master
+ 1624  git fetch --all
+ 1625  git reset --hard origin/master
+ 1626  git pull origin master#
+ 1627  git pull origin master
+ 1628  clear
+ 1629  flask run -h 192.168.0.213 -p 5000
+ 1630  flask run -h 192.168.0.213 -p 7000
+ 1631  git add .
+ 1632  git commit -m "loader changes"
+ 1633  git push origin master
+ 1634  flask run -h 192.168.0.213 -p 7000
+ 1635  git add .
+ 1636  git commit -m "loader changes2" 
+ 1637  git push origin master
+ 1638  flask db migrate
+ 1639  flask db upgrade
+ 1640  flask run -h 192.168.0.213 -p 7000
+ 1641  flask db migrate
+ 1642  flask db upgrade
+ 1643  flask run -h 192.168.0.213 -p 7000
+ 1644  sudo chmod -777 /home/ahoehne/flask02/uploads/configs/
+ 1645  flask run -h 192.168.0.213 -p 7000
+ 1646  history
+ 1647  chmod -R 077 /home/ahoehne/flask02/app/static/images/
+ 1648  sudo chmod -R 077 /home/ahoehne/flask02/app/uploads/configs/
+ 1649  sudo chmod -R 077 /home/ahoehne/flask02/uploads/configs/
+ 1650  flask run -h 192.168.0.213 -p 7000
+ 1651  flask db migrate
+ 1652  flask db upgrade
+ 1653  flask run -h 192.168.0.213 -p 7000
+ 1654  flask db migrate
+ 1655  flask db upgrade
+ 1656  flask run -h 192.168.0.213 -p 7000
+ 1657  flask db migrate
+ 1658  flask db upgrade
+ 1659  flask run -h 192.168.0.213 -p 7000
+ 1660  git add .
+ 1661  sudo git add .
+ 1662  git comiit -m "router changes"
+ 1663  git commit -m "router changes"
+ 1664  git push origin master
+ 1665  flask run -h 192.168.0.213 -p 7000
+ 1666  git fetch --all
+ 1667  git reset --hard origin/master
+ 1668  sudo git reset --hard origin/master
+ 1669  git pull origin master
+ 1670  flask run -h 192.168.0.213 -p 7000
+ 1671  flask db migrate
+ 1672  flask db upgrade
+ 1673  flask run -h 192.168.0.213 -p 7000
+ 1674  flask shell
+ 1675  flask run -h 192.168.0.213 -p 7000
+ 1676  pip  install flask-admin
+ 1677  flask run -h 192.168.0.213 -p 7000
+ 1678  mysql -u root -p
+ 1679  python app/functions/dyntables.py
+ 1680  git fetch --all
+ 1681  git reset --hard origin/master
+ 1682  sudo git reset --hard origin/master
+ 1683  flask run -h 192.168.0.213 -p 7000
+ 1684  git add .
+ 1685  git commit -m "standard"
+ 1686  git push origin master
+ 1687  flask run -h 192.168.0.213 -p 7000
+ 1688  sudo apt-get install libreoffice
+ 1689  sudo apt-get install libreoffice libreoffice-l10n-de libreoffice-help-de 
+ 1690  sudo apt-get -f install libreoffice libreoffice-l10n-de libreoffice-help-de 
+ 1691  sudo apt-get -f install libreoffice-calc
+ 1692  sudo apt-get install openoffice
+ 1693  sudo add-apt-repository ppa:upubuntu-com/office 
+ 1694  sudo apt-get update
+ 1695  sudo apt-get install openoffice
+ 1696  sudo add-apt-repository ppa:libreoffice/ppa
+ 1697  sudo apt update
+ 1698  sudo apt-get install openoffice
+ 1699  libreoffice
+ 1700  sudo apt install libreoffice-common
+ 1701  sudo poweroff
+ 1702  cd uploads/
+ 1703  ls
+ 1704  cd pwacker/
+ 1705  ls
+ 1706  sudo rm statistic_06-01-2019_pwacker.xlsx
+ 1707  ls
+ 1708  sudo rm wb = openpyxl.load_workbook(folder,read_only=False)
+ 1709  sudo rm statistic_06-01-2019_pwacker.xlsx
+ 1710  sudo subl
+ 1711  sudo chmod 777 /home/ahoehne/flask02/app/templates/router_configs/
+ 1712  sudo subl
+ 1713  history
+ 1714  telnet 62.99.227.25
+ 1715  hsitory
+ 1716  sudo chown ahoehne:ahoehne /home/ahoehne/flask02/app/static/images/pwacker_barplot.png'
+ 1717  :
+ 1718  #
+ 1719  sudo chown ahoehne:ahoehne /home/ahoehne/flask02/app/static/images/pwacker_barplot.png
+ 1720  history
+ 1721  sudo chmod -R 077 /home/ahoehne/flask02/app/static/images/
+ 1722  sudo chmod -R 077 /home/ahoehne/flask02/app/static/images/pwacker_barplot.png
+ 1723  sudo chmod -R chmod -R 755 /home/ahoehne/flask02/app/static/
+ 1724  sudo chmod -R 755 /home/ahoehne/flask02/app/static/
+ 1725   -h 192.168.0.213 -p 5000
+ 1726  sudo chmod -R 777 /home/ahoehne
+ 1727  flask run -h 192.168.0.213 -p 5000
+ 1728  flask shell
+ 1729  flask run -h 192.168.0.213 -p 5000
+ 1730  flask shell
+ 1731  flask run -h 192.168.0.213 -p 5000
+ 1732  unzip /home/ahoehne/Downloads/daterangepicker-master.zip 
+ 1733  cd /home/ahoehne/Downloads/
+ 1734  ls
+ 1735  cd ..
+ 1736  cd flask02/
+ 1737  ls
+ 1738  cd daterangepicker-master/
+ 1739  ls
+ 1740  cp moment.min.js /home/ahoehne/flask02/app/static
+ 1741  cp daterangepicker.js /home/ahoehne/flask02/app/static
+ 1742  cp daterangepicker.css /home/ahoehne/flask02/app/static/css/
+ 1743  cd ..
+ 1744  flask run -h 192.168.0.213 -p 5000
+ 1745  flask db migrate
+ 1746  flask db upgrade
+ 1747  flask run -h 192.168.0.213 -p 5000
+ 1748  flask shell
+ 1749  flask run -h 192.168.0.213 -p 5000
+ 1750  git add .
+ 1751  git commit -m "dates"
+ 1752  git diff upload.py
+ 1753  git diff app/templates/_statistics_tabs.html
+ 1754  gitk app/templates/_statistics_tabs.html
+ 1755  git log --follow -p -- app/templates/_statistics_tabs.html
+ 1756  cd flask 
+ 1757  cd flask02/
+ 1758  git add .
+ 1759  gitr commit - m "dates"
+ 1760  git commit - m "dates"
+ 1761  source venv/bin/activate
+ 1762  git commit - m "dates"
+ 1763  git commit -m "dates"
+ 1764  git add .
+ 1765  git commit -m "dates"
+ 1766  git commit -m "dates2"
+ 1767  git add .
+ 1768  git push origin master
+ 1769  flask run -h 192.168.0.213 -p 5000
+ 1770  nautilus
+ 1771  startx
+ 1772  sudo subl
+ 1773  flask run -h 192.168.0.213 -p 5000
+ 1774  cd flask02/
+ 1775  source venv/bin/activate
+ 1776  flask run -h 192.168.0.213 -p 5000
+ 1777  chown -R user:group /home/ahoehne/flask02/
+ 1778  chmod -R a+rwX /home/ahoehne/flask02/
+ 1779  sudo chmod -R a+rwX /home/ahoehne/flask02/
+ 1780  [A
+ 1781  flask run -h 192.168.0.213 -p 5000
+ 1782  git add .
+ 1783  git commit -m "dynamic db"
+ 1784  git push origin master
+ 1785  history 
+ 1786  chown -R user:group /home/ahoehne/flask02/
+ 1787  flask run -h 192.168.0.213 -p 5000
+ 1788  flask shell
+ 1789  flask run -h 192.168.0.213 -p 5000
+ 1790  git add.
+ 1791  git add .
+ 1792  git commit -m "making views more dynamically"
+ 1793  git push origin master
+ 1794  qbittorrent 
+ 1795  sudo apt-get install software-properties-common 
+ 1796  sudo apt-get -f install software-properties-common 
+ 1797  sudo apt-get purge --autoremove teamviewer
+ 1798  sudo apt-get -f install software-properties-common 
+ 1799  sudo apt-add-repository ppa:ansible/ansible
+ 1800  sudo apt-get update 
+ 1801  sudo apt-get install ansible
+ 1802  sudo vim /etc/ansible/hosts 
+ 1803  ansible -i hosts 62.99.227.25 -m ping
+ 1804  ansible -i /etc/ansible/hosts 62.99.227.25 -m ping
+ 1805  telnet 62.99.227.25
+ 1806  ansible -i /etc/ansible/hosts 62.99.227.25 -m ping
+ 1807  sudo ssh admin@62.99.227.25
+ 1808  ansible -i /etc/ansible/hosts 62.99.227.25 -m ping
+ 1809  ansible -u admin -i /etc/ansible/hosts 62.99.227.25 -m ping
+ 1810  sudo vim /etc/ansible/hosts 
+ 1811  ansible -u admin -i /etc/ansible/hosts 62.99.227.25 -m ping
+ 1812  sudo vim /etc/ansible/hosts 
+ 1813  ansible -u admin -i /etc/ansible/hosts 62.99.227.25 -m ping
+ 1814  ansible -u vagrant -i /etc/ansible/hosts 62.99.227.25 -m ping --ask-pass
+ 1815  ansible -u admin -i /etc/ansible/hosts 62.99.227.25 -m ping --ask-pass
+ 1816  sudo vim /etc/ansible/hosts 
+ 1817  ansible -u admin -i /etc/ansible/hosts 62.99.227.25 -m ping --ask-pass
+ 1818  sudo vim /etc/ansible/playbook_brief.yml
+ 1819  ansible -u admin -i /etc/ansible/hosts /etc/ansible/playbook_brief.yml --ask-pass
+ 1820  ansible -u admin -i /etc/ansible/hosts -m /etc/ansible/playbook_brief.yml --ask-pass
+ 1821  ansible -u admin -i /etc/ansible/hosts  62.99.227.25  -m /etc/ansible/playbook_brief.yml --ask-pass
+ 1822  sudo vim /etc/ansible/playbook_brief.yml
+ 1823  ansible -u admin -i /etc/ansible/hosts  62.99.227.25  -m /etc/ansible/playbook_brief.yml --ask-pass
+ 1824  cd ~/.ansible/plugins/modules/
+ 1825  cd /etc/ansible/plugins/modules/
+ 1826  ansible-playbook -u admin -i /etc/ansible/hosts  62.99.227.25  -m /etc/ansible/playbook_brief.yml --ask-pass
+ 1827  ansible-playbook -u admin -i /etc/ansible/hosts  62.99.227.25  /etc/ansible/playbook_brief.yml --ask-pass
+ 1828  ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass
+ 1829  sudo vim /etc/ansible/playbook_brief.yml
+ 1830  ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass
+ 1831  sudo vim /etc/ansible/playbook_brief.yml
+ 1832  ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass
+ 1833  sudo vim /etc/ansible/playbook_brief.yml
+ 1834  ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass
+ 1835  sudo vim /etc/ansible/playbook_brief.yml
+ 1836  ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass
+ 1837  sudo vim /etc/ansible/playbook_brief.yml
+ 1838  ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass
+ 1839  sudo ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass
+ 1840  sudo ssh admin@62.99.227.25
+ 1841  sudo ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass
+ 1842  sudo ssh admin@62.99.227.25
+ 1843  sudo ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass
+ 1844  ANSIBLE_DEBUG=1
+ 1845  sudo ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass
+ 1846  export ANSIBLE_DEBUG=1
+ 1847  sudo ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass
+ 1848  sudo nano /etc/ansible/ansible.cfg
+ 1849  sudo ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass
+ 1850  sudo nano /etc/ansible/ansible.cfg
+ 1851  sudo ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass
+ 1852  sudo ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass -c
+ 1853  sudo ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass -c local
+ 1854  sudo nano /etc/ansible/playbook_brief.yml 
+ 1855  sudo ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass -c local
+ 1856  ls
+ 1857  sudo nano /etc/ansible/playbook_brief.yml 
+ 1858  sudo ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass -c local
+ 1859  ls
+ 1860  sudo nano /etc/ansible/playbook_brief.yml 
+ 1861  sudo ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass -c local
+ 1862  ls
+ 1863  sudo nano /etc/ansible/hosts 
+ 1864  sudo ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass 
+ 1865  sudo nano /etc/ansible/hosts 
+ 1866  sudo nano /etc/ansible/playbook_brief.yml 
+ 1867  sudo ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass 
+ 1868  sudo nano /etc/ansible/playbook_brief.yml 
+ 1869  sudo ansible-playbook -u admin -i /etc/ansible/hosts  /etc/ansible/playbook_brief.yml --ask-pass 
+ 1870  cd /etc/ansible/
+ 1871  ls
+ 1872  git init
+ 1873  sudo git init
+ 1874  git commit -m "first commit"
+ 1875  sudo git commit -m "first commit"
+ 1876  git add .
+ 1877  sudo git add .
+ 1878  sudo git commit -m "first commit"
+ 1879  git remote add origin https://github.com/Timesol/Ansible.git
+ 1880  sudo git remote add origin https://github.com/Timesol/Ansible.git
+ 1881  git push -u origin master
+ 1882  sudo git push -u origin master
+ 1883  sudo ansible-playbook -u admin -i hosts  playbook_brief.yml  
+ 1884  sudo fdisk -l
+ 1885  sudo mount -t auto /dev/sdb1 /media
+ 1886  sudo rsync -r --info=progress2 /home/ahoehne/Downloads/got /media
+ 1887  nautilus
+ 1888  sudo subl
+ 1889  mkdir myfoxit
+ 1890  cd myfoxit/
+ 1891  python3 venv jenv
+ 1892  python3 -m venv jenv
+ 1893  source jenv/bin/activate
+ 1894  git init
+ 1895  git add remote https://github.com/Timesol/getnerd
+ 1896  git remote add origin https://github.com/Timesol/getnerd
+ 1897  git fetch --all
+ 1898  git reset --hard origin/master
+ 1899  sudo rm .git
+ 1900  sudo rm -R .git
+ 1901  git init
+ 1902  git add .
+ 1903  ls
+ 1904  git commit -m "first commit"
+ 1905  git remote add origin https://github.com/Timesol/getnerdprod.git
+ 1906  git push -u origin master
+ 1907  flask run -h 192.168.0.213 -p 5000
+ 1908  ls
+ 1909  sudo nano .env
+ 1910  flask run -h 192.168.0.213 -p 5000
+ 1911  export FLASK_APP=myfoxit.py
+ 1912  flask run -h 192.168.0.213 -p 5000
+ 1913  pip install -r  requirements.txt 
+ 1914  flask run -h 192.168.0.213 -p 5000
+ 1915  pip install wheel
+ 1916  flask run -h 192.168.0.213 -p 5000
+ 1917  pip install -r  requirements.txt 
+ 1918  flask run -h 192.168.0.213 -p 5000
+ 1919  pip install flask_sqlalchemy
+ 1920  flask run -h 192.168.0.213 -p 5000
+ 1921  python setup.py bdist_wheel 
+ 1922  pip install --upgrade pip
+ 1923  pip install -r  requirements.txt 
+ 1924  flask run -h 192.168.0.213 -p 5000
+ 1925  pip unistall flask_sqlalchemy
+ 1926  pip uninstall flask_sqlalchemy
+ 1927  pip install flask_sqlalchemy
+ 1928  flask run -h 192.168.0.213 -p 5000
+ 1929  mysql -u root -p
+ 1930  flask run -h 192.168.0.213 -p 5000
+ 1931  sudo apt-get install flask_sqlalchemy
+ 1932  pip install flask_sqlalchemy
+ 1933  pip install --upgrade --force-reinstall -r requirements.txt 
+ 1934  flask run -h 192.168.0.213 -p 5000
+ 1935  pip install flask
+ 1936  ls
+ 1937  flask db init
+ 1938  pip install python-dotenv"
+ 1939  pip install python-dotenv
+ 1940  flask db init
+ 1941  flask --help
+ 1942  export FLASK_APP=myfoxit.py
+ 1943  flask db init
+ 1944  ls
+ 1945  cd ..
+ 1946  cd flask02/
+ 1947  ls
+ 1948  cd ..
+ 1949  cd myfoxit/
+ 1950  ls
+ 1951  sudo reboot
+ 1952  sudo subl
+ 1953  qbittorrent 
+ 1954  git fetch --all
+ 1955  git reset --hard origin/master
+ 1956  flask run -h 192.168.0.213 -p 5000
+ 1957  export FLASK_APP=myfoxit.py
+ 1958  flask run -h 192.168.0.213 -p 5000
+ 1959  env
+ 1960  source jenv/bin/activate
+ 1961  ls
+ 1962  ls jenv/
+ 1963  ls jenv/bin
+ 1964  cd ..
+ 1965  ls
+ 1966  cd myfoxit/
+ 1967  sudo reboot
+ 1968  cd myfoxit/
+ 1969  source jenv/bin/activate
+ 1970  flask run -h 192.168.0.213 -p 5000
+ 1971  env
+ 1972  export FLASK_APP=myfoxit.py
+ 1973  env
+ 1974  flask run -h 192.168.0.213 -p 5000
+ 1975  nv/
+ 1976  ls jenv/bin
+ 1977  cd ..
+ 1978  ls
+ 1979  cd myfoxit/
+ 1980  sudo reboot
+ 1981  sudo subl
+ 1982  nautilus
+ 1983  cd myfoxit/
+ 1984  python 3 -m venv jenv
+ 1985  python3 -m venv jenv
+ 1986  source jenv/bin/activate
+ 1987  ls
+ 1988  flask run -h 192.168.0.213 -p 5000
+ 1989  cd myfoxit/
+ 1990  source nenv/bin/activate
+ 1991  flask run -h 192.168.0.213 -p 5000
+ 1992  export FLASK_APP=myfoxit.py
+ 1993  flask run -h 192.168.0.213 -p 5000
+ 1994  pybabel init -i messages.pot -d app/translations -l es
+ 1995  pybabel compile -d app/translations
+ 1996  flask run -h 192.168.0.213 -p 5000
+ 1997  current_app.config['LANGUAGES']
+ 1998  flask shell
+ 1999  pybabel extract -F babel.cfg -k _l -o messages.pot .
+ 2000  pip install --upgrade setuptools
+ 2001  pybabel extract -F babel.cfg -k _l -o messages.pot .
+ 2002  pybabel update -i messages.pot -d app/translations
+ 2003  flask run -h 192.168.0.213 -p 5000
+ 2004  pybabel init -i messages.pot -d app/translations -l ep
+ 2005  pip install --upgrade --force flask_babel
+ 2006  flask run -h 192.168.0.213 -p 5000
+ 2007  flask db migrate
+ 2008  flask db init
+ 2009  flask db migrate
+ 2010  flask db upgrade
+ 2011  mysql -u root -p
+ 2012  flask db init
+ 2013  sudo rm -R migrations/
+ 2014  flask db init
+ 2015  sudo rm /home/ahoehne/myfoxit/migrations/alembic.ini
+ 2016  flask db migrate
+ 2017  flask db init
+ 2018  sudo rm -R migrations/
+ 2019  sudo rm /home/ahoehne/myfoxit/migrations/alembic.ini
+ 2020  flask db init
+ 2021  flask db migrate
+ 2022  mysql -u root -p
+ 2023  flask db upgrade
+ 2024  env
+ 2025  export DATABASE_URL='mysql+pymysql://flask01:Katze7436!@localhost:3306/flask01'
+ 2026  env
+ 2027  export DATABASE_URL='mysql+pymysql://myfoxit:Katze7436!@localhost:3306/myfoxit'
+ 2028  env
+ 2029  flask db migrate
+ 2030  flask db upgrade
+ 2031  flask run -h 192.168.0.213 -p 5000
+ 2032  [A
+ 2033  flask run -h 192.168.0.213 -p 5000
+ 2034  history > command_history/home_05_02_2019.txt

@@ -54,11 +54,14 @@
                     <li><a href="{{ url_for('auth.logout') }}">{{ _('Logout') }}</a></li>
                     {% endif %}
 
-                 <li>{% for language in AVAILABLE_LANGUAGES.items() %}
+                 {% for language in AVAILABLE_LANGUAGES.items() %}
                      {% if CURRENT_LANGUAGE == language[0] %}
-                     {{ language[1] }}
+                     <li>
+
+                     <a><img src="{{url_for('static', filename='img/'+language[0]+'.png')}}"></li></a>
                      {% else %}
-                     <a href="{{ url_for('set_language', language=language[0]) }}" >{{ language[1] }}</a>
+                     <li>
+                     <a href="{{ url_for('main.language', language=language[0]) }}" ><img src="{{url_for('static', filename='img/'+language[0]+'.png')}}"></a>
                      {%  endif %}
                     {% endfor %}</li>
                 </ul>
