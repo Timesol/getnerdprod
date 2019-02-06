@@ -1,4 +1,15 @@
+create database myfoxitdb character set utf8 collate utf8_bin;
+create user 'myfoxitdb'@'localhost' identified by 'Katze7436!';
+grant all privileges on myfoxitdb.* to 'myfoxitdb'@'localhost';
+flush privileges;
+quit;
 
+
+backup.1378807@umts
+
+gashpur4
+
+81.223.39.32/28
 
 
 1464296 Contractid Referenzvertrag 

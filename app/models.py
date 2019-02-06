@@ -128,10 +128,12 @@ class Task(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     summary=db.Column(db.String(140))
     body = db.Column(db.String(1200))
-    internet=db.Column(db.Boolean())
+    internet=db.Column(db.String(16))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     tags = db.relationship('Tags', backref='task', lazy='dynamic')
+    city_id = db.Column(db.Integer, db.ForeignKey('city.id'))
+
 
 
 
@@ -155,6 +157,10 @@ class Mappoint(db.Model):
     plz=db.Column(db.String(16))
     additional_infos=db.Column(db.String(140))
 
+class City(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name=db.Column(db.String(64), unique=True)
+    citytasks = db.relationship('Task', backref='city', lazy='dynamic')
 
 
     
