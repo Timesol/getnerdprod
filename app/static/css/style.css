@@ -73,3 +73,17 @@
 
 border-top: 1px solid;
 }
+
+
+@media screen and (max-width: 600px) {
+
+
+textarea.form-control#body-add-task {
+    height: 350px;
+}
+
+
+
+
+
+}
