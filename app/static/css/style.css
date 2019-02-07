@@ -87,3 +87,25 @@ textarea.form-control#body-add-task {
 
 
 }
+
+#form-add-task label{
+
+color:#59697d;
+font-weight:normal;
+
+}
+
+
+#modal-task1 .modal-title{
+
+
+color:#59697d;
+
+
+}
+
+#internet-toogle{
+
+
+  color: white;
+}
