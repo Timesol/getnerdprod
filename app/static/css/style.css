@@ -88,12 +88,7 @@ textarea.form-control#body-add-task {
 
 }
 
-#form-add-task label{
 
-color:#59697d;
-font-weight:normal;
-
-}
 
 
 #modal-task1 .modal-title{
@@ -104,8 +99,10 @@ color:#59697d;
 
 }
 
-#internet-toogle{
+label.toogle-on{
 
-
-  color: white;
+color: #fff;
+text-align:center;
+padding-right: 10px;
 }
+
