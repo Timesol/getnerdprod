@@ -4,3 +4,32 @@ color:#59697d;
 font-weight:normal;
 
 }
+
+.toggle-on {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -12px;
+    right: 50%;
+    margin: 0;
+
+    }
+
+
+.index-button-task{
+
+padding: 4px 2vw;
+    padding-top: 4px;
+    padding-right: 2vw;
+    padding-bottom: 4px;
+    padding-left: 2vw;
+
+
+
+}
+
+div.row{
+
+display: flex;
+min-height: 10rem;
+}

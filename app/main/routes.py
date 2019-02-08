@@ -24,30 +24,36 @@ def language(language=None):
 @bp.route('/', methods=['GET', 'POST'])
 @bp.route('/index', methods=['GET', 'POST'])
 def index(city=None):
+    
+    city=City.query.filter_by(name=city).first()
+    
+
+
     available_citys=City.query.all()
     citys_list=[(i.id,i.name) for i in available_citys]
-
+    
     form_task=TaskForm()
-
+    
     form_task.city.choices = citys_list
-    city=City.query.filter_by(name=city).first()
-    print(city)
+    
+    
+    if form_task.validate_on_submit():
+                
+                task = Task(body=form_task.body.data, author=current_user,
+                    internet=form_task.internet.data, summary=form_task.summary.data)
+        
+                db.session.add(task)
+                db.session.commit()
+        
+                scity=City.query.get(form_task.city.data)
+                scity.citytasks.append(task)
+                db.session.commit()
 
     if city is not None:
         
         
         
-        if form_task.validate_on_submit():
-            
-            task = Task(body=form_task.body.data, author=current_user,
-                internet=form_task.internet.data, summary=form_task.summary.data)
-    
-            db.session.add(task)
-            db.session.commit()
-    
-            scity=City.query.get(form_task.city.data)
-            scity.citytasks.append(task)
-            db.session.commit()
+        
 
     
             
@@ -74,4 +80,14 @@ def index(city=None):
 
 
     return render_template('index.html',tasks=tasks.items, next_url=next_url,
-                           prev_url=prev_url,form_task=form_task)
+                           prev_url=prev_url, form_task=form_task)
+
+
+@bp.route('/add_task', methods=['GET', 'POST'])
+@login_required
+def add_task():
+
+    
+
+
+    return render_template('add_task.html')

@@ -58,10 +58,10 @@
                      {% if CURRENT_LANGUAGE == language[0] %}
                      <li>
 
-                     <a><img src="{{url_for('static', filename='img/'+language[0]+'.png')}}"></li></a>
+                     <a><img src="{{url_for('static', filename='img/'+language[0]+'.png')}}" style="width:32px; height:32px;"></li></a>
                      {% else %}
                      <li>
-                     <a href="{{ url_for('main.language', language=language[0]) }}" ><img src="{{url_for('static', filename='img/'+language[0]+'.png')}}"></a>
+                     <a href="{{ url_for('main.language', language=language[0]) }}" ><img src="{{url_for('static', filename='img/'+language[0]+'.png')}}" style="width:16px; height: 16px;"></a>
                      {%  endif %}
                     {% endfor %}</li>
                 </ul>
