@@ -1,7 +1,7 @@
 
 
 .button_blue_round {
-  background-color:#5772a1;
+  background-color:#db6c00;
   -moz-border-radius:25px;
   -webkit-border-radius:25px;
   border-radius:28px;
@@ -14,15 +14,18 @@
   text-decoration:none;
   width
   text-shadow:0px 1px 0px #283966;
-  border:1px solid #4e6096;
+ 
   width: 100%;
   text-align:center;
   margin: 1%;
 }
 .button_blue_round:hover {
-  background-color:#476e9e;
+  background-color:#d46b05;
   color:#ffffff;
   text-decoration: none;
+  -webkit-box-shadow: 0 10px 8px -8px #999;
+        -moz-box-shadow: 0 10px 8px -8px #999;
+             box-shadow: 0 10px 8px -8px #999;
 }
 .button_blue_round:active {
   position:relative;
@@ -54,6 +57,9 @@
 #login_button:hover {
   
   background-color:#f5f7fa;
+  -webkit-box-shadow: 0 10px 8px -8px #999;
+        -moz-box-shadow: 0 10px 8px -8px #999;
+             box-shadow: 0 10px 8px -8px #999;
  
 }
 #login_button:active {
@@ -63,17 +69,15 @@
 
 
 .navbar-default {
-    background-color: #fff;
-    border-bottom: 1px solid #d5d8e0;
+    background-color: #db6c00;
+         -webkit-box-shadow: 0 8px 6px -6px #999;
+        -moz-box-shadow: 0 8px 6px -6px #999;
+             box-shadow: 0 8px 6px -6px #999;
+   
 }
 
 
 
-.nav_top_border a:hover{
-
-border-bottom: 1px solid;
-
-}
 
 
 @media screen and (max-width: 600px) {
@@ -102,4 +106,64 @@ color:#59697d;
 
 .navbar-nav > li > a {  padding-bottom:5px !important; display:block; height: 50px}
 .navbar {min-height:32px !important}
+
+
+.navbar-default .navbar-nav > li > a{
+
+color:#fff;
+
+}
+.navbar-default .navbar-nav > li > a:hover{
+
+background-color:#f8e8d1;
+color: #6e5625;
+
+
+}
+
+
+.navbar-default .navbar-brand{
+
+
+color:#fbeac8;
+ 
+
+
+}
+
+.navbar-default .navbar-brand:hover{
+
+
+background-color:#f8e8d1;
+color: #6e5625;
+
+}
+
+
+
+
+.navbar-default{
+  text-align:center;
+}
+
+
+#bottom-nav {
+  position: fixed;
+  bottom: 0;
+}
+
+
+
+.banner-container{
+            background: url('../img/fox-banner.png') no-repeat  fixed;
+            -webkit-background-size:auto;
+            -moz-background-size:auto;
+            -o-background-size:auto;
+            background-size:auto;
+            background-position: 0 0;
+
+        }
+
+
+
 

@@ -9,25 +9,13 @@
 
 
 <div class="container" id="Container-Index-Main-Content">
-{% if current_user.is_authenticated %}
-<div class="row  align-items-end">
-        <div class="col-sm-2 ">
-
-<button class="button_blue_round index-button-task" onclick="switch_content('Container-Index-Main-Content', 'Container-Index-Add-Task')">
-
-{% else %}
-<div class="row  align-items-end">
-        <div class="col-sm-2 ">
-
-<button class="button_blue_round index-button-task" onclick="window.location.href='{{ url_for('auth.login') }}'">
-  
-{% endif %}
-<span>{{_('Add task')}}</span>
-</button>
-</div>
-</div>
 
 
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
 <p></p>
   
     {% for task in tasks %}
@@ -47,16 +35,37 @@
             </li>
         </ul>
     </nav>
-
+</div>
  </div> <!-- End Div Container Index-Main-Content -->
 
-<div class="container" id="Container-Index-Add-Task" style="display:none;">
-    <div class="row  align-items-end">
-        <div class="col-sm-2 ">
-    <button class="button_blue_round index-button-task" onclick="switch_content('Container-Index-Add-Task','Container-Index-Main-Content', )">Back</button>
-    </div>
-    </div>
 
+<div class="container" id="Container-Index-Add-Task" style="display:none;">
+  
+  
+
+    <h1>Ask for help</h1>
+    <form action="" method="post" novalidate>
+        {{ form_task.hidden_tag() }}
+        <p>
+            {{ form_task.summary.label }}<br>
+            {{ form_task.summary(class="form-control") }}
+        </p>
+        <p>
+            {{ form_task.body.label }}<br>
+            {{ form_task.body(class="form-control") }}</p><p>
+
+            {{ form_task.internet.label }}<br>
+            {{ form_task.internet() }}</p>
+        <p>
+            {{ form_task.tags.label }}<br>
+            {{ form_task.tags(class="form-control") }}</p>
+
+            <p>{{ form_task.city.label }}<br>
+            {{ form_task.city(class="form-control") }}</p>
+
+        
+        <p>  {{ form_task.create() }}  </p>
+    </form>
 
 
 
@@ -65,6 +74,8 @@
 
 
 </div>
+
+
 
  
 {% endblock %}

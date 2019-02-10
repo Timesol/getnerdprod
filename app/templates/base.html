@@ -17,8 +17,10 @@
 {% endblock %}
 
 {% block navbar %}
+ 
 
-    <nav class="nav navbar-default nav_top_border" >
+
+    <nav class="nav navbar-default nav_top_border shadow p-3 mb-5 bg-white rounded navbar-fixed-top" >
         <div class="container" >
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -27,11 +29,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url_for('main.index') }}">myFoxit</a>
+                <a class="navbar-brand" href="{{ url_for('main.index') }}">Foxonauts</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
+                    {% if request.endpoint == 'main.index' %}
+                    <li><a id="main-button" class="glyphicon glyphicon-edit" onclick="switch_content('main-button','Container-Index-Main-Content', 'Container-Index-Add-Task','glyphicon-edit', 'glyphicon-menu-left' )">
+                        
+
+
+                    </a></li>
+                    {% endif %}
                 
                     
                     
@@ -69,10 +77,27 @@
             </div>
         </div>
     </nav>
+
+
+
+
+{% endblock %}
+
+
+{% block navbar2 %}
+
+
+
 {% endblock %}
 
 {% block content %}
 
+<div id="flex-container-fox" class="flex-container"> 
+<div id="flex-item-fox" class="flex-item">
+   <div class="banner-container" style="height:400px;"></div>
+
+</div>
+</div>
     <div class="container">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -83,10 +108,9 @@
         {% endwith %}
 
         {# application content needs to be provided in the app_content block #}
-        {% block app_content %}
+        {% block app_content %}{% endblock %}
 
-         
-        {% endblock %}
+
     
 {% endblock %}
 
@@ -99,3 +123,5 @@
 {% endblock %}
 
 {% block scripts_router %}{% endblock %}
+
+
