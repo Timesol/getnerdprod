@@ -166,4 +166,39 @@ color: #6e5625;
 
 
 
+.flex-container.task-wrapper {
+  display: flex;
+  align-content: space-around;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
 
+
+
+}
+
+.flex-item.task-wrapper {
+
+align-content: space-around;
+margin: 1%;
+border: 1px solid #e1e1e1;
+border-radius: 5px;
+width:30%;
+min-width:100px;
+height:200px;
+background-color: blue;
+
+
+
+}
+
+.task-summary{
+
+ word-wrap: break-word;
+  background-color: red;
+}
+
+.word-wrap{word-wrap: break-word;}
+
+
+body {word-wrap: break-word;}

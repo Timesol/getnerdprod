@@ -10,17 +10,27 @@
 
 <div class="container" id="Container-Index-Main-Content">
 
-
-
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-  
+    <div class="flex-container task-wrapper">
     {% for task in tasks %}
-        {% include '_task.html' %}
+
+    <div class="flex-item task-wrapper">
+        <div class="row">
+        <div class="col task-summary">{{task.summary}}</div>
+        </div>
+
+
+    </div>
+
+    
+   
     {% endfor %}
+
+</div>
+
+
+
+
+
     <nav aria-label="...">
         <ul class="pager">
             <li class="previous{% if not prev_url %} disabled{% endif %}">
