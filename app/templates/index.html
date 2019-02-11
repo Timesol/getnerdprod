@@ -14,12 +14,18 @@
     {% for task in tasks %}
 
     <div class="flex-item task-wrapper">
-        <div class="row">
-        <div class="col task-summary">{{task.summary}}</div>
+        <div class="container-fluid" >
+        <div class="row task-rows" >
+        <div class="col-xs-12 task-infos ">{{task.internet}}</div>
         </div>
-
-
-    </div>
+        <div class="row task-rows">
+        <div class="col-xs-12 task-summary">{{task.summary}}</div>
+        </div>
+        <div class="row task-rows">
+        <div class="col-xs-12 task-summary">{{task.tags}}</div>
+        </div>
+        </div>
+        </div>
 
     
    

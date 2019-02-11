@@ -33,3 +33,8 @@ div.row{
 display: flex;
 min-height: 10rem;
 }
+
+div.row.task-rows {
+    display: flex;
+    min-height: 4rem;
+}

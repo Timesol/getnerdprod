@@ -172,8 +172,7 @@ color: #6e5625;
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
-
-
+  
 
 }
 
@@ -186,7 +185,8 @@ border-radius: 5px;
 width:30%;
 min-width:100px;
 height:200px;
-background-color: blue;
+
+word-wrap: break-word;
 
 
 
@@ -194,11 +194,14 @@ background-color: blue;
 
 .task-summary{
 
- word-wrap: break-word;
-  background-color: red;
+
+
 }
 
-.word-wrap{word-wrap: break-word;}
 
 
-body {word-wrap: break-word;}
+
+div.row {
+    display: flex;
+    min-height: 4rem;
+}
