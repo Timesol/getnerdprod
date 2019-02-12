@@ -8,7 +8,7 @@ from flask import app
 from app.models import Task,City,User
 from app.main.forms import TaskForm
 from app import db
-
+import os
 
 
 
@@ -30,6 +30,10 @@ def index(city=None):
 
 
     available_citys=City.query.all()
+    folder=os.environ.get('ICON_FOLDER')
+    filelist=[]
+    for x in os.listdir(folder):
+        filelist.append(x)
     citys_list=[(i.id,i.name) for i in available_citys]
     
     form_task=TaskForm()
@@ -80,7 +84,7 @@ def index(city=None):
 
 
     return render_template('index.html',tasks=tasks.items, next_url=next_url,
-                           prev_url=prev_url, form_task=form_task)
+                           prev_url=prev_url, form_task=form_task,filelist=filelist)
 
 
 @bp.route('/add_task', methods=['GET', 'POST'])

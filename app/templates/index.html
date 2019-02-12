@@ -20,9 +20,10 @@
 
 
 
-        {% if task.internet == 1 %}
+        {% if task.internet == '1' %}
         <i class="material-icons" style="color:green;">wifi</i>
         {% else %}
+        
         <i class="material-icons" style="color:#e1e1e1;">wifi_off</i>
         {% endif %}
     </div>
@@ -81,21 +82,59 @@
 
             {{ form_task.internet.label }}<br>
             {{ form_task.internet() }}</p>
+
+               <p>{{ form_task.city.label }}<br>
+            {{ form_task.city(class="form-control") }}</p>
         <p>
             {{ form_task.tags.label }}<br>
             {{ form_task.tags(class="form-control") }}</p>
 
-            <p>{{ form_task.city.label }}<br>
-            {{ form_task.city(class="form-control") }}</p>
+            
+            <p>  {{ form_task.create() }}  </p>
 
-        
-        <p>  {{ form_task.create() }}  </p>
-    </form>
+ </form>
 
 
+         <!-- The Modal -->
+<div class="modal" id="modal-tags1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header modal-lg">
+        <h4 class="modal-title">Choose categorys</h4>
+     
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      
+
+      <div class="modal-body modal-lg">
+        <form action="/action_page.php" method="get">
+      <div class="flex-container flex-icons">
+         {%for filename in filelist %}
+         <div class="flex-item flex-icons">
+            <input type="checkbox" id="{{filename.split('.')[0]}}" style="display: none;"/>
+           <label  class="checked-label"for="{{filename.split('.')[0]}}"><img src="{{url_for('static', filename='img/icons/')}}{{filename}}" style="width:32px; height:32px" ></label>
+
+          </div>
 
 
 
+
+
+
+
+         {% endfor %}
+          </div>
+          </form>
+        </div>
+
+       
+      </div>
+    </div>
+  </div>
 
 
 </div>
