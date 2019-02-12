@@ -179,18 +179,17 @@ color: #6e5625;
 .flex-item.task-wrapper {
 
 align-content: space-around;
-margin: 1%;
+margin: 10px;
 border: 1px solid #e1e1e1;
 border-radius: 5px;
 width:30%;
-min-width:100px;
-height:200px;
-
+min-width:300px;
+height:300px;
 word-wrap: break-word;
-
-
-
 }
+
+@media screen and (max-width: 680px) {.flex-item.task-wrapper{min-width:100%}}
+
 
 .task-summary{
 
@@ -198,10 +197,42 @@ word-wrap: break-word;
 
 }
 
+.flex-item.task-wrapper:hover{
+border: 2px solid #e1e1e1;
+-webkit-box-shadow: 0 8px 6px -6px #999;
+        -moz-box-shadow: 0 8px 6px -6px #999;
+             box-shadow: 0 8px 6px -6px #999;
+
+  
+}
 
 
 
 div.row {
     display: flex;
     min-height: 4rem;
+}
+
+.black-link{
+
+color:black;
+
+
+}
+
+
+.black-link:hover{
+
+color:black;
+
+
+
+}
+
+.black-link:visited{
+
+color:black;
+border:none;
+
+  
 }

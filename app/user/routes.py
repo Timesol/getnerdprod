@@ -9,7 +9,7 @@ from werkzeug.utils import secure_filename
 
 
 UPLOAD_FOLDER = os.environ.get('UPLOAD_FOLDER_ENV')
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'xlsx','cfg'])
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'xlsx','cfg','svg'])
 ALLOWED_EXTENSIONS_PANDAS = set(['xlsx'])
 def allowed_file(filename):
     return '.' in filename and \
@@ -29,7 +29,7 @@ def allowed_file_pandas(filename):
 @bp.route('/user/<username>', methods=['GET', 'POST'])
 @login_required
 def user(username):
-    folder=os.environ.get('UPLOAD_FOLDER')+current_user.username
+    folder=os.environ.get('ICON_FOLDER')
     filelist=[]
     for x in os.listdir(folder):
         filelist.append(x)

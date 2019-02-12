@@ -12,22 +12,31 @@
 
     <div class="flex-container task-wrapper">
     {% for task in tasks %}
-
-    <div class="flex-item task-wrapper">
+     <a href="#" class="black-link">
+    <div class="flex-item task-wrapper task-hover">
         <div class="container-fluid" >
         <div class="row task-rows" >
-        <div class="col-xs-12 task-infos ">{{task.internet}}</div>
+        <div class="col-xs-12 task-infos ">
+
+
+
+        {% if task.internet == 1 %}
+        <i class="material-icons" style="color:green;">wifi</i>
+        {% else %}
+        <i class="material-icons" style="color:#e1e1e1;">wifi_off</i>
+        {% endif %}
+    </div>
         </div>
         <div class="row task-rows">
-        <div class="col-xs-12 task-summary">{{task.summary}}</div>
+        <div class="col-xs-12 task-summary">{{task.summary[:70]}} ...</div>
         </div>
         <div class="row task-rows">
-        <div class="col-xs-12 task-summary">{{task.tags}}</div>
+        <div class="col-xs-12 task-summary">{{task.body[:250]}} ...</div>
         </div>
         </div>
         </div>
 
-    
+    </a>
    
     {% endfor %}
 

@@ -67,6 +67,9 @@ def create_app(config_class=Config):
     from app.edit import bp as edit_bp
     app.register_blueprint(edit_bp)
 
+    from app.file import bp as file_bp
+    app.register_blueprint(file_bp)
+
 
     @app.context_processor
     def inject_conf_var():
