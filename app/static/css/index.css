@@ -88,3 +88,26 @@ div.row.task-rows {
 :checked + label img {
   
 }
+
+
+
+
+
+.tag-form{
+
+
+    border: none !important;
+    display: inline-block;
+    box-shadow: none !important;
+    outline: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    height: 25px;
+  }
+
+  .tag-element{
+
+
+
+    margin-top:-15px !important;
+  }

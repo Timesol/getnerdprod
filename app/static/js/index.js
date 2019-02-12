@@ -16,10 +16,18 @@ function select_categorys(){
 
 let element = document.getElementsByClassName("checked-data");
 let element_tag=document.getElementById("tags")
+let tageditor=document.getElementById("tag-editor")
+let tagform=document.getElementById("tag-form")
 let str_of_tags=""
 for (let i of element){
 	
 if (i.checked == true){
+	let new_element=document.createElement("SPAN")
+	new_element.classList.add('tag-element');
+	new_element.innerHTML=i.id
+	tageditor.appendChild(new_element)
+	tageditor.insertBefore(new_element, tageditor.childNodes[0]);
+
 	
 	str_of_tags=str_of_tags.concat(i.id+=";")
 
@@ -29,5 +37,7 @@ if (i.checked == true){
 
 }
 console.log(str_of_tags)
- element_tag.value=str_of_tags;
+element_tag.setAttribute("style", "width:300px;")
+
+
 }
