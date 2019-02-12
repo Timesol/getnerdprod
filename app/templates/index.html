@@ -20,7 +20,8 @@
 
 
 
-        {% if task.internet == '1' %}
+        {% if task.internet == 1 %}
+
         <i class="material-icons" style="color:green;">wifi</i>
         {% else %}
         
@@ -28,11 +29,12 @@
         {% endif %}
     </div>
         </div>
+       
         <div class="row task-rows">
         <div class="col-xs-12 task-summary">{{task.summary[:70]}} ...</div>
         </div>
         <div class="row task-rows">
-        <div class="col-xs-12 task-summary">{{task.body[:250]}} ...</div>
+        <div class="col-xs-12 task-body">{{task.body[:250]}} ...</div>
         </div>
         </div>
         </div>
@@ -131,13 +133,13 @@
 
          
          {% endfor %}
-
-         <button onclick="select_categorys()">Test</button>
-          </div>
+       
         
         </div>
 
-       
+          <div>
+         <p><button id="select-tag-b" class="btn btn-danger"onclick="select_categorys()" >Select</button></p></div>
+          </div>
       </div>
     </div>
   </div>

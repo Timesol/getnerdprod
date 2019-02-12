@@ -41,3 +41,14 @@ element_tag.setAttribute("style", "width:300px;")
 
 
 }
+
+
+
+$('#select-tag-b').click(function() {
+
+
+ $('#modal-tags1').modal('hide');
+
+
+
+});

@@ -214,6 +214,7 @@ word-wrap: break-word;
 }
 
 @media screen and (max-width: 680px) {.flex-item.task-wrapper{min-width:100%}}
+@media screen and (max-width: 380px) {.banner-container{display:none;} .flex-container.task-wrapper{margin-top:65px;}}
 
 
 .task-summary{
@@ -237,10 +238,7 @@ text-decoration: none;
 
 }
 
-div.row {
-    display: flex;
-    min-height: 4rem;
-}
+
 
 .black-link{
 

@@ -28,13 +28,8 @@ padding: 4px 2vw;
 
 }
 
-div.row{
 
-display: flex;
-min-height: 10rem;
-}
-
-div.row.task-rows {
+div.row.task-rows.task-summary {
     display: flex;
     min-height: 4rem;
 }
@@ -111,3 +106,22 @@ div.row.task-rows {
 
     margin-top:-15px !important;
   }
+
+
+.task-summary{
+
+
+color: #db6c00;
+font-size: 18px;
+
+
+}
+.task-body{
+
+
+
+color: #524e4e;
+
+
+
+}
