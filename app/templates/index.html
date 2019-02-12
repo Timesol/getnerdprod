@@ -111,11 +111,11 @@
       
 
       <div class="modal-body modal-lg">
-        <form action="/action_page.php" method="get">
+        
       <div class="flex-container flex-icons">
          {%for filename in filelist %}
          <div class="flex-item flex-icons">
-            <input type="checkbox" id="{{filename.split('.')[0]}}" style="display: none;"/>
+            <input class="checked-data" type="checkbox" id="{{filename.split('.')[0]}}" style="display: none;"/>
            <label  class="checked-label"for="{{filename.split('.')[0]}}"><img src="{{url_for('static', filename='img/icons/')}}{{filename}}" style="width:32px; height:32px" ></label>
 
           </div>
@@ -125,10 +125,12 @@
 
 
 
-
+         
          {% endfor %}
+
+         <button onclick="select_categorys()">Test</button>
           </div>
-          </form>
+        
         </div>
 
        

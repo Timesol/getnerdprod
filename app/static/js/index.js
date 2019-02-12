@@ -9,3 +9,25 @@ element.setAttribute("onclick", `switch_content('${id}','${show_id}','${hide_id}
 
 
 }
+
+
+function select_categorys(){
+
+
+let element = document.getElementsByClassName("checked-data");
+let element_tag=document.getElementById("tags")
+let str_of_tags=""
+for (let i of element){
+	
+if (i.checked == true){
+	
+	str_of_tags=str_of_tags.concat(i.id+=";")
+
+
+
+}
+
+}
+console.log(str_of_tags)
+ element_tag.value=str_of_tags;
+}
