@@ -31,7 +31,7 @@
         </div>
        
         <div class="row task-rows">
-        <div class="col-xs-12 task-summary">{{task.summary[:70]}} ...</div>
+        <div class="col-xs-12 task-summary">{{task.summary[:150]}} ...</div>
         </div>
         <div class="row task-rows">
         <div class="col-xs-12 task-body">{{task.body[:250]}} ...</div>
@@ -68,6 +68,13 @@
 
 
 <div class="container" id="Container-Index-Add-Task" style="display:none;">
+
+
+  <form method=post enctype=multipart/form-data>
+     <label  id="pic-upload" for="file-input"><img class="pic-upload" src="{{url_for('static', filename='img/camera.svg')}}" >
+     </label>
+    <input type="file" id="file-input"  name=file  size="60" style="display:none;" >
+</form>
   
   
 

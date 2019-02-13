@@ -113,6 +113,8 @@ div.row.task-rows.task-summary {
 
 color: #db6c00;
 font-size: 18px;
+margin-top: 10px;
+margin-bottom: 10px;
 
 
 }
@@ -120,7 +122,7 @@ font-size: 18px;
 
 
 
-color: #524e4e;
+color: #666161;
 
 
 
@@ -143,5 +145,17 @@ color: #524e4e;
 
 font-size: 16px;
 cursor:pointer
+
+}
+
+
+.pic-upload{
+width: 150px; 
+height: 150px;
+fill:#bbb;
+
+
+
+
 
 }

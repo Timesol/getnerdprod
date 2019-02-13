@@ -34,8 +34,9 @@ class User(UserMixin,db.Model):
     about_me = db.Column(db.String(140))
     last_seen = db.Column(db.DateTime, default=datetime.utcnow)
     role=db.Column(db.String(24))
-    create_date=db.Column(db.String(140))
+    create_date=db.Column(db.DateTime, index=True, default=datetime.utcnow)
     rating=db.Column(db.Integer)
+    
 
 
     @login.user_loader
@@ -153,10 +154,10 @@ class Mappoint(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     streetname=db.Column(db.String(140))
-    cityname=db.Column(db.String(64))
+    cityname=db.Column(db.String(64), unique=True)
     land=db.Column(db.String(64))
     number=db.Column(db.String(32))
-    plz=db.Column(db.String(16))
+    plz=db.Column(db.String(16), unique=True)
     additional_infos=db.Column(db.String(140))
 
 class City(db.Model):

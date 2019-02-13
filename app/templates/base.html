@@ -36,11 +36,23 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     {% if request.endpoint == 'main.index' %}
-                    <li><a id="main-button" class="glyphicon glyphicon-edit" onclick="switch_content('main-button','Container-Index-Main-Content', 'Container-Index-Add-Task','glyphicon-edit', 'glyphicon-menu-left' )">
+                    {% if current_user.is_authenticated %}
+
+                    <li><a id="main-button" class="glyphicon glyphicon-edit" onclick="switch_content('main-button','Container-Index-Main-Content', 'Container-Index-Add-Task','glyphicon-edit', 'glyphicon-menu-left' )"></a></li>
                         
+                    {% else %}
+
+                    <li><a id="main-button" class="glyphicon glyphicon-edit" href="{{ url_for('auth.login') }}"></a></li>
+
+                    {% endif %}
+
+                    {% else %}
+
+                    <li><a class="navbar-brand glyphicon glyphicon-home" href="{{ url_for('main.index') }}"></a></li>
+                            
 
 
-                    </a></li>
+                    
                     {% endif %}
                 
                     
@@ -61,6 +73,8 @@
                     {% if current_user.is_anonymous %}
                     <li><a href="{{ url_for('auth.login') }}">{{ _('Login') }}</a></li>
                     {% else %}
+                    <li><a  class="glyphicon glyphicon-user" href="{{ url_for('user.user', username=current_user.username) }}"></a></li>
+                        
                     <li><a href="{{ url_for('auth.logout') }}">{{ _('Logout') }}</a></li>
                     {% endif %}
 
