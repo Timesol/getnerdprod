@@ -75,21 +75,43 @@ element.parentNode.removeChild(element);
 
 }
 
+$(document).ready(function(){
+	window.onload = function() {
+    document.getElementById("file-input").onchange = function() {
+        document.getElementById("form-async").submit();
+    }
+};
+
 
 
 
 var form = document.getElementById("form-async");
+
 form.addEventListener('submit', function(ev) {
+let new_element=document.createElement("IMG")
   var oData = new FormData(form);
   var oReq = new XMLHttpRequest();
-  oReq.open("POST", "{{url_for('file.asynch_file')}}", true);
+  oReq.open("POST", "asynch_file", true);
   oReq.onload = function(oEvent) {
     if (oReq.status == 200) {
-      document.getElementById('resultimg').setAttribute('src', JSON.parse(oReq.responseText).result_image_location);
+      
+       new_element.setAttribute('src', JSON.parse(oReq.responseText).result_image_location);
+       form.appendChild(new_element)
+
     } else {
       alert("Error " + oReq.status + " occurred when trying to upload your file")
     }
+
+
+
+
+
+
   };
   oReq.send(oData);
   ev.preventDefault();
 }, false);
+
+
+});
+

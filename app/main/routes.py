@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, url_for, request, g, current_app, json,app
+from flask import render_template, flash, redirect, url_for, request, g, current_app, json,app,jsonify, Response
 from flask_login import login_user, logout_user, current_user, login_required
 from app.main import bp
 from flask_babel import _, get_locale
@@ -9,6 +9,7 @@ from app.models import Task,City,User
 from app.main.forms import TaskForm
 from app import db
 import os
+from werkzeug.utils import secure_filename
 
 
 
@@ -77,6 +78,8 @@ def index(city=None):
             if tasks.has_next else None
         prev_url = url_for('main.index', page=tasks.prev_num) \
             if tasks.has_prev else None
+
+  
         
 
 

@@ -203,11 +203,13 @@ def asynch_file():
     if request.method == 'POST':
         file = request.files['file']
         fname = secure_filename(file.filename)
-        file.save('static/' + fname)
+        file.save('/home/ahoehne/myfoxit/app/static/' + fname)
         # do the processing here and save the new file in static/
         fname_after_processing = fname
-        return json.dumps({'result_image_location': url_for('static', filename=fname_after_processing)})
+        print('in asynch_files')
+        return jsonify({'result_image_location': url_for('static', filename=fname_after_processing)})
+        
 
 
-    return render_template('asynch_file.html')
+    
 

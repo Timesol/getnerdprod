@@ -73,9 +73,13 @@
   <form method=post enctype=multipart/form-data id="form-async">
      <label  id="pic-upload" for="file-input"><img class="pic-upload" src="{{url_for('static', filename='img/camera.svg')}}" >
      </label>
-    <input type="file" id="file-input"  name=file  size="60" style="display:none;" >
-    <input type="submit" value="Upload the file!" />
+    <input type="file" id="file-input"  name=file  size="60" style="display:none;" />
+    <input  id="btnsubmit" type="submit" value="Upload the file!" />
 </form>
+
+
+
+<div id="demo"></div>
   
   
 
