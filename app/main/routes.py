@@ -45,7 +45,7 @@ def index(city=None):
         city=City.query.get(form_task.city.data)
         print('in form')                
         task = Task(body=form_task.body.data, author=current_user,
-            internet=form_task.internet.data, summary=form_task.summary.data)       
+            internet=form_task.internet.data, summary=form_task.summary.data,price=form_task.price.data,currency=form_task.currency.data)       
         db.session.add(task)
         db.session.commit()      
         scity=City.query.get(form_task.city.data)

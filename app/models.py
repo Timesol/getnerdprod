@@ -128,11 +128,13 @@ class Task(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     summary=db.Column(db.String(140))
     body = db.Column(db.String(1200))
-    internet=db.Column(db.String(16))
+    internet=db.Column(db.Boolean())
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     tags = db.relationship('Tags', backref='task', lazy='dynamic')
     city_id = db.Column(db.Integer, db.ForeignKey('city.id'))
+    price=db.Column(db.Float())
+    currency=db.Column(db.String(32))
 
 
 

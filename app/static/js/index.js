@@ -23,13 +23,21 @@ for (let i of element){
 	
 if (i.checked == true){
 	let new_element=document.createElement("SPAN")
-	new_element.classList.add('tag-element');
-	new_element.innerHTML=i.id
+	let deletetag=document.createElement("A")
+	deletetag.setAttribute("onclick", `delete_tag('${i.id}')`)
+	deletetag.innerHTML="&times;";
+	new_element.classList.add("tag-element");
+	new_element.innerHTML=i.id+" "
+	new_element.id=i.id
+	deletetag.classList.add("deltag")
+
+
 	tageditor.appendChild(new_element)
+	new_element.appendChild(deletetag)
 	tageditor.insertBefore(new_element, tageditor.childNodes[0]);
 
 	
-	str_of_tags=str_of_tags.concat(i.id+=";")
+	
 
 
 
@@ -42,7 +50,7 @@ element_tag.setAttribute("style", "width:300px;")
 
 }
 
-
+$(document).ready(function(){
 
 $('#select-tag-b').click(function() {
 
@@ -52,3 +60,17 @@ $('#select-tag-b').click(function() {
 
 
 });
+});
+
+
+function delete_tag(id){
+
+let element = document.getElementById(id);
+element.parentNode.removeChild(element);
+
+
+
+
+
+
+}

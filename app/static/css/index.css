@@ -125,3 +125,23 @@ color: #524e4e;
 
 
 }
+
+.tag-element{
+
+
+
+  background-color: #e39447;
+  margin-right: 3px;
+  margin-left: 3px;
+  padding: 1px 1px 1px 5px;
+  border:1px solid #e39447;
+  border-radius: 4px;
+  color:#5a4c2f;
+}
+
+.deltag{
+
+font-size: 16px;
+cursor:pointer
+
+}
