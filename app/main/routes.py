@@ -20,7 +20,7 @@ def language(language=None):
 
 
 
-@bp.route('/<city>', methods=['GET', 'POST'])
+
 @bp.route('/', methods=['GET', 'POST'])
 @bp.route('/index', methods=['GET', 'POST'])
 def index(city=None):

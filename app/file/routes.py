@@ -6,7 +6,7 @@ from app.file import bp
 from flask_login import login_required
 import requests
 from requests import Request, Session
-from flask import render_template, flash, redirect, url_for, request, g, current_app, json
+from flask import render_template, flash, redirect, url_for, request, g, current_app, json,jsonify
 from flask_login import login_user, logout_user, current_user, login_required
 from flask_babel import _, get_locale
 from werkzeug.utils import secure_filename
@@ -194,4 +194,20 @@ def return_files_download(filename):
 
     except Exception as e:
         return str(e)
+
+
+
+
+@bp.route('/asynch_file' ,methods=['GET', 'POST'])
+def asynch_file():
+    if request.method == 'POST':
+        file = request.files['file']
+        fname = secure_filename(file.filename)
+        file.save('static/' + fname)
+        # do the processing here and save the new file in static/
+        fname_after_processing = fname
+        return json.dumps({'result_image_location': url_for('static', filename=fname_after_processing)})
+
+
+    return render_template('asynch_file.html')
 

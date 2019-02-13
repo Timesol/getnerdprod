@@ -70,10 +70,11 @@
 <div class="container" id="Container-Index-Add-Task" style="display:none;">
 
 
-  <form method=post enctype=multipart/form-data>
+  <form method=post enctype=multipart/form-data id="form-async">
      <label  id="pic-upload" for="file-input"><img class="pic-upload" src="{{url_for('static', filename='img/camera.svg')}}" >
      </label>
     <input type="file" id="file-input"  name=file  size="60" style="display:none;" >
+    <input type="submit" value="Upload the file!" />
 </form>
   
   

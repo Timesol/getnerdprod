@@ -74,3 +74,22 @@ element.parentNode.removeChild(element);
 
 
 }
+
+
+
+
+var form = document.getElementById("form-async");
+form.addEventListener('submit', function(ev) {
+  var oData = new FormData(form);
+  var oReq = new XMLHttpRequest();
+  oReq.open("POST", "{{url_for('file.asynch_file')}}", true);
+  oReq.onload = function(oEvent) {
+    if (oReq.status == 200) {
+      document.getElementById('resultimg').setAttribute('src', JSON.parse(oReq.responseText).result_image_location);
+    } else {
+      alert("Error " + oReq.status + " occurred when trying to upload your file")
+    }
+  };
+  oReq.send(oData);
+  ev.preventDefault();
+}, false);
