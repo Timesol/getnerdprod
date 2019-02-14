@@ -76,18 +76,15 @@ element.parentNode.removeChild(element);
 }
 
 $(document).ready(function(){
-	window.onload = function() {
-    document.getElementById("file-input").onchange = function() {
-        document.getElementById("form-async").submit();
-    }
-};
-
-
+	
+   
 
 
 var form = document.getElementById("form-async");
+var input= document.getElementById("file-input")
 
-form.addEventListener('submit', function(ev) {
+form.onchange= function(ev) {
+  
 let new_element=document.createElement("IMG")
   var oData = new FormData(form);
   var oReq = new XMLHttpRequest();
@@ -110,7 +107,7 @@ let new_element=document.createElement("IMG")
   };
   oReq.send(oData);
   ev.preventDefault();
-}, false);
+};
 
 
 });
