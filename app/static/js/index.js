@@ -1,26 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function switch_content(id,hide_id,show_id,class_remove, class_replace){
 
 let vhide = document.getElementById(hide_id).style["display"]="none";
@@ -28,7 +5,7 @@ let vshow = document.getElementById(show_id).style["display"]="block";
 let element = document.getElementById(id)
 element.classList.remove(class_remove)
 element.classList.add(class_replace);
-element.setAttribute("onclick", `switch_content('${id}','${show_id}','${hide_id}','${class_replace}' ,'${class_remove}')`);
+element.setAttribute("onclick", `switch_content("${id}","${show_id}","${hide_id}","${class_replace}" ,"${class_remove}")`);
 
 
 }
@@ -47,7 +24,7 @@ for (let i of element){
 if (i.checked == true){
 	let new_element=document.createElement("SPAN")
 	let deletetag=document.createElement("A")
-	deletetag.setAttribute("onclick", `delete_tag('${i.id}')`)
+	deletetag.setAttribute("onclick", `delete_tag("${i.id}")`)
 	deletetag.innerHTML="&times;";
 	new_element.classList.add("tag-element");
 	new_element.innerHTML=i.id+" "
@@ -75,10 +52,10 @@ element_tag.setAttribute("style", "width:300px;")
 
 $(document).ready(function(){
 
-$('#select-tag-b').click(function() {
+$("#select-tag-b").click(function() {
 
 
- $('#modal-tags1').modal('hide');
+ $("#modal-tags1").modal("hide");
 
 
 
@@ -106,15 +83,18 @@ $(document).ready(function(){
 let form = document.getElementById("form-async");
 let input= document.getElementById("file-input");
 let slideshow_container= document.getElementById("slideshow-container")
+let img_container=document.getElementById("img-upload-container");
 
 
 form.onchange= function(ev) {
   
   let new_element=document.createElement("IMG");
-  let div_slide=document.createElement("DIV");
-  let number_text=document.createElement("DIV");
-  div_slide.classList.add("mySlides");
-  div_slide.classList.add("fade");
+  let flex_item=document.createElement("DIV");
+  let uploaded_img=document.createElement("IMG");
+
+
+
+ 
 
 
   
@@ -125,11 +105,13 @@ form.onchange= function(ev) {
   oReq.open("POST", "asynch_file", true);
   oReq.onload = function(oEvent) {
     if (oReq.status == 200) {
-      
-       new_element.setAttribute('src', JSON.parse(oReq.responseText).result_image_location);
-       new_element.setAttribute('style','width:20%; height20%;');
-       slideshow_container.appendChild(div_slide)
-       div_slide.appendChild(new_element);
+
+
+      flex_item.setAttribute("class", "flex-item")
+      img_container.insertBefore(flex_item, img_container.childNodes[0]);
+      uploaded_img.setAttribute("src", JSON.parse(oReq.responseText).result_image_location);
+      uploaded_img.setAttribute("style","width:150px; height:150px;");
+      flex_item.appendChild(uploaded_img);
        
 
     } else {
