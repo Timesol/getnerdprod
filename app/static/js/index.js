@@ -1,3 +1,26 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function switch_content(id,hide_id,show_id,class_remove, class_replace){
 
 let vhide = document.getElementById(hide_id).style["display"]="none";
@@ -80,20 +103,34 @@ $(document).ready(function(){
    
 
 
-var form = document.getElementById("form-async");
-var input= document.getElementById("file-input")
+let form = document.getElementById("form-async");
+let input= document.getElementById("file-input");
+let slideshow_container= document.getElementById("slideshow-container")
+
 
 form.onchange= function(ev) {
   
-let new_element=document.createElement("IMG")
-  var oData = new FormData(form);
-  var oReq = new XMLHttpRequest();
+  let new_element=document.createElement("IMG");
+  let div_slide=document.createElement("DIV");
+  let number_text=document.createElement("DIV");
+  div_slide.classList.add("mySlides");
+  div_slide.classList.add("fade");
+
+
+  
+  
+  
+  let oData = new FormData(form);
+  let oReq = new XMLHttpRequest();
   oReq.open("POST", "asynch_file", true);
   oReq.onload = function(oEvent) {
     if (oReq.status == 200) {
       
        new_element.setAttribute('src', JSON.parse(oReq.responseText).result_image_location);
-       form.appendChild(new_element)
+       new_element.setAttribute('style','width:20%; height20%;');
+       slideshow_container.appendChild(div_slide)
+       div_slide.appendChild(new_element);
+       
 
     } else {
       alert("Error " + oReq.status + " occurred when trying to upload your file")
@@ -111,4 +148,6 @@ let new_element=document.createElement("IMG")
 
 
 });
+
+
 
