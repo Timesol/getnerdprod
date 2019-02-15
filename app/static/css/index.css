@@ -161,17 +161,18 @@ height: 100px;
 
 }
 .img-form-item{
-width: 150px; 
-height: 150px;
+width: 152px; 
+height: 152px;
 color:white;
 text-align: center;
 background-color: #b3a48e;
+padding: 5px 5px 5px 5px;
 
 
 }
 
 .outline-box{
-margin:4px 4px 4px 4px;
+
 align-self: center;
 
 width: 140px; 
@@ -185,10 +186,50 @@ border:1px solid #fff;
 
 
 .img-upload-container .flex-item{
-
+margin: 3px;
 display:inline-block;
-border:1px solid #b3a48e;
+border:1px solid #bbb;
 
 
+
+
+}
+
+.img-upload-container .new_pics{
+
+
+width: 150px; 
+height: 150px;
+
+
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 680px) {
+.img-form-item {
+
+margin-right:100% !important;
+
+
+
+}
+
+
+.img-upload-container .new_pics{
+
+
+width: 50px; 
+height: 50px;
+
+
+
+
+}
 
 }

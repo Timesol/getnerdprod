@@ -207,7 +207,7 @@ align-content: space-around;
 margin: 10px;
 border: 1px solid #e1e1e1;
 border-radius: 5px;
-width:30%;
+width:300px;
 min-width:300px;
 height:300px;
 word-wrap: break-word;
@@ -215,7 +215,24 @@ word-wrap: break-word;
 }
 
 @media screen and (max-width: 680px) {.flex-item.task-wrapper{min-width:100%}}
-@media screen and (max-width: 380px) {.banner-container{display:none;} .main-container{margin-top:65px;}}
+@media screen and (max-width: 380px) {.banner-container{display:none;} .main-container{margin-top:65px;} #main-button{display:none;}
+
+.b-nav{
+
+
+display: block;
+
+
+
+
+}
+
+
+
+
+
+
+}
 
 
 .task-summary{
@@ -263,4 +280,39 @@ color:black;
 border:none;
 
   
+}
+
+
+.b-nav{
+
+
+display: none;
+
+
+
+
+}
+
+@media screen and (max-width: 380px) {
+
+.b-nav{
+background-color: #fbf0e0;
+
+display: block;
+color:black;
+
+
+
+
+}
+
+.b-nav  a {
+   
+
+
+
+color:#bbb;
+
+
+
 }

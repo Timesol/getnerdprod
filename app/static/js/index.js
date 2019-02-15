@@ -107,10 +107,10 @@ form.onchange= function(ev) {
     if (oReq.status == 200) {
 
 
-      flex_item.setAttribute("class", "flex-item")
+      flex_item.setAttribute("class", "flex-item ")
       img_container.insertBefore(flex_item, img_container.childNodes[0]);
       uploaded_img.setAttribute("src", JSON.parse(oReq.responseText).result_image_location);
-      uploaded_img.setAttribute("style","width:150px; height:150px;");
+      uploaded_img.setAttribute("class","new_pics");
       flex_item.appendChild(uploaded_img);
        
 
