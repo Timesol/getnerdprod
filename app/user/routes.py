@@ -3,7 +3,7 @@ from flask import render_template, flash, redirect, url_for, request, g, current
 from flask_login import login_user, logout_user, current_user, login_required
 from flask_babel import _, get_locale
 from app import db
-from app.models import User, Post
+from app.models import User, Post,Task
 import os
 from werkzeug.utils import secure_filename
 
@@ -36,13 +36,12 @@ def user(username):
     
 
     user = User.query.filter_by(username=username).first_or_404()
-    page = request.args.get('page', 1, type=int)
-    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
-        page, current_app.config['POSTS_PER_PAGE'], False)
-    next_url = url_for('user.user', username=user.username, page=posts.next_num) \
-        if posts.has_next else None
-    prev_url = url_for('user.user', username=user.username, page=posts.prev_num) \
-        if posts.has_prev else None
+    
+    tasks_created=user.tasks
+    for i in tasks_created:
+       print(i.summary +'It works')
+    tasks_taken=user.tasks_taken
+   
 
     if request.method == 'POST':
         if 'file' not in request.files:
@@ -59,10 +58,10 @@ def user(username):
             
                 
         return redirect(url_for('user.user',username=user.username, user=user,
-                            filename=filename,filelist=filelist ))
+                            filename=filename,filelist=filelist, ))
 
-    return render_template('user.html', user=user, posts=posts.items,
-                           next_url=next_url, prev_url=prev_url, filelist=filelist)
+    return render_template('user.html', user=user, 
+                            filelist=filelist,tasks_taken=tasks_taken ,tasks_created=tasks_created)
 
 
 

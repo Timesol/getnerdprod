@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+
+<script type="text/javascript" src="{{url_for('static', filename='js/task.js')}}"></script>
+<button onclick="take_task('{{task.id}}')" >Test</button>
+
+{{task.summary}}
+{{task.body}}
+
+{% endblock %}

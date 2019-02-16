@@ -222,7 +222,7 @@ display:inline-block;}
 .nav-b{
 display: inline-block;}
 
-
+#main-button-t{display: none;}
 
 .nav-b .nav > li {
     position: relative;

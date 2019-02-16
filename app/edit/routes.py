@@ -1,8 +1,11 @@
 from flask import render_template, flash, redirect, url_for, request, g, current_app, json
+from flask_login import current_user
 from app.edit import bp
 from flask_login import login_required
 from app import db
 from app.models import User
+from app.main.forms import EditProfileForm
+from flask_babel import _
 
 @bp.route('/save',methods=['GET', 'POST'])
 @login_required

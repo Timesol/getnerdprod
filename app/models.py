@@ -22,20 +22,32 @@ followers = db.Table('followers',
 
 
 
+
+
+
+
+
+
+
 class User(UserMixin,db.Model):
     
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True) 
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
     posts = db.relationship('Post', backref='author', lazy='dynamic')
-    tasks = db.relationship('Task', backref='author', lazy='dynamic')
-    mappoints = db.relationship('Mappoint', backref='location', lazy='dynamic')
+    tasks = db.relationship('Task', foreign_keys="[Task.created_by]", backref='author', lazy='dynamic')
+    tasks_taken = db.relationship('Task', foreign_keys="[Task.taken_by]", backref='user', lazy='dynamic')
+    mappoints = db.relationship('Mappoint',  backref='location', lazy='dynamic')
     about_me = db.Column(db.String(140))
     last_seen = db.Column(db.DateTime, default=datetime.utcnow)
     role=db.Column(db.String(24))
     create_date=db.Column(db.DateTime, index=True, default=datetime.utcnow)
     rating=db.Column(db.Integer)
+    
+
+    
+
     
 
 
@@ -131,11 +143,14 @@ class Task(db.Model):
     body = db.Column(db.String(1200))
     internet=db.Column(db.Boolean())
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    created_by= db.Column(db.Integer, db.ForeignKey('user.id'))
+    taken_by= db.Column(db.Integer, db.ForeignKey('user.id'))
     tags = db.relationship('Tags', backref='task', lazy='dynamic')
     city_id = db.Column(db.Integer, db.ForeignKey('city.id'))
     price=db.Column(db.Float())
     currency=db.Column(db.String(32))
+    status=db.Column(db.String(140))
+    
 
 
 

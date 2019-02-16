@@ -49,7 +49,7 @@
 
     <div class="flex-container task-wrapper">
     {% for task in tasks %}
-     <a href="#" class="black-link">
+     <a href="{{ url_for('main.task', id=task.id) }}'" class="black-link">
     <div class="flex-item task-wrapper task-hover">
         <div class="container-fluid" >
         <div class="row task-rows" >

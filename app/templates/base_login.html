@@ -12,6 +12,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js')}}">\x3C/script>')</script>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
 <script type="text/javascript" src="{{url_for('static', filename='js/main.js')}}"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -25,30 +26,18 @@
 
     <nav class="nav navbar-default navbar-fixed-top nav-t-l" >
         <div class="container" >
-            <div class="navbar-header">
+            
                 
-                <a class="navbar-brand" href="{{ url_for('main.index') }}">Foxonauts</a>
-            </div>
+                
+            
            
-                <ul class="nav navbar-nav">
-                 <li><a class=" glyphicon glyphicon-home" href="{{ url_for('main.index') }}"></a></li>
+                <ul class="nav navbar-nav ">
+                	<a class="navbar-brand" href="{{ url_for('main.index') }}">Foxonauts </a>
+                 
                  </ul>
                 
                         
-                <ul class="nav navbar-nav navbar-right">
-                   
-
-                 {% for language in AVAILABLE_LANGUAGES.items() %}
-                     {% if CURRENT_LANGUAGE == language[0] %}
-                     <li>
-
-                     <a><img src="{{url_for('static', filename='img/'+language[0]+'.png')}}" style="width:32px; height:32px;"></li></a>
-                     {% else %}
-                     <li>
-                     <a href="{{ url_for('main.language', language=language[0]) }}" ><img src="{{url_for('static', filename='img/'+language[0]+'.png')}}" style="width:16px; height: 16px;"></a>
-                     {%  endif %}
-                    {% endfor %}</li>
-                </ul> 
+             
 
            
        </div>

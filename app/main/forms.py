@@ -12,9 +12,26 @@ class TaskForm(FlaskForm):
 	summary= StringField(_l('Summarize your Problem'), validators=[DataRequired()])
 	body= TextAreaField(_l('Describe your Problem'), validators=[DataRequired()], id='body-add-task')
 	internet=BooleanField(_l('Does the Device still have access to the Internet?'), render_kw={'data-toggle':'toggle','data-on':'Yes' ,'data-off':'No'}, id='internet-toogle')
-	tags= StringField(_l('Tags'), validators=[DataRequired()], render_kw={'data-toggle':'modal', 'data-target':'#modal-tags1'})
+	tags= StringField(_l('Tags'), render_kw={'data-toggle':'modal', 'data-target':'#modal-tags1'})
 	city=SelectField(u'City', coerce=int, validators=[InputRequired()])
 	price=StringField(_l('Price'), validators=[DataRequired()])
 	currency=SelectField(_l('Currency'),
         choices=[('euro', '€'),('dollar', '$'), ('pfund','£')])
 	create = SubmitField(_l('Create'))
+
+
+class EditProfileForm(FlaskForm):
+    username = StringField(_l('Username'), validators=[DataRequired()])
+    about_me = TextAreaField(_l('About me'),
+                             validators=[Length(min=0, max=140)])
+    submit = SubmitField(_l('Submit'))
+
+    def __init__(self, original_username, *args, **kwargs):
+        super(EditProfileForm, self).__init__(*args, **kwargs)
+        self.original_username = original_username
+
+    def validate_username(self, username):
+        if username.data != self.original_username:
+            user = User.query.filter_by(username=self.username.data).first()
+            if user is not None:
+                raise ValidationError(_('Please use a different username.'))

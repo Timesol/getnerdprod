@@ -43,6 +43,7 @@ def index(city=None):
     
     
     if form_task.validate_on_submit():
+        print('in form')
         city=City.query.get(form_task.city.data)
         print('in form')                
         task = Task(body=form_task.body.data, author=current_user,
@@ -98,3 +99,32 @@ def add_task():
 
 
     return render_template('add_task.html')
+
+
+@bp.route('/task/<id>', methods=['GET', 'POST'])
+@login_required
+
+def task(id):
+    task= Task.query.get(id)
+    
+
+
+
+    return render_template('task.html' ,task=task)
+
+
+@bp.route('/take_task', methods=['GET', 'POST'])
+@login_required
+def take_task():
+
+    if request.method == 'POST':
+        task_id=request.form.get('id', None)
+        task=Task.query.get(task_id)
+        current_user.tasks_taken.append(task)
+        db.session.commit()
+        
+       
+
+
+        
+        return json.dumps({'status':'OK'});
