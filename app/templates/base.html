@@ -12,7 +12,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js')}}">\x3C/script>')</script>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-<script type="text/javascript" src="{{url_for('static', filename='main.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/main.js')}}"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
@@ -22,7 +22,7 @@
  
 
 
-    <nav class="nav navbar-default nav_top_border shadow p-3 mb-5 bg-white rounded navbar-fixed-top" >
+    <nav class="nav navbar-default nav_top_border shadow p-3 mb-5 bg-white rounded navbar-fixed-top nav-t" >
         <div class="container" >
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -38,7 +38,7 @@
                     {% if request.endpoint == 'main.index' %}
                     {% if current_user.is_authenticated %}
 
-                    <li><a id="main-button" class="glyphicon glyphicon-edit" onclick="switch_content('main-button','Container-Index-Main-Content', 'Container-Index-Add-Task','glyphicon-edit', 'glyphicon-menu-left' )"></a></li>
+                    <li><a id="main-button-t" class="glyphicon glyphicon-edit" onclick="switch_content('main-button-t','Container-Index-Main-Content', 'Container-Index-Add-Task','glyphicon-edit', 'glyphicon-menu-left' )"></a></li>
                         
                     {% else %}
 
@@ -89,6 +89,39 @@
                      {%  endif %}
                     {% endfor %}</li>
                 </ul> </div> <!-- 1 -->
+
+           
+       </div>
+    </nav>
+
+    <!-- #########################################################################################  -->
+
+    <nav class="nav navbar-default nav_top_border   bg-white rounded navbar-fixed-bottom nav-b" >
+        <div class="container" >
+            <div class="navbar-header">
+                
+                
+            </div>
+            
+<ul class="nav navbar-nav">
+{% if current_user.is_authenticated %}
+
+<li><a id="main-button-b" class="glyphicon glyphicon-edit" onclick="switch_content_b('Container-Index-Main-Content','container-user','Container-Index-Add-Task')"></a></li>
+{% else %}
+<li><a href="{{ url_for('auth.login') }}" class="glyphicon glyphicon-edit"></a></li>
+{%  endif %}
+
+
+<li><a class=" glyphicon glyphicon-home"  onclick="switch_content_b('Container-Index-Add-Task','container-user','Container-Index-Main-Content')"></a></li>
+ {% if current_user.is_anonymous %}
+<li><a href="{{ url_for('auth.login') }}" class="glyphicon glyphicon-user"></a></li>
+{% else %}
+<li><a  class="glyphicon glyphicon-user" onclick="switch_content_b('Container-Index-Main-Content','Container-Index-Add-Task','container-user')"></a></li>
+{%  endif %}
+
+
+</ul>
+                
 
            
        </div>

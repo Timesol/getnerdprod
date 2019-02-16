@@ -6,9 +6,24 @@ color: #b71d1d;
 font-family: monospace;
 
 
+}
 
 
 
+.nav-t-l{
+display:inline-block;
 
 
+
+}
+
+.nav-t-l .navbar-nav > li {
+    display: inline-block;
+}
+
+.nav-t-l img{
+
+display: inline-block;
+
+	
 }

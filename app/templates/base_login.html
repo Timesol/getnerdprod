@@ -1,0 +1,98 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}{{ title }} - Time Software Solutions{% else %}{{ _('Welcome to myFoxit') }}{% endif %}
+{% endblock %}
+
+{% block head %}
+{{ super() }}
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js')}}">\x3C/script>')</script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+<script type="text/javascript" src="{{url_for('static', filename='js/main.js')}}"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+{% endblock %}
+
+
+{% block navbar %}
+ 
+
+
+    <nav class="nav navbar-default navbar-fixed-top nav-t-l" >
+        <div class="container" >
+            <div class="navbar-header">
+                
+                <a class="navbar-brand" href="{{ url_for('main.index') }}">Foxonauts</a>
+            </div>
+           
+                <ul class="nav navbar-nav">
+                 <li><a class=" glyphicon glyphicon-home" href="{{ url_for('main.index') }}"></a></li>
+                 </ul>
+                
+                        
+                <ul class="nav navbar-nav navbar-right">
+                   
+
+                 {% for language in AVAILABLE_LANGUAGES.items() %}
+                     {% if CURRENT_LANGUAGE == language[0] %}
+                     <li>
+
+                     <a><img src="{{url_for('static', filename='img/'+language[0]+'.png')}}" style="width:32px; height:32px;"></li></a>
+                     {% else %}
+                     <li>
+                     <a href="{{ url_for('main.language', language=language[0]) }}" ><img src="{{url_for('static', filename='img/'+language[0]+'.png')}}" style="width:16px; height: 16px;"></a>
+                     {%  endif %}
+                    {% endfor %}</li>
+                </ul> 
+
+           
+       </div>
+    </nav>
+{% endblock %}
+
+{% block content %}
+
+<div id="flex-container-fox" class="flex-container"> 
+<div id="flex-item-fox" class="flex-item">
+   <div class="banner-container" style="height:400px;"></div>
+
+</div>
+</div>
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-info" role="alert">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        {# application content needs to be provided in the app_content block #}
+        <div class='main-container'>
+        {% block app_content %}
+
+
+
+        {% endblock %}
+        </div>
+
+
+    
+{% endblock %}
+
+
+
+
+
+{% block scripts %}
+
+
+    {{ super() }}
+    {{ moment.include_moment() }}
+    {{ moment.lang(g.locale) }}
+{% endblock %}

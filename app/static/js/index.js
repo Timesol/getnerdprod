@@ -3,8 +3,6 @@
 
 
 
-
-
 function switch_content(id,hide_id,show_id,class_remove, class_replace){
 
 let vhide = document.getElementById(hide_id).style["display"]="none";
