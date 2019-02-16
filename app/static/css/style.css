@@ -204,7 +204,6 @@ margin: 10px;
 .flex-item.task-wrapper {
 display:inline-block;
 align-content: space-around;
-margin: 10px;
 border: 1px solid #e1e1e1;
 border-radius: 5px;
 width:300px;
@@ -214,7 +213,7 @@ word-wrap: break-word;
 
 }
 
-@media screen and (max-width: 680px) {.flex-item.task-wrapper{min-width:100%}}
+@media screen and (max-width: 680px) {.flex-item.task-wrapper{min-width:100%;}}
 @media screen and (max-width: 380px) {.banner-container{display:none;} .main-container{margin-top:65px;} #main-button{}
 
 .b-nav{
