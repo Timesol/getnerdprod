@@ -10,6 +10,7 @@ uploads/
 migrations/
 request-kerberus
 pymysql/
+app/static/*.jpg *.png
 app/templates/journals
 
 #ignore files

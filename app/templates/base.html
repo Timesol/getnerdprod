@@ -88,26 +88,12 @@
                      <a href="{{ url_for('main.language', language=language[0]) }}" ><img src="{{url_for('static', filename='img/'+language[0]+'.png')}}" style="width:16px; height: 16px;"></a>
                      {%  endif %}
                     {% endfor %}</li>
-                </ul>
+                </ul> </div> <!-- 1 -->
 
-            </div>
-        </div>
-    </nav>
+           
+       
+    </nav> <!-- 2-->
 
-
-    <nav class="navbar navbar-default navbar-fixed-bottom b-nav" >
-        <div class="container-fluid" >
-            <div class="navbar-header"></div>
-            
-                <ul class="nav navbar-nav">
-                    
-
-                    <li><a id="main-button-bottom" class="glyphicon glyphicon-edit" onclick="switch_content('main-button','Container-Index-Main-Content', 'Container-Index-Add-Task','glyphicon-edit', 'glyphicon-menu-left' )"></a></li>
-                    
-
-   </div>
-        </div>
-    </nav>
 
 {% endblock %}
 

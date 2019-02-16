@@ -215,7 +215,7 @@ word-wrap: break-word;
 }
 
 @media screen and (max-width: 680px) {.flex-item.task-wrapper{min-width:100%}}
-@media screen and (max-width: 380px) {.banner-container{display:none;} .main-container{margin-top:65px;} #main-button{display:none;}
+@media screen and (max-width: 380px) {.banner-container{display:none;} .main-container{margin-top:65px;} #main-button{}
 
 .b-nav{
 
@@ -293,26 +293,3 @@ display: none;
 
 }
 
-@media screen and (max-width: 380px) {
-
-.b-nav{
-background-color: #fbf0e0;
-
-display: block;
-color:black;
-
-
-
-
-}
-
-.b-nav  a {
-   
-
-
-
-color:#bbb;
-
-
-
-}
