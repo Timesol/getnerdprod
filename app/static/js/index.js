@@ -1,16 +1,51 @@
+function load_task(id){
+
+  var xhttp;
+
+  if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xhttp = new XMLHttpRequest();
+   
+    } else {
+    // code for IE6, IE5
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("Container-Index-Main-Content").style["display"]="none";
+       document.getElementById("Container-Index-Add-Task").style["display"]="none";
+       document.getElementById("container-user").style["display"]="none"; 
+       document.getElementById("container-task").innerHTML=this.responseText;
+       document.getElementById("container-task").style["display"]="block";
+
+      this.responseText;
+      
+      
+    }
+  };
+
+  xhttp.open("GET", '/task/'+id,  true);
+  
+  xhttp.send();
+ 
+
+}
 
 
 
 
 
-function switch_content(id,hide_id,show_id,class_remove, class_replace){
+
+function switch_content(id,hide_id,hide_id2,hide_id3,show_id,class_remove, class_replace){
 
 let vhide = document.getElementById(hide_id).style["display"]="none";
+let vhide2 = document.getElementById(hide_id2).style["display"]="none";
+let vhide3 = document.getElementById(hide_id3).style["display"]="none";
 let vshow = document.getElementById(show_id).style["display"]="block";
 let element = document.getElementById(id)
 element.classList.remove(class_remove)
 element.classList.add(class_replace);
-element.setAttribute("onclick", `switch_content("${id}","${show_id}","${hide_id}","${class_replace}" ,"${class_remove}")`);
+element.setAttribute("onclick", `switch_content("${id}","${show_id}","${hide_id3}","${hide_id2}","${hide_id}","${class_replace}" ,"${class_remove}")`);
 
 
 }
@@ -136,5 +171,24 @@ form.onchange= function(ev) {
 
 });
 
+
+
+function take_task(id){
+
+$.ajax({
+      url: '/take_task',
+                        type: "POST",
+      data: { id:id ,},
+    
+      success: function(response){
+        console.log(response);
+        
+      },
+      error: function(error){
+        console.log(error);
+      }
+    });
+
+}
 
 

@@ -1,0 +1,58 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">{{ _('Summary') }}</th>
+      <th scope="col">{{ _('Author') }}</th>
+      <th scope="col">{{ _('Price') }}</th>
+      <th scope="col">{{ _('Date') }}</th>
+      <th scope="col">{{ _('#') }}</th>
+    </tr>
+  </thead>
+   <tbody>
+{% for task in tasks_taken%}
+
+
+<tr>
+      <th scope="row">{{task.summary}}</th>
+      <td>{{task.author}}</td>
+      <td>{{task.price}} </td>
+      <td>{{task.timestamp}} </td>
+
+      <td> <div class="btn-group">
+    <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">{{ _('Change Status') }} <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+        <li><a  onclick="remove_task('{{task.id}}');setTimeout(function() {
+      refresh('/tasks_taken_r','container-taken-tasks') }, 500);"> {{ _('Set free') }} </a></li>
+        <li><a href="#">{{ _('Solved') }}</a></li>
+        <li class="divider"></li>
+        <li><a href="#">{{ _('Resolver needed') }}</a></li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+       </td>
+    </tr>
+   
+ 
+
+
+{% endfor %}
+
+
+ </tbody>
+</table>

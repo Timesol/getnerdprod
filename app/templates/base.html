@@ -38,7 +38,7 @@
                     {% if request.endpoint == 'main.index' %}
                     {% if current_user.is_authenticated %}
 
-                    <li><a id="main-button-t" class="glyphicon glyphicon-edit" onclick="switch_content('main-button-t','Container-Index-Main-Content', 'Container-Index-Add-Task','glyphicon-edit', 'glyphicon-menu-left' )"></a></li>
+                    <li><a id="main-button-t" class="glyphicon glyphicon-edit" onclick="switch_content('main-button-t','Container-Index-Main-Content','container-task','container-user','Container-Index-Add-Task','glyphicon-edit', 'glyphicon-menu-left' )"></a></li>
                         
                     {% else %}
 
@@ -106,17 +106,17 @@
 <ul class="nav navbar-nav">
 {% if current_user.is_authenticated %}
 
-<li><a id="main-button-b" class="glyphicon glyphicon-edit" onclick="switch_content_b('Container-Index-Main-Content','container-user','Container-Index-Add-Task')"></a></li>
+<li><a id="edit-button-b" class="glyphicon glyphicon-edit" onclick="switch_content_b('edit-button-b','Container-Index-Main-Content','container-task','container-user','Container-Index-Add-Task')"></a></li>
 {% else %}
-<li><a href="{{ url_for('auth.login') }}" class="glyphicon glyphicon-edit"></a></li>
+<li><a id="edit-button-b" href="{{ url_for('auth.login') }}" class="glyphicon glyphicon-edit"></a></li>
 {%  endif %}
 
 
-<li><a class=" glyphicon glyphicon-home"  onclick="switch_content_b('Container-Index-Add-Task','container-user','Container-Index-Main-Content')"></a></li>
+<li><a  id="home-button-b" class=" glyphicon glyphicon-home"  onclick="switch_content_b('home-button-b','Container-Index-Add-Task','container-user','container-task','Container-Index-Main-Content')"></a></li>
  {% if current_user.is_anonymous %}
-<li><a href="{{ url_for('auth.login') }}" class="glyphicon glyphicon-user"></a></li>
+<li><a  id="user-button-b" href="{{ url_for('auth.login') }}" class="glyphicon glyphicon-user"></a></li>
 {% else %}
-<li><a  class="glyphicon glyphicon-user" onclick="switch_content_b('Container-Index-Main-Content','Container-Index-Add-Task','container-user')"></a></li>
+<li><a  id="user-button-b" class="glyphicon glyphicon-user" onclick="switch_content_b('user-button-b','Container-Index-Main-Content','Container-Index-Add-Task','container-task','container-user')"></a></li>
 {%  endif %}
 
 

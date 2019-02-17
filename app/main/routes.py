@@ -91,6 +91,24 @@ def index(city=None):
                            prev_url=prev_url, form_task=form_task,filelist=filelist)
 
 
+@bp.route('/index_r', methods=['GET', 'POST'])
+def index_r(city=None):
+
+    
+        page = request.args.get('page', 1, type=int)
+        tasks = Task.query.order_by(Task.timestamp.desc()).paginate(
+            page, current_app.config['TASKS_PER_PAGE'], False)
+        next_url = url_for('main.index', page=tasks.next_num) \
+            if tasks.has_next else None
+        prev_url = url_for('main.index', page=tasks.prev_num) \
+            if tasks.has_prev else None
+        return render_template('_index.html',tasks=tasks.items, next_url=next_url,
+                           prev_url=prev_url)
+
+
+
+
+
 @bp.route('/add_task', methods=['GET', 'POST'])
 @login_required
 def add_task():
@@ -121,6 +139,23 @@ def take_task():
         task_id=request.form.get('id', None)
         task=Task.query.get(task_id)
         current_user.tasks_taken.append(task)
+        db.session.commit()
+        
+       
+
+
+        
+        return json.dumps({'status':'OK'});
+
+
+@bp.route('/remove_task', methods=['GET', 'POST'])
+@login_required
+def remove_task():
+
+    if request.method == 'POST':
+        task_id=request.form.get('id', None)
+        task=Task.query.get(task_id)
+        current_user.tasks_taken.remove(task)
         db.session.commit()
         
        

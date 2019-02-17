@@ -38,8 +38,7 @@ def user(username):
     user = User.query.filter_by(username=username).first_or_404()
     
     tasks_created=user.tasks
-    for i in tasks_created:
-       print(i.summary +'It works')
+    
     tasks_taken=user.tasks_taken
    
 
@@ -62,6 +61,26 @@ def user(username):
 
     return render_template('user.html', user=user, 
                             filelist=filelist,tasks_taken=tasks_taken ,tasks_created=tasks_created)
+
+
+@bp.route('/tasks_taken_r', methods=['GET', 'POST'])
+@login_required
+def tasks_taken_r():
+
+
+    tasks_taken=current_user.tasks_taken
+    return render_template('_taken.html',tasks_taken=tasks_taken)
+
+
+@bp.route('/tasks_created_r', methods=['GET', 'POST'])
+@login_required
+def tasks_created_r():
+
+
+    tasks_created=current_user.tasks
+    return render_template('_created.html',tasks_created=tasks_created)
+
+
 
 
 

@@ -1,37 +1,34 @@
 {% extends "base.html" %}
 
 {% block app_content %}
+<script type="text/javascript" src="{{url_for('static', filename='js/user.js')}}"></script>
 
 <div class="main-container">
 
 
 <ul class="nav nav-tabs">
   <li class="nav-item active">
-    <a class="nav-link active"  id="Overview-tab" data-toggle="tab" href="#Overview" role="tab" aria-controls="home" aria-selected="true">Overview</a>
+    <a class="nav-link active"  id="Created-tab" data-toggle="tab" href="#Created" role="tab" aria-controls="home" aria-selected="true">{{ _('Tasks created') }}</a>
 
   </li>
   <li class="nav-item">
-    <a class="nav-link active" id="Networks-tab" data-toggle="tab" href="#Networks" role="tab" aria-controls="home" aria-selected="true">Networks</a>
+    <a class="nav-link active" id="Taken-tab" data-toggle="tab" href="#Taken" role="tab" aria-controls="home" aria-selected="true">{{ _('Tasks taken') }}</a>
   </li>
 </ul>
 <div class="tab-content" id="TabContent" class="active" >
-<div class="tab-pane active in " id="Overview" role="tabpanel" aria-labelledby="Overview-tab">
+<div class="tab-pane active in " id="Created" role="tabpanel" aria-labelledby="Created-tab">
 
+<div class="container" id="container-created-tasks"></div>
 
-{%for task in tasks_created %}
-
-{{task.summary}}
-{% endfor %}
-
-</div> <!--End Div Tab Panel Overview-->
+</div> <!--End Div Tab Panel Created-->
 
 
 
-<div class="tab-pane fade out" id="Networks" role="tabpanel" aria-labelledby="Networks-tab" >
-   {%for task in tasks_taken %}
+<div class="tab-pane fade out" id="Taken" role="tabpanel" aria-labelledby="Taken-tab" >
+  
+<div class="container" id="container-taken-tasks"></div>
 
-{{task.summary}}
-{% endfor %}
+
 
 </div>
 

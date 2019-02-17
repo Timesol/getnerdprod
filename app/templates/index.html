@@ -39,6 +39,70 @@
 
 }); 
 
+
+
+
+  $(document).ready(function(){
+
+  var xhttp;
+
+  if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xhttp = new XMLHttpRequest();
+    xhttp2 = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("Container-Index-Main-Content").innerHTML = this.responseText;
+      
+      
+    }
+  };
+
+  xhttp.open("GET", '{{ url_for('main.index_r') }}', true);
+  
+  xhttp.send();
+ 
+
+
+
+}); 
+
+
+
+
+ setInterval(function(){ 
+
+  var xhttp;
+
+  if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xhttp = new XMLHttpRequest();
+    xhttp2 = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("Container-Index-Main-Content").innerHTML = this.responseText;
+      
+      
+    }
+  };
+
+  xhttp.open("GET", '{{ url_for('main.index_r') }}', true);
+  
+  xhttp.send();
+ 
+}, 300000);
+
+
+
+
  </script>
   {% endif %}
 
@@ -47,38 +111,7 @@
 
 <div class="container" id="Container-Index-Main-Content">
 
-    <div class="flex-container task-wrapper">
-    {% for task in tasks %}
-     <a href="{{ url_for('main.task', id=task.id) }}'" class="black-link">
-    <div class="flex-item task-wrapper task-hover">
-        <div class="container-fluid" >
-        <div class="row task-rows" >
-        <div class="col-xs-12 task-infos ">
-
-
-
-        {% if task.internet == 1 %}
-
-        <i class="material-icons" style="color:green;">wifi</i>
-        {% else %}
-        
-        <i class="material-icons" style="color:#e1e1e1;">wifi_off</i>
-        {% endif %}
-    </div>
-        </div>
-       
-        <div class="row task-rows">
-        <div class="col-xs-12 task-summary">{{task.summary[:150]}} ...</div>
-        </div>
-        <div class="row task-rows">
-        <div class="col-xs-12 task-body">{{task.body[:200]}} ...</div>
-        </div>
-        </div>
-        </div>
-
-    </a>
-   
-    {% endfor %}
+  
 
 </div>
 
@@ -239,6 +272,7 @@
 
 
 <div class="container" id="container-user" style="display:none;"></div>
+<div class="container" id="container-task" style="display:none;"></div>
 
 
  
