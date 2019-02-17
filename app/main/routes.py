@@ -176,7 +176,7 @@ def remove_task():
 
 
         
-        return json.dumps({'status':'OK'});
+        return json.dumps({'status':'OK','message':message});
 
 
 @bp.route('/close_task', methods=['GET', 'POST'])
@@ -198,5 +198,4 @@ def close_task():
 
 
         
-        return json.dumps({'status':'OK','message':message
-            });
+        return json.dumps({'status':'OK','message':message});
