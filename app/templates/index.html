@@ -61,8 +61,14 @@
       
     }
   };
-
+  {% if request.args.get('page') %}
+  xhttp.open("GET", '{{ url_for('main.index_r', page=request.args.get('page')) }}', true);
+  
+  {% else %}
   xhttp.open("GET", '{{ url_for('main.index_r') }}', true);
+  {% endif %}
+
+
   
   xhttp.send();
  
@@ -190,10 +196,11 @@
             {{ form_task.internet() }}</p>
              <p>
             {{ form_task.price.label }}<br>
-            {{ form_task.price() }}
+            <span>
+            {{ form_task.price() }}</span>
 
-           
-            {{ form_task.currency() }}</p>
+            <span>
+            {{ form_task.currency() }}</span></p>
 
                <p>{{ form_task.city.label }}<br>
             {{ form_task.city(class="form-control") }}</p>
@@ -260,6 +267,9 @@
 
 <div class="container" id="container-user" style="display:none;"></div>
 <div class="container" id="container-task" style="display:none;"></div>
+
+
+
 
 
  

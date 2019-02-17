@@ -25,6 +25,7 @@ def language(language=None):
 @bp.route('/', methods=['GET', 'POST'])
 @bp.route('/index', methods=['GET', 'POST'])
 def index(city=None):
+
     
     city=City.query.filter_by(name=city).first()
     
@@ -55,30 +56,9 @@ def index(city=None):
         db.session.commit()
         return redirect(url_for('main.index'))
 
-    
-        
-        
-        
-        
 
-    
-            
-        page = request.args.get('page', 1, type=int)
-        
-        tasks = city.citytasks.order_by(Task.timestamp.desc()).paginate(
-            page, current_app.config['TASKS_PER_PAGE'], False)
-        next_url = url_for('main.index', page=tasks.next_num) \
-            if tasks.has_next else None
-        prev_url = url_for('main.index', page=tasks.prev_num) \
-            if tasks.has_prev else None
-    else:
-        page = request.args.get('page', 1, type=int)
-        tasks = Task.query.order_by(Task.timestamp.desc()).paginate(
-            page, current_app.config['TASKS_PER_PAGE'], False)
-        next_url = url_for('main.index', page=tasks.next_num) \
-            if tasks.has_next else None
-        prev_url = url_for('main.index', page=tasks.prev_num) \
-            if tasks.has_prev else None
+
+
 
   
         
@@ -87,12 +67,11 @@ def index(city=None):
 
 
 
-    return render_template('index.html',tasks=tasks.items, next_url=next_url,
-                           prev_url=prev_url, form_task=form_task,filelist=filelist)
+    return render_template('index.html',form_task=form_task,filelist=filelist)
 
 
 @bp.route('/index_r', methods=['GET', 'POST'])
-def index_r(city=None):
+def index_r():
 
     
         page = request.args.get('page', 1, type=int)
@@ -145,16 +124,17 @@ def take_task():
         else:
             if current_user.tasks_taken.count() >= 3:
                 
-                message= _('You can\'t take more than 3 tasks!')
+                message = _('You can\'t take more than 3 tasks!')
             else:
 
                 message=_('Task already taken!')
+            return json.dumps({'status':'OK','message':message});
         
        
 
 
         
-        return json.dumps({'status':'OK','message':message});
+        return json.dumps({'status':'OK'});
 
 
 @bp.route('/remove_task', methods=['GET', 'POST'])
@@ -171,12 +151,13 @@ def remove_task():
 
         elif  task.status== 'progress':
             message=_('Only the Creator or Task taker can change a task!')
+            return json.dumps({'status':'OK','message':message});
         
        
 
 
         
-        return json.dumps({'status':'OK','message':message});
+        return json.dumps({'status':'OK'});
 
 
 @bp.route('/close_task', methods=['GET', 'POST'])
@@ -192,10 +173,11 @@ def close_task():
             db.session.commit()
         else:
             message=_('Only the Creator or Task taker can change a task!')
+            return json.dumps({'status':'OK','message':message});
         
         
        
 
 
         
-        return json.dumps({'status':'OK','message':message});
+        return json.dumps({'status':'OK'});

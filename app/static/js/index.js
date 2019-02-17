@@ -1,3 +1,22 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function load_task(id){
 
   var xhttp;
@@ -183,6 +202,7 @@ $.ajax({
       success: function(response){
         console.log(response);
         data=JSON.parse(response);
+        if (data.message){
         let element=document.getElementById('errors_message')
         element.innerHTML=data.message;
         element.style["display"]="block";
@@ -193,7 +213,7 @@ $.ajax({
 
         }, 3000);
 
-
+       }
         
       },
       error: function(error){
@@ -204,3 +224,40 @@ $.ajax({
 }
 
 
+setTimeout(function() {
+$(document).ready(function(){
+refresh('/tasks_taken_r','container-taken-tasks')
+refresh('/tasks_created_r','container-created-tasks')
+
+ }); 
+
+
+
+function refresh(url,container){
+
+  var xhttp;
+  if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xhttp = new XMLHttpRequest();
+    
+    } else {
+    // code for IE6, IE5
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById(container).innerHTML = this.responseText;
+      
+      
+    }
+  };
+
+  xhttp.open("GET" , url, true);
+  
+  xhttp.send();
+ 
+
+}
+
+
+}, 1000);

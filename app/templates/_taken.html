@@ -1,38 +1,47 @@
 
+<div class="flex-container task-taken-wrapper">
+    {% for task in tasks_taken %}
+     
+    <div class="flex-item task-taken-wrappe task-hover">
+        <div class="container-fluid" >
+        <div class="row task-rows">
+        <div class="col-xs-12 task-summary">{{task.summary}}</div>
+      </div>
 
-
-
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">{{ _('Summary') }}</th>
-      <th scope="col">{{ _('Author') }}</th>
-      <th scope="col">{{ _('Price') }}</th>
-      <th scope="col">{{ _('Date') }}</th>
-      <th scope="col">{{ _('Status') }}</th>
-      <th scope="col">{{ _('#') }}</th>
-    </tr>
-  </thead>
-   <tbody>
-{% for task in tasks_taken%}
-
-
-<tr>
-      <th scope="row">{{task.summary}}</th>
-      <td>{{task.author}}</td>
-      <td>{{task.price}} </td>
-      <td>{{task.timestamp}} </td>
-      <td>{{task.status}}</td>
-
-      <td> <div class="btn-group">
-    <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">{{ _('Change Status') }} <span class="caret"></span></button>
+        <div class="row task-rows" >
+        <div class="col-xs-6 task-infos ">{{task.author}}</div>
+        <div class="col-xs-6 task-infos ">{{task.price}}</div>
+      </div>
+       
+       
+        <div class="row task-rows">
+        <div class="col-xs-12 task-summary">{{task.timestamp}}</div>
+        </div>
+        <div class="row task-rows">
+        <div class="col-xs-12 task-body">{{task.status}}</div>
+      </div>
+        <div class="row task-rows">
+        <div class="col-xs-12 task-body"><button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">{{ _('Change Status') }} <span class="caret"></span></button>
     <ul class="dropdown-menu">
         <li><a  onclick="remove_task('{{task.id}}');setTimeout(function() {
       refresh('/tasks_taken_r','container-taken-tasks') }, 500);"> {{ _('Set free') }} </a></li>
         <li><a href="#">{{ _('Solved') }}</a></li>
         <li class="divider"></li>
         <li><a href="#">{{ _('Resolver needed') }}</a></li>
-    </ul>
+    </ul></div>
+      
+
+
+
+      </div>
+        </div>
+        </div>
+
+    
+
+
+   
+    {% endfor %}
 </div>
 
 
@@ -45,20 +54,4 @@
 
 
 
-  
 
-
-
-
-       </td>
-
-    </tr>
-   
- 
-
-
-{% endfor %}
-
-
- </tbody>
-</table>
