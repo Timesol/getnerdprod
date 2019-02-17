@@ -10,8 +10,8 @@ from app.main.forms import TaskForm
 from app import db
 import os
 from werkzeug.utils import secure_filename
-
-
+from flask_babel import gettext, ngettext
+from jinja2 import Template
 
 @bp.route('/language/<language>')
 def language(language=None):
@@ -47,7 +47,7 @@ def index(city=None):
         city=City.query.get(form_task.city.data)
         print('in form')                
         task = Task(body=form_task.body.data, author=current_user,
-            internet=form_task.internet.data, summary=form_task.summary.data,price=form_task.price.data,currency=form_task.currency.data)       
+            internet=form_task.internet.data, summary=form_task.summary.data,price=form_task.price.data,currency=form_task.currency.data, status='open')       
         db.session.add(task)
         db.session.commit()      
         scity=City.query.get(form_task.city.data)
@@ -138,14 +138,23 @@ def take_task():
     if request.method == 'POST':
         task_id=request.form.get('id', None)
         task=Task.query.get(task_id)
-        current_user.tasks_taken.append(task)
-        db.session.commit()
+        if task.status == 'open' and current_user.tasks_taken.count() <= 3:
+            task.status='progress'
+            current_user.tasks_taken.append(task)
+            db.session.commit()
+        else:
+            if current_user.tasks_taken.count() >= 3:
+                
+                message= _('You can\'t take more than 3 tasks!')
+            else:
+
+                message=_('Task already taken!')
         
        
 
 
         
-        return json.dumps({'status':'OK'});
+        return json.dumps({'status':'OK','message':message});
 
 
 @bp.route('/remove_task', methods=['GET', 'POST'])
@@ -155,11 +164,39 @@ def remove_task():
     if request.method == 'POST':
         task_id=request.form.get('id', None)
         task=Task.query.get(task_id)
-        current_user.tasks_taken.remove(task)
-        db.session.commit()
+        if task.author== current_user or task.user == current_user:
+            task.status='open'
+            current_user.tasks_taken.remove(task)
+            db.session.commit()
+
+        elif  task.status== 'progress':
+            message=_('Only the Creator or Task taker can change a task!')
         
        
 
 
         
         return json.dumps({'status':'OK'});
+
+
+@bp.route('/close_task', methods=['GET', 'POST'])
+@login_required
+def close_task():
+
+    if request.method == 'POST':
+        task_id=request.form.get('id', None)
+        task=Task.query.get(task_id)
+
+        if task.author== current_user or task.user == current_user:
+            task.status='closed'
+            db.session.commit()
+        else:
+            message=_('Only the Creator or Task taker can change a task!')
+        
+        
+       
+
+
+        
+        return json.dumps({'status':'OK','message':message
+            });

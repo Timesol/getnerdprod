@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-05 19:09+0100\n"
+"POT-Creation-Date: 2019-02-17 15:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgid "[Microblog] Reset Your Password"
 msgstr ""
 
 #: app/auth/forms.py:11 app/auth/forms.py:18 app/auth/forms.py:51
-#: app/main/forms.py:15
+#: app/main/forms.py:24
 msgid "Username"
 msgstr ""
 
@@ -38,7 +38,7 @@ msgstr ""
 msgid "Remember Me"
 msgstr ""
 
-#: app/auth/forms.py:14 app/auth/routes.py:37 app/templates/auth/login.html:5
+#: app/auth/forms.py:14 app/auth/routes.py:38 app/templates/auth/login.html:6
 msgid "Sign In"
 msgstr ""
 
@@ -50,12 +50,12 @@ msgstr ""
 msgid "Repeat Password"
 msgstr ""
 
-#: app/auth/forms.py:24 app/auth/routes.py:60 app/templates/auth/login.html:14
+#: app/auth/forms.py:24 app/auth/routes.py:66 app/templates/auth/login.html:15
 #: app/templates/auth/register.html:5
 msgid "Register"
 msgstr ""
 
-#: app/auth/forms.py:29
+#: app/auth/forms.py:29 app/main/forms.py:37
 msgid "Please use a different username."
 msgstr ""
 
@@ -79,24 +79,52 @@ msgstr ""
 msgid "Change Password"
 msgstr ""
 
-#: app/auth/routes.py:30 app/auth/routes.py:101
+#: app/auth/routes.py:31 app/auth/routes.py:107
 msgid "Invalid username or password"
 msgstr ""
 
-#: app/auth/routes.py:58
+#: app/auth/routes.py:64
 msgid "Congratulations, you are now a registered user!"
 msgstr ""
 
-#: app/auth/routes.py:73
+#: app/auth/routes.py:79
 msgid "Check your email for the instructions to reset your password"
 msgstr ""
 
-#: app/auth/routes.py:76 app/templates/auth/reset_password_request.html:5
+#: app/auth/routes.py:82 app/templates/auth/reset_password_request.html:5
 msgid "Reset Password"
 msgstr ""
 
-#: app/auth/routes.py:90
+#: app/auth/routes.py:96
 msgid "Your password has been reset."
+msgstr ""
+
+#: app/edit/routes.py:122 app/edit/routes.py:155
+msgid "Your changes have been saved."
+msgstr ""
+
+#: app/edit/routes.py:127 app/templates/edit_profile.html:5
+msgid "Edit Profile"
+msgstr ""
+
+#: app/edit/routes.py:156
+msgid "Edit"
+msgstr ""
+
+#: app/file/forms.py:14
+msgid "Search"
+msgstr ""
+
+#: app/file/routes.py:63 app/user/routes.py:56
+msgid "File uploaded!"
+msgstr ""
+
+#: app/file/routes.py:75 app/file/routes.py:84
+msgid "Uploads"
+msgstr ""
+
+#: app/file/routes.py:179
+msgid "user"
 msgstr ""
 
 #: app/main/forms.py:12
@@ -104,50 +132,143 @@ msgid "Summarize your Problem"
 msgstr ""
 
 #: app/main/forms.py:13
-msgid "Descripe your Problem"
+msgid "Describe your Problem"
 msgstr ""
 
 #: app/main/forms.py:14
 msgid "Does the Device still have access to the Internet?"
 msgstr ""
 
-#: app/main/forms.py:16
+#: app/main/forms.py:15
+msgid "Tags"
+msgstr ""
+
+#: app/main/forms.py:17 app/templates/_taken.html:10
+msgid "Price"
+msgstr ""
+
+#: app/main/forms.py:18
+msgid "Currency"
+msgstr ""
+
+#: app/main/forms.py:20
 msgid "Create"
 msgstr ""
 
-#: app/templates/base.html:4
+#: app/main/forms.py:25
+msgid "About me"
+msgstr ""
+
+#: app/main/forms.py:27
+msgid "Submit"
+msgstr ""
+
+#: app/main/routes.py:148
+msgid "Hound"
+msgstr ""
+
+#: app/main/routes.py:151
+msgid "Task already taken!"
+msgstr ""
+
+#: app/main/routes.py:173 app/main/routes.py:194
+msgid "Only the Creator or Task taker can change a task!"
+msgstr ""
+
+#: app/templates/_taken.html:8
+msgid "Summary"
+msgstr ""
+
+#: app/templates/_taken.html:9
+msgid "Author"
+msgstr ""
+
+#: app/templates/_taken.html:11
+msgid "Date"
+msgstr ""
+
+#: app/templates/_taken.html:12
+msgid "Status"
+msgstr ""
+
+#: app/templates/_taken.html:13
+msgid "#"
+msgstr ""
+
+#: app/templates/_taken.html:28
+msgid "Change Status"
+msgstr ""
+
+#: app/templates/_taken.html:31
+msgid "Set free"
+msgstr ""
+
+#: app/templates/_taken.html:32
+msgid "Solved"
+msgstr ""
+
+#: app/templates/_taken.html:34
+msgid "Resolver needed"
+msgstr ""
+
+#: app/templates/_task.html:16
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr ""
+
+#: app/templates/_task.html:22
+msgid "Translate"
+msgstr ""
+
+#: app/templates/base.html:4 app/templates/base_login.html:4
 msgid "Welcome to myFoxit"
 msgstr ""
 
-#: app/templates/base.html:34
-msgid "Home"
-msgstr ""
-
-#: app/templates/base.html:52
+#: app/templates/base.html:74
 msgid "Login"
 msgstr ""
 
-#: app/templates/base.html:54
+#: app/templates/base.html:78
 msgid "Logout"
+msgstr ""
+
+#: app/templates/index.html:128
+msgid "Newer tasks"
+msgstr ""
+
+#: app/templates/index.html:133
+msgid "Older tasks"
+msgstr ""
+
+#: app/templates/index.html:156
+msgid "Add Images"
+msgstr ""
+
+#: app/templates/user.html:11
+msgid "Tasks created"
+msgstr ""
+
+#: app/templates/user.html:15
+msgid "Tasks taken"
 msgstr ""
 
 #: app/templates/auth/change_password.html:7
 msgid "Change Your Password"
 msgstr ""
 
-#: app/templates/auth/login.html:18
+#: app/templates/auth/login.html:19
 msgid "Forgot Your Password?"
 msgstr ""
 
-#: app/templates/auth/login.html:19
+#: app/templates/auth/login.html:20
 msgid "Click to Reset It"
 msgstr ""
 
-#: app/templates/auth/login.html:22
+#: app/templates/auth/login.html:23
 msgid "Change Password?"
 msgstr ""
 
-#: app/templates/auth/login.html:23
+#: app/templates/auth/login.html:24
 msgid "Click to Change It"
 msgstr ""
 
@@ -169,5 +290,28 @@ msgstr ""
 
 #: app/templates/errors/500.html:5
 msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr ""
+
+#: app/user/routes.py:94 app/user/routes.py:110
+#, python-format
+msgid "User %(username)s not found."
+msgstr ""
+
+#: app/user/routes.py:97
+msgid "You cannot follow yourself!"
+msgstr ""
+
+#: app/user/routes.py:101
+#, python-format
+msgid "You are following %(username)s!"
+msgstr ""
+
+#: app/user/routes.py:113
+msgid "You cannot unfollow yourself!"
+msgstr ""
+
+#: app/user/routes.py:117
+#, python-format
+msgid "You are not following %(username)s."
 msgstr ""
 

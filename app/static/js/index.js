@@ -182,6 +182,18 @@ $.ajax({
     
       success: function(response){
         console.log(response);
+        data=JSON.parse(response);
+        let element=document.getElementById('errors_message')
+        element.innerHTML=data.message;
+        element.style["display"]="block";
+        setTimeout(function() {
+
+
+          element.style["display"]="none";
+
+        }, 3000);
+
+
         
       },
       error: function(error){

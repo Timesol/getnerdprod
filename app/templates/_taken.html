@@ -1,4 +1,7 @@
 
+
+
+
 <table class="table">
   <thead>
     <tr>
@@ -6,6 +9,7 @@
       <th scope="col">{{ _('Author') }}</th>
       <th scope="col">{{ _('Price') }}</th>
       <th scope="col">{{ _('Date') }}</th>
+      <th scope="col">{{ _('Status') }}</th>
       <th scope="col">{{ _('#') }}</th>
     </tr>
   </thead>
@@ -18,6 +22,7 @@
       <td>{{task.author}}</td>
       <td>{{task.price}} </td>
       <td>{{task.timestamp}} </td>
+      <td>{{task.status}}</td>
 
       <td> <div class="btn-group">
     <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">{{ _('Change Status') }} <span class="caret"></span></button>
@@ -46,6 +51,7 @@
 
 
        </td>
+
     </tr>
    
  
