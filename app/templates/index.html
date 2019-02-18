@@ -6,9 +6,10 @@
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
 <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
-{% if current_user.is_authenticated %}
+
 <script>
 
+{% if current_user.is_authenticated %}
 
  $(document).ready(function(){
 
@@ -17,7 +18,7 @@
   if (window.XMLHttpRequest) {
     // code for modern browsers
     xhttp = new XMLHttpRequest();
-    xhttp2 = new XMLHttpRequest();
+    
     } else {
     // code for IE6, IE5
     xhttp = new ActiveXObject("Microsoft.XMLHTTP");
@@ -39,6 +40,10 @@
 
 }); 
 
+load_content()
+
+{% endif %}
+
 
 
 
@@ -49,7 +54,7 @@
   if (window.XMLHttpRequest) {
     // code for modern browsers
     xhttp = new XMLHttpRequest();
-    xhttp2 = new XMLHttpRequest();
+    
     } else {
     // code for IE6, IE5
     xhttp = new ActiveXObject("Microsoft.XMLHTTP");
@@ -110,7 +115,7 @@
 
 
  </script>
-  {% endif %}
+
 
 <div id ="errors_message" class="fading error-message alert alert-warning" style="display:none;"></div>
 

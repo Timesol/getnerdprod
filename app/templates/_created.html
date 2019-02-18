@@ -1,7 +1,49 @@
-{% for task in tasks_created%}
 
-<span>{{task.summary}} </span>
+<div class="flex-container task-taken-wrapper">
+    {% for task in tasks_created %}
+     
+    <div class="flex-item task-taken-wrapper task-hover">
+        <div class="container-fluid" >
+        <div class="row task-rows task-date-row">
+        <div class="col-xs-12 task-summary">{{task.timestamp}}</div>
+        </div>
+
+
+      <div class="row task-rows task-top-row" >
+        <div class="col-xs-6 task-infos ">{{task.author}}</div>
+        <div class="col-xs-2 task-infos "></div>
+        <div class="col-xs-4 task-infos price">{{task.price}} {{task.currency.capitalize()}}</div>
+      </div>
+        <div class="row task-rows task-middle-row ">
+        <div class="col-xs-12 task-summary">{{task.summary}}</div>
+      </div>
+
+      
+       
+       
+                <div class="row task-rows">
+        <div class="col-xs-6 task-body">{{task.status}}</div>
+    
+        
+        <div class="col-xs-6 task-body"><button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">{{ _('Change Status') }} <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+        <li><a  onclick="remove_task('{{task.id}}');setTimeout(function() {
+      refresh('/tasks_taken_r','container-taken-tasks') }, 500);"> {{ _('Set free') }} </a></li>
+        <li><a onclick="close_task('{{task.id}}');setTimeout(function() {
+      refresh('/tasks_taken_r','container-taken-tasks') }, 500);">{{ _('Solved') }}</a></li>
+        <li class="divider"></li>
+        <li><a href="#">{{ _('Resolver needed') }}</a></li>
+    </ul></div></div>
 
 
 
-{% endfor %}
+        </div>
+    </div>
+     
+
+    
+
+
+   
+    {% endfor %}
+</div>

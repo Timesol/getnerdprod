@@ -16,6 +16,25 @@ $.ajax({
 
 }
 
+
+function close_task(id){
+
+$.ajax({
+      url: '/close_task',
+                        type: "POST",
+      data: { id:id ,},
+    
+      success: function(response){
+        console.log(response);
+        
+      },
+      error: function(error){
+        console.log(error);
+      }
+    });
+
+}
+
 $(document).ready(function(){
 refresh('/tasks_taken_r','container-taken-tasks')
 refresh('/tasks_created_r','container-created-tasks')

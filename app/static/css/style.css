@@ -337,3 +337,65 @@ width: 20%;
 
 
 }
+
+
+
+
+.flex-container.task-taken-wrapper {
+  
+  display: flex;
+  align-content: space-around;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  
+  
+
+}
+.flex-item.task-taken-wrapper {
+
+display:inline-block;
+margin:3px;
+align-content: space-around;
+border: 1px solid #e1e1e1;
+border-radius: 5px;
+width:300px;
+min-width:300px;
+height:300px;
+word-wrap: break-word;
+
+}
+
+.task-top-row{
+
+margin-bottom: 15px;
+
+
+}
+
+.price{
+color:green;
+
+
+
+}
+
+
+.task-middle-row{
+
+height:190px;
+
+
+
+
+
+}
+
+
+.task-date-row{
+
+
+margin-bottom: 15px
+  
+}

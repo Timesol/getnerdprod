@@ -117,7 +117,7 @@ def take_task():
     if request.method == 'POST':
         task_id=request.form.get('id', None)
         task=Task.query.get(task_id)
-        if task.status == 'open' and current_user.tasks_taken.count() <= 3:
+        if task.status == 'open' and current_user.tasks_taken.count() <= 3 and  task.author != current_user:
             task.status='progress'
             current_user.tasks_taken.append(task)
             db.session.commit()
@@ -125,6 +125,9 @@ def take_task():
             if current_user.tasks_taken.count() >= 3:
                 
                 message = _('You can\'t take more than 3 tasks!')
+            elif task.author == current_user:
+                message = _('You can\'t take a task you created!')
+
             else:
 
                 message=_('Task already taken!')

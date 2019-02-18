@@ -223,7 +223,7 @@ $.ajax({
 
 }
 
-
+function load_content(){
 setTimeout(function() {
 $(document).ready(function(){
 refresh('/tasks_taken_r','container-taken-tasks')
@@ -261,3 +261,6 @@ function refresh(url,container){
 
 
 }, 1000);
+
+
+}
