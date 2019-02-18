@@ -399,3 +399,31 @@ height:190px;
 margin-bottom: 15px
   
 }
+
+
+.box-heading-big{
+
+background-color: #ffc863;
+color:#80551e;
+border-radius: 5px;
+border: 1px solid #ffc863;
+font-size:16px;
+padding:5px;
+}
+
+.box-heading{
+
+background-color: #ffc863;
+color:#625e5b;
+border: 1px solid #ffc863;
+
+
+}
+
+
+.header-description{
+
+font-size:20px;
+color:#625e5b;
+
+}
