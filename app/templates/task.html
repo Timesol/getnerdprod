@@ -4,6 +4,8 @@
 
 
 <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/task.css') }}">
+
 
 
 
@@ -11,29 +13,17 @@
         <div class="row task-rows task-date-row box-heading">
         <div class="col-xs-2 ">{{task.timestamp}} | </div>
         <div class="col-xs-2 task-infos ">{{task.author.username}}</div>
-        <div class="col-xs-2 task-infos" style="text-align:right;" style="justify-content:right;"><button class="button-take" onclick="take_task('{{task.id}}')" >Take</button></div>
+       
         </div>
         <div class="row task-rows">
         <div class="col-xs-12 header-description">{{task.summary}}</div>
       </div>
 
-        <div class="row task-rows task-content-container" >
-        <div class="col-xs-8 left-content ">
+<div class="row task-rows task-content-container" >
+<div class="col-xs-8 left-content ">
 
         <div class="row task-rows slide-img-container" >
-        <div class="col-xs-12 " ">
-
-       {% include 'slideshow.html' %}
-
-
-
-
-
-
-
-        </div></div>
-
-
+        <div class="col-xs-12 " ">{% include 'slideshow.html' %}</div></div>
 
         <div class="row task-rows">
         <div class="col-xs-12 box-heading">{{ _('Beschreibung') }}</div></div>
@@ -43,22 +33,23 @@
 
 
 
-       </div>
+</div>
 
 
-        <div class="col-xs-4 left-content ">
 
+<div class="col-xs-4 right-content ">
 
-      <div class="row task-rows " >
         
        
-        
-        <div class="col-xs-4 task-infos price"style="text-align:right;">{{task.price}} {{task.currency.capitalize()}}</div>
-      </div>
+ <div class="row task-rows">       
+<div class="col-xs-12 task-infos price"style="text-align:center;">{{task.price}} {{task.currency.capitalize()}}</div></div>
+ 
+ <div class="row task-rows"> 
+ <div class="col-xs-12 task-infos" style="text-align:center;" style="justify-content:right;"><button class="button-take" onclick="take_task('{{task.id}}')" >Take</button></div></div>
+</div>
 
-  </div>
-        
-   </div>
+</div>
+</div>
 
 
     
