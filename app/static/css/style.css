@@ -495,9 +495,9 @@ color:#625e5b;
 /* Container for image text */
 .caption-container {
   text-align: center;
-  background-color: #222;
+  background-color: #fff;
   padding: 2px 16px;
-  color: white;
+  color: #bbb;
 }
 
 .row-slide:after {
@@ -509,7 +509,8 @@ color:#625e5b;
 /* Six columns side by side */
 .column-slide {
   float: left;
-  width: 16.66%;
+  width: 10%;
+  margin-left: 2px;
 }
 
 /* Add a transparency effect for thumnbail images */
@@ -520,4 +521,29 @@ color:#625e5b;
 .active,
 .demo:hover {
   opacity: 1;
+}
+
+
+.mySlides img{
+
+
+  max-height: 400px;
+
+    margin: auto;    
+    display: block;
+
+}
+
+
+.slide-img-container{
+
+margin-top: 30px;
+
+
+}
+
+.img-test{
+
+
+  background-color: #f3f2f2;
 }
