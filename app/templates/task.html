@@ -26,7 +26,7 @@
         <div class="col-xs-12 " ">{% include 'slideshow.html' %}</div></div>
 
         <div class="row task-rows">
-        <div class="col-xs-12 box-heading">{{ _('Beschreibung') }}</div></div>
+        <div class="col-xs-12 box-heading-border">{{ _('Beschreibung') }}</div></div>
 
         <div class="row task-rows task-middle-row ">
         <div class="col-xs-12 ">{{task.body}}</div></div>
@@ -36,16 +36,28 @@
 </div>
 
 
+<div class="col-xs-1 right-content "></div>
 
-<div class="col-xs-4 right-content ">
+<div class="col-xs-3 right-content ">
+  <div class="row task-rows box-heading-border"><div class="col-xs-12 task-infos">{{ _('Taskinfos') }}</div> </div>
+
+  <div class="row task-rows space-row-50">  
+<div class="col-xs-12 right-content "></div></div>
+
+  <div class="row task-rows"> 
+ <div class="col-xs-12 task-infos" style="text-align:center;" style="justify-content:right;"><button class="button-take"onclick="take_task('{{task.id}}')" > <span class="glyphicon glyphicon-check"></span> Take</button></div></div>
+
+
+<div class="row task-rows space-row-100">  
+<div class="col-xs-12 right-content "></div></div>
 
         
        
- <div class="row task-rows">       
-<div class="col-xs-12 task-infos price"style="text-align:center;">{{task.price}} {{task.currency.capitalize()}}</div></div>
+ <div class="row task-rows box-heading price-row center-block">  
+
+<div class="col-xs-12 task-infos price-col"style="text-align:center;">{{task.price}} {{task.currency.capitalize()}}</div></div>
  
- <div class="row task-rows"> 
- <div class="col-xs-12 task-infos" style="text-align:center;" style="justify-content:right;"><button class="button-take" onclick="take_task('{{task.id}}')" >Take</button></div></div>
+ 
 </div>
 
 </div>
