@@ -2,67 +2,65 @@
 
 {% block app_content %}
 
-
 <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/task.css') }}">
 
 
 
+<div class="row task-header-row">
+  <div class="col-xs-12 task-header-col"></div>Header</div>
 
-        <div class="container-fluid task-full-wrapper" >
-        <div class="row task-rows task-date-row box-heading">
-        <div class="col-xs-2 ">{{task.timestamp}} | </div>
-        <div class="col-xs-2 task-infos ">{{task.author.username}}</div>
-       
-        </div>
-        <div class="row task-rows">
-        <div class="col-xs-12 header-description">{{task.summary}}</div>
-      </div>
+    <div class="row task-info-row">
+    <div class="col-xs-12 task-info-col">Infos</div></div>
 
-<div class="row task-rows task-content-container" >
-<div class="col-xs-8 left-content ">
+      <div class="row task-summary-row">
+    <div class="col-xs-12 task-summary-col">Summary</div></div>
+    
 
-        <div class="row task-rows slide-img-container" >
-        <div class="col-xs-12 " ">{% include 'slideshow.html' %}</div></div>
 
-        <div class="row task-rows">
-        <div class="col-xs-12 box-heading-border">{{ _('Beschreibung') }}</div></div>
+  
 
-        <div class="row task-rows task-middle-row ">
-        <div class="col-xs-12 ">{{task.body}}</div></div>
 
+
+
+ <div class="row task-function-row">
+   
+<div class=" col-xs-6 task-left-content">Left-content</div>
+<div class=" col-xs-6 task-right-content">Right-Content</div>
+
+
+ </div> <!-- End task-header-row -->
+
+
+ <div class="row task-gallery-row ">
+  <div class=" col-xs-12 task-gallery-col">
+    <img class="galimg" src="{{url_for('static', filename='img/icons/camera.svg')}}"> 
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>           
+                
+ </div>
+  
 
 
 </div>
 
-
-<div class="col-xs-1 right-content "></div>
-
-<div class="col-xs-3 right-content ">
-  <div class="row task-rows box-heading-border"><div class="col-xs-12 task-infos">{{ _('Taskinfos') }}</div> </div>
-
-  <div class="row task-rows space-row-50">  
-<div class="col-xs-12 right-content "></div></div>
-
-  <div class="row task-rows"> 
- <div class="col-xs-12 task-infos" style="text-align:center;" style="justify-content:right;"><button class="button-take"onclick="take_task('{{task.id}}')" > <span class="glyphicon glyphicon-check"></span> Take</button></div></div>
+   <div class="row task-thumb-row">
+   <div class=" col-xs-12 task-thumb-col">Image-Preview</div></div>
 
 
-<div class="row task-rows space-row-100">  
-<div class="col-xs-12 right-content "></div></div>
+  <div class="row task-description-row">
+   <div class=" col-xs-12 task-description-col">Description</div></div>
 
-        
-       
- <div class="row task-rows box-heading price-row center-block">  
 
-<div class="col-xs-12 task-infos price-col"style="text-align:center;">{{task.price}} {{task.currency.capitalize()}}</div></div>
- 
- 
-</div>
 
-</div>
-</div>
 
+ <div class="row task-footer-row">
+   <div class=" col-xs-12 task-footer-col">Footer</div>
+
+
+
+
+ </div>
 
     
 
