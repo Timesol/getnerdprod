@@ -204,12 +204,13 @@ margin: 10px;
 .flex-item.task-wrapper {
 display:inline-block;
 align-content: space-around;
-border: 1px solid #e1e1e1;
 border-radius: 5px;
+border:1px solid #d5d8e0;
 width:300px;
 min-width:300px;
 height:300px;
 word-wrap: break-word;
+margin: 3px;
 
 }
 .nav-b{display:none;}
@@ -269,15 +270,7 @@ box-shadow: -1px -6px 8px -5px #ece9e9;
 
 }
 
-.flex-item.task-wrapper:hover{
-border: 2px solid #e1e1e1;
--webkit-box-shadow: -1px -2px 4px -1px #f2efef;
-        -moz-box-shadow: -1px -2px 4px -1px #f2efef;
-            box-shadow: -1px -2px 4px -1px #f2efef;
-             
 
-  
-}
 
 a:hover{
 text-decoration: none;
@@ -438,10 +431,21 @@ color:#625e5b;
 
 }
 
+.container-task{
 
 
+  margin-bottom: 65px;
+}
 
+@media screen and (max-width: 420px) {
+.flex-item.task-wrapper {
 
+border-right: none;
+border-bottom:none;
+border-left: none;
+border-radius: none;
 
+}
 
+}
 
