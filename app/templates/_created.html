@@ -1,47 +1,26 @@
-
-<div class="flex-container task-taken-wrapper">
+<div class="task-container">
     {% for task in tasks_created %}
-     
-    <div class="flex-item task-taken-wrapper task-hover">
-        <div class="container-fluid" >
-        <div class="row task-rows task-date-row">
-        <div class="col-xs-12 task-summary">{{task.timestamp}}</div>
-        </div>
-
-
-      <div class="row task-rows task-top-row" >
-        <div class="col-xs-6 task-infos ">{{task.author}}</div>
-        <div class="col-xs-2 task-infos "></div>
-        <div class="col-xs-4 task-infos price">{{task.price}} {{task.currency.capitalize()}}</div>
-      </div>
-        <div class="row task-rows task-middle-row ">
-        <div class="col-xs-12 task-summary">{{task.summary}}</div>
-      </div>
-
-      
-       
-       
-                <div class="row task-rows">
-        <div class="col-xs-6 task-body">{{task.status}}</div>
-    
+<a href="javascript:load_task('{{task.id}}')" class="black-link">
+<div class="task-item">
         
-        <div class="col-xs-6 task-body"><button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">{{ _('Change Status') }} <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-        <li><a  onclick="remove_task('{{task.id}}');setTimeout(function() {
-      refresh('/tasks_taken_r','container-taken-tasks') }, 500);"> {{ _('Set free') }} </a></li>
-        <li><a onclick="close_task('{{task.id}}');setTimeout(function() {
-      refresh('/tasks_taken_r','container-taken-tasks') }, 500);">{{ _('Solved') }}</a></li>
-        <li class="divider"></li>
-        <li><a href="#">{{ _('Resolver needed') }}</a></li>
-    </ul></div></div>
+        <div class="row task-rows" >
+        <div class="col-xs-3 task-infos ">
+        {% if task.internet == 1 %}
+        <i class="material-icons" style="color:#82c382;">wifi</i>
+        {% else %}
+        <i class="material-icons" style="color:#e1e1e1;">wifi_off</i>
+        {% endif %}</div></div>
 
 
+       
+        <div class="row task-rows">
+        <div class="col-xs-12 task-summary">{{task.summary[:150]}} ...</div></div>
 
-        </div>
-    </div>
-     
+        <div class="row task-rows">
+        <div class="col-xs-12 task-body">{{task.body[:200]}} ...</div></div>
 
-    
+</div>
+</a>
 
 
    

@@ -1,0 +1,125 @@
+
+<div class="img-upload-container flex-container" id="img-upload-container">
+
+  <div class="img-form-item flex-item">
+  <div class="outline-box">
+    
+    <span>{{ _('Add Images') }}</span>
+
+    <form method=post enctype=multipart/form-data id="form-async">
+     <label  id="pic-upload-label" for="file-input"><img class="pic-upload-img" src="{{url_for('static', filename='img/camera.svg')}}" >
+     </label>
+    <input type="file" id="file-input"  name=file  size="60" style="display:none;" />
+  
+</form>
+</div>
+</div>
+<!-- Slideshow container -->
+
+
+</div>
+
+
+<!--  ############################################################################################   -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="demo"></div>
+  
+  
+
+    <h1>Ask for help</h1>
+    <form action="" method="post" novalidate>
+        {{ form_task.hidden_tag() }}
+        <p>
+            {{ form_task.summary.label }}<br>
+            {{ form_task.summary(class="form-control") }}
+        </p>
+        <p>
+            {{ form_task.body.label }}<br>
+            {{ form_task.body(class="form-control") }}</p><p>
+
+            {{ form_task.internet.label }}<br>
+            {{ form_task.internet() }}</p>
+             <p>
+            {{ form_task.price.label }}<br>
+            <span>
+            {{ form_task.price() }}</span>
+
+            <span>
+            {{ form_task.currency() }}</span></p>
+
+               <p>{{ form_task.city.label }}<br>
+            {{ form_task.city(class="form-control") }}</p>
+            {{ form_task.tags.label }}<br>
+         <div class="tag-editor form-control" id="tag-editor">
+           
+            <span>{{ form_task.tags(class="form-control tag-form") }}</span>
+
+
+          </div><br>
+
+            
+            <p>  {{ form_task.create(class="btn btn-danger") }}  </p>
+
+ </form>
+
+
+         <!-- The Modal -->
+<div class="modal" id="modal-tags1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header modal-lg">
+        <h4 class="modal-title">Choose categorys</h4>
+     
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      
+
+      <div class="modal-body modal-lg">
+        
+      <div class="flex-container flex-icons">
+         {%for filename in filelist %}
+         <div class="flex-item flex-icons">
+            <input class="checked-data" type="checkbox" id="{{filename.split('.')[0]}}" style="display: none;"/>
+           <label  class="checked-label"for="{{filename.split('.')[0]}}"><img src="{{url_for('static', filename='img/icons/')}}{{filename}}" style="width:32px; height:32px" ></label>
+
+          </div>
+
+
+
+
+
+
+         
+         {% endfor %}
+       
+        
+        </div>
+
+          <div>
+         <p><button id="select-tag-b" class="btn btn-danger"onclick="select_categorys()" >Select</button></p></div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

@@ -1,5 +1,4 @@
 
-
 .button_blue_round {
   background-color:#db6c00;
   -moz-border-radius:25px;
@@ -67,7 +66,6 @@
   top:1px;
 }
 
-
 .navbar-default {
     background-color: #db6c00;
          -webkit-box-shadow: 0 8px 6px -6px #999;
@@ -75,26 +73,6 @@
              box-shadow: 0 8px 6px -6px #999;
    
 }
-
-
-
-
-
-@media screen and (max-width: 600px) {
-
-
-textarea.form-control#body-add-task {
-    height: 350px;
-}
-
-
-
-
-
-}
-
-
-
 
 #modal-task1 .modal-title{
 
@@ -162,25 +140,16 @@ color: #6e5625;
             background-size:auto;
             background-position: 0 0;
             margin-bottom: 20px;
+            width:100vw;
+            margin-left: calc(50% - 50vw);
+
 
         }
 
 
 
-.flex-container.task-wrapper {
-  display: flex;
-  align-content: space-around;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
-  
-  display:inline-block;
-  
 
-}
-
-
-.flex-container.flex-icons {
+.task-container{
 
   display: flex;
   align-content: space-around;
@@ -201,29 +170,9 @@ margin: 10px;
 }
 
 
-.flex-item.task-wrapper {
-display:inline-block;
-align-content: space-around;
-border-radius: 5px;
-border:1px solid #d5d8e0;
-width:300px;
-min-width:300px;
-height:300px;
-word-wrap: break-word;
-margin: 3px;
 
-}
 .nav-b{display:none;}
-@media screen and (max-width: 680px) {.flex-item.task-wrapper{min-width:100%;}}
-@media screen and (max-width: 420px) {.banner-container{display:none;} .main-container{margin-top:65px;} 
-#main-button-t{
-display:none;}
-#main-button-b{
-display:inline-block;}
-.nav-b{
-display: inline-block;}
 
-#main-button-t{display: none;}
 
 .nav-b .nav > li {
     position: relative;
@@ -256,27 +205,6 @@ box-shadow: -1px -6px 8px -5px #ece9e9;
 .nav-b .navbar-nav> li > a {
     color: #e1e1e1;
 }
-
-
-
-
-
-}
-
-
-.task-summary{
-
-
-
-}
-
-
-
-a:hover{
-text-decoration: none;
-
-}
-
 
 
 .black-link{
@@ -334,118 +262,111 @@ width: 20%;
 
 
 
-.flex-container.task-taken-wrapper {
-  
-  display: flex;
-  align-content: space-around;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  
-  
-
-}
-.flex-item.task-taken-wrapper {
-
-display:inline-block;
-margin:3px;
-align-content: space-around;
-border: 1px solid #e1e1e1;
-border-radius: 5px;
-width:300px;
-min-width:300px;
-height:300px;
-word-wrap: break-word;
-
-}
-
-.task-top-row{
-
-margin-bottom: 15px;
-
-
-}
-
 .price{
-color:green;
+color:green;}
 
 
 
-}
+.marg-down{
 
-
-.task-middle-row{
-
-height:190px;
-
-
-
+margin-top: 65px;
 
 
 }
 
-
-.task-date-row{
-
-
-margin-bottom: 15px
-  
-}
-
-
-.box-heading-big{
-
-background-color: #ffc863;
-color:#80551e;
-border-radius: 5px;
-border: 1px solid #ffc863;
-font-size:16px;
-padding:5px;
-}
-
-.box-heading{
-
-background-color: #fff6dc;
-color:#625e5b;
-border: 1px solid #fff6dc;
-
-
-}
-
-.box-heading-border{
-
-background-color: #fff6dc;
-color:#625e5b;
-border: 1px solid #fff6dc;
-border-radius: 5px;
+.marg-up{
+margin-bottom: 65px;
 
 }
 
 
 
-.header-description{
-
-font-size:20px;
-color:#625e5b;
+// Responsive Changes
+@media screen and (max-width: 680px) {
+.task-item{min-width:100%;}
 
 }
-
-.container-task{
-
-
-  margin-bottom: 65px;
-}
-
 @media screen and (max-width: 420px) {
-.flex-item.task-wrapper {
-
+.task-item {
 border-right: none;
 border-bottom:none;
 border-left: none;
-border-radius: none;
+border-radius: 0px;
+width:100%;
+height:100%;
+min-height: 350px;
+}
+.banner-container{display:none;}
+.main-container{margin-top:65px;}
+#main-button-t{display:none;}
+#main-button-b{display:inline-block;}
+.nav-b{display: inline-block;}
+
 
 }
 
+
+
+
+@media screen and (max-width: 600px) {
+
+
+textarea.form-control#body-add-task {
+    height: 350px;
+}
 }
 
+
+.cblue{
+background-color: blue;}
+.cgreen{
+background-color: green;}
+.cyellow{
+background-color: yellow;}
+.cred{
+background-color: red;}
+.corange{
+background-color: orange;}
+.cbrown{
+background-color: brown;}
+.cgrey{
+background-color: grey;}
+.cpurple{
+background-color: purple;}
+
+.task-rows{
+margin-right: 0px;
+margin-left: 0px;
+
+}
+
+.task-summary{
+height:200px;
+
+
+}
+
+.space-50{
+
+height: 50px;
+
+}
+
+.space-15{
+
+  height: 15px;
+}
+
+
+
+.container-row{
+margin-bottom: 50px;
+background-color: red;
+height: 100px;
+
+}
+.container-tasks:hover{
+
+ 
+
+}

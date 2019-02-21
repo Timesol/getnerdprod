@@ -1,36 +1,27 @@
-  <div class="flex-container task-wrapper">
+<div class="task-container" >
     {% for task in tasks %}
-     <a href="javascript:load_task('{{task.id}}')" class="black-link">
-    <div class="flex-item task-wrapper task-hover">
-        <div class="container-fluid" >
-        <div class="row task-rows" >
-        <div class="col-xs-3 task-infos ">
-        {% if task.internet == 1 %}
 
-        <i class="material-icons" style="color:#82c382;">wifi</i>
-        {% else %}
-        
-        <i class="material-icons" style="color:#e1e1e1;">wifi_off</i>
-        {% endif %}
-    </div>
-        </div>
-       
-        <div class="row task-rows">
-        <div class="col-xs-12 task-summary">{{task.summary[:150]}} ...</div>
-        </div>
-        <div class="row task-rows">
-        <div class="col-xs-12 task-body">{{task.body[:200]}} ...</div>
-        </div>
-        </div>
-        </div>
 
-    </a>
+   <div class="task-item">
+<a href="javascript:load_task('{{task.id}}')" class="black-link ">
+    <div class="row header-row">
+    <div class="col-xs-12 header-col cblue ">Header</div></div>
+
+    <div class="row summary-row">
+    <div class="col-xs-12 summary-col cgreen ">{{task.summary}}</div></div>
+
+</a>
+</div>
+
+
+
+
 
 
    
     {% endfor %}
-</div>
 
+</div>
 <nav aria-label="...">
         <ul class="pager">
             <li class="previous{% if not prev_url %} disabled{% endif %}">

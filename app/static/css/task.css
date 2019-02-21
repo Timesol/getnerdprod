@@ -1,60 +1,19 @@
-.task-header-row{
-
-	background-color: blue;
-}
-
-.task-main-content-row{
-
-background-color: green;
-
-
-}
-
-.task-left-content{
-
-
-
-	background-color: yellow;
-}
-
-
-.task-right-content{
-
-
-
-	background-color: red;
-}
-
-
-.task-summary-col{
-
-
-background-color: orange;
-
-}
-
-
-.task-footer-col{
-
-background-color: brown;
-
-
-}
-
-
-.task-gallery-col{
-
-
-	background-color: grey;
-	
-}
-
-
-.task-thumb-col{
-
-
-	background-color: purple;
-}
+.cblue{
+background-color: blue;}
+.cgreen{
+background-color: green;}
+.cyellow{
+background-color: yellow;}
+.cred{
+background-color: red;}
+.corange{
+background-color: orange;}
+.cbrown{
+background-color: brown;}
+.cgrey{
+background-color: grey;}
+.cpurple{
+background-color: purple;}
 
 
 
@@ -141,3 +100,8 @@ max-width: 100%;
   width: 16.66%;
 }
 
+.task-hover{
+ background-color: red;
+
+
+}
