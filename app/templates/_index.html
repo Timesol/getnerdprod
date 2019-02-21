@@ -1,17 +1,31 @@
-<div class="task-container" >
+
     {% for task in tasks %}
 
 
-   <div class="task-item">
+   
 <a href="javascript:load_task('{{task.id}}')" class="black-link ">
-    <div class="row header-row">
-    <div class="col-xs-12 header-col cblue ">Header</div></div>
+    <div class="row main-row ">
+    <div class="col-xs-12 main-col cyellow ">
 
+
+    <div class="row header-row">
+    <div class="col-xs-6 summary-col cblue ">Header</div></div>
     <div class="row summary-row">
     <div class="col-xs-12 summary-col cgreen ">{{task.summary}}</div></div>
+    <div class="row space-row">
+    <div class="col-xs-12 space-col cpurple "></div></div>
+
+
+
+
+
+
+ </div></div>
+
+   
 
 </a>
-</div>
+
 
 
 
@@ -21,7 +35,7 @@
    
     {% endfor %}
 
-</div>
+
 <nav aria-label="...">
         <ul class="pager">
             <li class="previous{% if not prev_url %} disabled{% endif %}">
