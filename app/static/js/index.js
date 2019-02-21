@@ -70,10 +70,12 @@ if (i.checked == true){
 	new_element.innerHTML=i.id+" "
 	new_element.id=i.id
 	deletetag.classList.add("deltag")
+  str_of_tags+=i.id+"%"
 
 
 	tageditor.appendChild(new_element)
 	new_element.appendChild(deletetag)
+
 	tageditor.insertBefore(new_element, tageditor.childNodes[0]);
 
 	
@@ -85,7 +87,11 @@ if (i.checked == true){
 
 }
 console.log(str_of_tags)
+
 element_tag.setAttribute("style", "width:300px;")
+element_tag.style["color"]="white";
+element_tag.value=str_of_tags
+
 
 
 }
@@ -104,7 +110,7 @@ $("#select-tag-b").click(function() {
 
 
 function delete_tag(id){
-
+let element_tag=document.getElementById("tags")
 let element = document.getElementById(id);
 element.parentNode.removeChild(element);
 

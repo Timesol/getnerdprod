@@ -165,7 +165,7 @@ class Task(db.Model):
 
 class Tags(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name=db.Column(db.String(64))
+    name=db.Column(db.String(64), unique=True)
     task_id = db.Column(db.Integer, db.ForeignKey('task.id'))
 
 

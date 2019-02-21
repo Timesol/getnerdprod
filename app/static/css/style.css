@@ -355,8 +355,30 @@ height: 100px;
 
 .main-col:hover{
 
-background-color: red;
+background-color: #fbfcfda3;
 
+
+
+}
+
+.main-col{
+
+border-top: solid 1px #e6e6e6;
+padding-top:5px;
+margin-bottom:5px;
+
+
+}
+
+.price-col{
+
+color:#4d548e;
+
+
+}
+
+.tags{
+display:inline-block;
 
 
 }

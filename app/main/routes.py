@@ -5,7 +5,7 @@ from flask_babel import _, get_locale
 from flask import session
 from app import babel
 from flask import app
-from app.models import Task,City,User
+from app.models import Task,City,User,Tags
 from app.main.forms import TaskForm
 from app import db
 import os
@@ -48,9 +48,32 @@ def index(city=None):
         city=City.query.get(form_task.city.data)
         print('in form')                
         task = Task(body=form_task.body.data, author=current_user,
-            internet=form_task.internet.data, summary=form_task.summary.data,price=form_task.price.data,currency=form_task.currency.data, status='open')       
+            internet=form_task.internet.data, summary=form_task.summary.data,price=form_task.price.data,currency=form_task.currency.data, status='open')
+
+        tags=form_task.tags.data
+        tags=tags[:-1]
+        tags=tags.split('%')
+
+        
+
+
         db.session.add(task)
-        db.session.commit()      
+        db.session.commit() 
+
+        for tag in tags:
+            tagout=Tags.query.filter_by(name=tag).first()
+            if tagout is not None:
+                task.tags.append(tagout)
+            else:
+                tagout=Tags(name=tag)
+                task.tags.append(tagout)
+
+            
+
+
+        db.session.commit() 
+
+
         scity=City.query.get(form_task.city.data)
         scity.citytasks.append(task)
         db.session.commit()
