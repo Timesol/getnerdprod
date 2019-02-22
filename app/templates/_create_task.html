@@ -59,8 +59,13 @@
             <span>
             {{ form_task.price() }}</span>
 
+
+
             <span>
-            {{ form_task.currency() }}</span></p>
+            {{ form_task.currency() }}</span></p><br>
+            {{ form_task.methods.label() }}<br>
+
+                   <span>{{ form_task.methods() }}</span>
 
                <p>{{ form_task.city.label }}<br>
             {{ form_task.city(class="form-control") }}</p>
@@ -71,6 +76,8 @@
 
 
           </div><br>
+
+          <p>  {{ form_task.folder_name() }}  </p>
 
             
             <p>  {{ form_task.create(class="btn btn-danger") }}  </p>

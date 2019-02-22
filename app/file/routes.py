@@ -12,6 +12,9 @@ from flask_babel import _, get_locale
 from werkzeug.utils import secure_filename
 import re
 import random
+import string
+
+
 
 
 
@@ -202,13 +205,48 @@ def return_files_download(filename):
 def asynch_file():
     if request.method == 'POST':
         file = request.files['file']
+        folder_key=request.form.get('current_folder')
         fname = secure_filename(file.filename)
-        file.save('/home/ahoehne/myfoxit/app/static/' + fname)
-        # do the processing here and save the new file in static/
-        fname_after_processing = fname
-        print('in asynch_files')
-        return jsonify({'result_image_location': url_for('static', filename=fname_after_processing)})
+        rstring=''
+
+        if folder_key == 'not_set':
         
+            
+            N=16
+            rstring=''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(N))
+            folder=rstring
+            folder=str(folder)
+            folder='/home/ahoehne/myfoxit/app/static/cache/'+folder +'/'
+            createFolder(folder)
+            file.save(folder + fname)
+        # do the processing here and save the new file in static/
+            fname_after_processing = fname
+            print('in asynch_files')
+            return jsonify({'result_image_location': url_for('static', filename='cache/'+rstring+'/'+fname_after_processing), 'folder': rstring})
+        else:
+            key=folder_key
+            folder='/home/ahoehne/myfoxit/app/static/cache/'+key +'/'
+            file.save(folder + fname)
+        # do the processing here and save the new file in static/
+            fname_after_processing = fname
+            print('folder already there')
+            return jsonify({'result_image_location': url_for('static', filename='cache/'+key+'/'+fname_after_processing),'folder': key})
+
+
+
+        
+        
+
+
+
+
+def createFolder(directory):
+    try:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+    except OSError:
+        print ('Error: Creating directory. ' +  directory)
+
 
 
     

@@ -12,7 +12,7 @@
     <div class="col-xs-4 summary-col cblue ">Header</div>
      <div class="col-xs-3 summary-col cblue ">Method</div>
      <div class="col-xs-3 summary-col cblue ">Internet</div>
-     <div class="col-xs-2 price-col cblue ">{{task.price}} {{task.currency}}</div>
+     <div class="col-xs-2 price-col cblue ">{{task.price}}{{task.currency}}</div>
 
 
 
@@ -23,7 +23,7 @@
      <div class="row footer-row">
     <div class="col-xs-12  footer-col cgreen ">
         {% for tag in task.tags %}
-        {{tag.name}}
+        <span class="tag-element">{{tag.name}}</span>
 
 
 

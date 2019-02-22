@@ -20,6 +20,11 @@ followers = db.Table('followers',
 )
 
 
+cats = db.Table('cats',
+    db.Column('tags_id', db.Integer, db.ForeignKey('tags.id')),
+    db.Column('task_id', db.Integer, db.ForeignKey('task.id'))
+)
+
 
 
 
@@ -141,6 +146,12 @@ class Post(db.Model): # ,SearchableMixin needs to be added
         return '<Post {}>'.format(self.body)
 
 
+class Tags(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name=db.Column(db.String(64), unique=True)
+
+
+
 class Task(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     summary=db.Column(db.String(140))
@@ -149,11 +160,20 @@ class Task(db.Model):
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     created_by= db.Column(db.Integer, db.ForeignKey('user.id'))
     taken_by= db.Column(db.Integer, db.ForeignKey('user.id'))
-    tags = db.relationship('Tags', backref='task', lazy='dynamic')
+    tags = db.relationship('Tags', secondary='cats',backref='tasks')
+    images = db.relationship('Images',backref='tasks_img')
     city_id = db.Column(db.Integer, db.ForeignKey('city.id'))
     price=db.Column(db.Float())
     currency=db.Column(db.String(32))
     status=db.Column(db.String(140))
+
+
+class Images(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    path=db.Column(db.String(280))
+    task_id = db.Column(db.Integer, db.ForeignKey('task.id'))
+
+
     
 
 
@@ -163,10 +183,8 @@ class Task(db.Model):
     def __repr__(self):
         return '<Post {}>'.format(self.body)
 
-class Tags(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name=db.Column(db.String(64), unique=True)
-    task_id = db.Column(db.Integer, db.ForeignKey('task.id'))
+
+   
 
 
 class Mappoint(db.Model):

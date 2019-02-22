@@ -130,6 +130,7 @@ let form = document.getElementById("form-async");
 let input= document.getElementById("file-input");
 let slideshow_container= document.getElementById("slideshow-container")
 let img_container=document.getElementById("img-upload-container");
+let folder_name=document.getElementById("folder_name");
 
 
 form.onchange= function(ev) {
@@ -137,6 +138,9 @@ form.onchange= function(ev) {
   let new_element=document.createElement("IMG");
   let flex_item=document.createElement("DIV");
   let uploaded_img=document.createElement("IMG");
+
+
+  
 
 
 
@@ -148,14 +152,25 @@ form.onchange= function(ev) {
   
   let oData = new FormData(form);
   let oReq = new XMLHttpRequest();
+  
+  folder_key=folder_name.dataset.string
+  oData.append('current_folder', folder_key)
+  
   oReq.open("POST", "asynch_file", true);
   oReq.onload = function(oEvent) {
     if (oReq.status == 200) {
+      folder_name.dataset.string=JSON.parse(oReq.responseText).folder
+       
+       
+      
+       
 
+       
 
       flex_item.setAttribute("class", "flex-item ")
       img_container.insertBefore(flex_item, img_container.childNodes[0]);
       uploaded_img.setAttribute("src", JSON.parse(oReq.responseText).result_image_location);
+      folder_name.value=JSON.parse(oReq.responseText).folder
       uploaded_img.setAttribute("class","new_pics");
       flex_item.appendChild(uploaded_img);
        

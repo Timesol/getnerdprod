@@ -50,6 +50,11 @@ def index(city=None):
         task = Task(body=form_task.body.data, author=current_user,
             internet=form_task.internet.data, summary=form_task.summary.data,price=form_task.price.data,currency=form_task.currency.data, status='open')
 
+        folder=form_task.folder_name.data
+        
+        for x in os.listdir(folder):
+            print(x)
+
         tags=form_task.tags.data
         tags=tags[:-1]
         tags=tags.split('%')
